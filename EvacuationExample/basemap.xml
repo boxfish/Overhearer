@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<ViewContext xmlns="http://www.opengis.net/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1.0.ex" id="OpenLayers_Context_134" xsi:schemaLocation="http://www.opengis.net/context http://www.opengis.net/context/1.1.0/context.xsd">
+	<General>
+		<Window width="464" height="455"/>
+		<BoundingBox minx="-14963227.69" miny="435913.3354" maxx="-5883731.726" maxy="9339298.388" SRS="EPSG:900913"/>
+		<Title/>
+		<Extension>
+			<ol:maxExtent xmlns:ol="http://openlayers.org/context" minx="-20037508.34" miny="-20037508.34" maxx="20037508.34" maxy="20037508.34"/>
+		</Extension>
+	</General>
+	<LayerList>
+		<Layer queryable="0" hidden="0">
+			<Server service="OSM:Mapnik" version="1.0.0">
+				<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://a.tile.openstreetmap.org/${z}/${x}/${y}.png"/>
+			</Server>
+			<Name>Base Map (Mapnik)</Name>
+			<Title>Base Map (Mapnik)</Title>
+			<FormatList>
+				<Format current="1"/>
+			</FormatList>
+			<sld:MaxScaleDenominator xmlns:sld="http://www.opengis.net/sld">443744272.7</sld:MaxScaleDenominator>
+			<StyleList>
+				<Style current="1">
+					<Name/>
+					<Title>Default</Title>
+				</Style>
+			</StyleList>
+			<Extension>
+				<ol:maxExtent xmlns:ol="http://openlayers.org/context" minx="-20037508.34" miny="-20037508.34" maxx="20037508.34" maxy="20037508.34"/>
+				<ol:numZoomLevels xmlns:ol="http://openlayers.org/context">6</ol:numZoomLevels>
+				<ol:units xmlns:ol="http://openlayers.org/context">m</ol:units>
+				<ol:isBaseLayer xmlns:ol="http://openlayers.org/context">true</ol:isBaseLayer>
+				<ol:displayInLayerSwitcher xmlns:ol="http://openlayers.org/context">true</ol:displayInLayerSwitcher>
+				<ol:singleTile xmlns:ol="http://openlayers.org/context">false</ol:singleTile>
+			</Extension>
+		</Layer>
+	</LayerList>
+</ViewContext>

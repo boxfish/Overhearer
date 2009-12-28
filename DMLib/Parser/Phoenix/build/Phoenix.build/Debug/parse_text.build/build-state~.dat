@@ -1,0 +1,160 @@
+Tparse_text
+v7
+r0
+t282102092.763159
+cCheck dependencies
+cCompileC build/Phoenix.build/Debug/parse_text.build/Objects-normal/i386/parse_text.o /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse_text.c normal i386 c com.apple.compilers.gcc.4_2
+cLd /Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/parse_text normal i386
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004ABBF0FD00000000000000EE
+t1253830909
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/ctype.h
+c000000004A5C14A60000000000002C18
+t1247548582
+s11288
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
+c000000004A5C14A70000000000004174
+t1247548583
+s16756
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/string.h
+c000000004A5C14A70000000000001731
+t1247548583
+s5937
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/types.h
+c000000004A73D6550000000000002905
+t1249105493
+s10501
+
+N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/globals_gram.h
+c000000004B1EAE130000000000000094
+t1260301843
+s148
+
+N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/globals_parse.h
+c000000004B1EAB790000000000000698
+t1260301177
+s1688
+i"globals_gram.h"
+
+N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/grammar.h
+c000000004B1EAB8D00000000000002A8
+t1260301197
+s680
+i"lengths.h"
+
+N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/lengths.h
+c000000004B1EABA70000000000000098
+t1260301223
+s152
+
+N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.h
+c000000004B1EABDA0000000000000B44
+t1260301274
+s2884
+i"grammar.h"
+
+N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse_text.c
+c000000004B1EB2CC0000000000000D3D
+t1260303052
+s3389
+i<stdio.h>
+i<ctype.h>
+i<string.h>
+i"parse.h"
+i"pconf.h"
+i"globals_parse.h"
+
+N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/pconf.h
+c000000004B1EAC100000000000000519
+t1260301328
+s1305
+i<sys/types.h>
+
+N/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/parse_text
+t2
+s0
+
+N/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/parse_text.build/Objects-normal/i386/parse_text.LinkFileList
+c000000004B2051CC0000000000000079
+t1260409292
+s121
+
+N/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/parse_text.build/Objects-normal/i386/parse_text.o
+t1260409292
+s13080
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies282102092#282102092#0(0"0(0#1#0"4300885448#0"0#
+
+CCompileC build/Phoenix.build/Debug/parse_text.build/Objects-normal/i386/parse_text.o /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse_text.c normal i386 c com.apple.compilers.gcc.4_2
+s282102092.702662
+e282102092.746242
+r1
+xCompileC
+xbuild/Phoenix.build/Debug/parse_text.build/Objects-normal/i386/parse_text.o
+x/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse_text.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@75"Compile /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse_text.c282102092#282102092#0(0"0(0#0#67"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse_text.c8245930584228258816#1385"    cd /Users/bohr/Work/Research/Overhearer/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/parse_text.build/parse_text-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/parse_text.build/parse_text-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/parse_text.build/parse_text-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/parse_text.build/parse_text-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/parse_text.build/DerivedSources/i386 -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/parse_text.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse_text.c -o /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/parse_text.build/Objects-normal/i386/parse_text.o0#
+
+CLd /Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/parse_text normal i386
+s282102092.746341
+e282102092.763118
+r0
+xLd
+x/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/parse_text
+xnormal
+xi386
+oUndefined symbols:
+o  "_parse", referenced from:
+o      _main in parse_text.o
+o  "_dict_file", referenced from:
+o      _dict_file$non_lazy_ptr in parse_text.o
+o  "_gram", referenced from:
+o      _gram$non_lazy_ptr in parse_text.o
+o  "_config", referenced from:
+o      _main in parse_text.o
+o  "_init_parse", referenced from:
+o      _main in parse_text.o
+o  "_MAX_PARSES", referenced from:
+o      _MAX_PARSES$non_lazy_ptr in parse_text.o
+o  "_verbose", referenced from:
+o      _verbose$non_lazy_ptr in parse_text.o
+o  "_extract", referenced from:
+o      _extract$non_lazy_ptr in parse_text.o
+o  "_num_nets", referenced from:
+o      _num_nets$non_lazy_ptr in parse_text.o
+o  "_print_profile", referenced from:
+o      _main in parse_text.o
+o  "_grammar_file", referenced from:
+o      _grammar_file$non_lazy_ptr in parse_text.o
+o  "_frames_file", referenced from:
+o      _frames_file$non_lazy_ptr in parse_text.o
+o  "_ALL_PARSES", referenced from:
+o      _ALL_PARSES$non_lazy_ptr in parse_text.o
+o  "_priority_file", referenced from:
+o      _priority_file$non_lazy_ptr in parse_text.o
+o  "_print_parse", referenced from:
+o      _main in parse_text.o
+o      _main in parse_text.o
+o  "_PROFILE", referenced from:
+o      _PROFILE$non_lazy_ptr in parse_text.o
+o  "_num_parses", referenced from:
+o      _num_parses$non_lazy_ptr in parse_text.o
+o  "_dir", referenced from:
+o      _dir$non_lazy_ptr in parse_text.o
+o  "_reset", referenced from:
+o      _main in parse_text.o
+old: symbol(s) not found
+ocollect2: ld returned 1 exit status
+lSLF07#2@72"Link /Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/parse_text282102092#282102092#0(1484"Undefined symbols:  "_parse", referenced from:      _main in parse_text.o  "_dict_file", referenced from:      _dict_file$non_lazy_ptr in parse_text.o  "_gram", referenced from:      _gram$non_lazy_ptr in parse_text.o  "_config", referenced from:      _main in parse_text.o  "_init_parse", referenced from:      _main in parse_text.o  "_MAX_PARSES", referenced from:      _MAX_PARSES$non_lazy_ptr in parse_text.o  "_verbose", referenced from:      _verbose$non_lazy_ptr in parse_text.o  "_extract", referenced from:      _extract$non_lazy_ptr in parse_text.o  "_num_nets", referenced from:      _num_nets$non_lazy_ptr in parse_text.o  "_print_profile", referenced from:      _main in parse_text.o  "_grammar_file", referenced from:      _grammar_file$non_lazy_ptr in parse_text.o  "_frames_file", referenced from:      _frames_file$non_lazy_ptr in parse_text.o  "_ALL_PARSES", referenced from:      _ALL_PARSES$non_lazy_ptr in parse_text.o  "_priority_file", referenced from:      _priority_file$non_lazy_ptr in parse_text.o  "_print_parse", referenced from:      _main in parse_text.o      _main in parse_text.o  "_PROFILE", referenced from:      _PROFILE$non_lazy_ptr in parse_text.o  "_num_parses", referenced from:      _num_parses$non_lazy_ptr in parse_text.o  "_dir", referenced from:      _dir$non_lazy_ptr in parse_text.o  "_reset", referenced from:      _main in parse_text.old: symbol(s) not foundcollect2: ld returned 1 exit status41(4@26""_parse", referenced from:282102092#19#29#0(6@0"282102092#0#0#0#0#0"0(13@21"_main in parse_text.o282102092#48#28#0(6@0"282102092#0#0#0#0#0"0(4@30""_dict_file", referenced from:282102092#76#33#0(6@0"282102092#0#0#0#0#0"0(13@39"_dict_file$non_lazy_ptr in parse_text.o282102092#109#46#0(6@0"282102092#0#0#0#0#0"0(4@25""_gram", referenced from:282102092#155#28#0(6@0"282102092#0#0#0#0#0"0(13@34"_gram$non_lazy_ptr in parse_text.o282102092#183#41#0(6@0"282102092#0#0#0#0#0"0(4@27""_config", referenced from:282102092#224#30#0(6@0"282102092#0#0#0#0#0"0(13@21"_main in parse_text.o282102092#254#28#0(6@0"282102092#0#0#0#0#0"0(4@31""_init_parse", referenced from:282102092#282#34#0(6@0"282102092#0#0#0#0#0"0(13@21"_main in parse_text.o282102092#316#28#0(6@0"282102092#0#0#0#0#0"0(4@31""_MAX_PARSES", referenced from:282102092#344#34#0(6@0"282102092#0#0#0#0#0"0(13@40"_MAX_PARSES$non_lazy_ptr in parse_text.o282102092#378#47#0(6@0"282102092#0#0#0#0#0"0(4@28""_verbose", referenced from:282102092#425#31#0(6@0"282102092#0#0#0#0#0"0(13@37"_verbose$non_lazy_ptr in parse_text.o282102092#456#44#0(6@0"282102092#0#0#0#0#0"0(4@28""_extract", referenced from:282102092#500#31#0(6@0"282102092#0#0#0#0#0"0(13@37"_extract$non_lazy_ptr in parse_text.o282102092#531#44#0(6@0"282102092#0#0#0#0#0"0(4@29""_num_nets", referenced from:282102092#575#32#0(6@0"282102092#0#0#0#0#0"0(13@38"_num_nets$non_lazy_ptr in parse_text.o282102092#607#45#0(6@0"282102092#0#0#0#0#0"0(4@34""_print_profile", referenced from:282102092#652#37#0(6@0"282102092#0#0#0#0#0"0(13@21"_main in parse_text.o282102092#689#28#0(6@0"282102092#0#0#0#0#0"0(4@33""_grammar_file", referenced from:282102092#717#36#0(6@0"282102092#0#0#0#0#0"0(13@42"_grammar_file$non_lazy_ptr in parse_text.o282102092#753#49#0(6@0"282102092#0#0#0#0#0"0(4@32""_frames_file", referenced from:282102092#802#35#0(6@0"282102092#0#0#0#0#0"0(13@41"_frames_file$non_lazy_ptr in parse_text.o282102092#837#48#0(6@0"282102092#0#0#0#0#0"0(4@31""_ALL_PARSES", referenced from:282102092#885#34#0(6@0"282102092#0#0#0#0#0"0(13@40"_ALL_PARSES$non_lazy_ptr in parse_text.o282102092#919#47#0(6@0"282102092#0#0#0#0#0"0(4@34""_priority_file", referenced from:282102092#966#37#0(6@0"282102092#0#0#0#0#0"0(13@43"_priority_file$non_lazy_ptr in parse_text.o282102092#1003#50#0(6@0"282102092#0#0#0#0#0"0(4@32""_print_parse", referenced from:282102092#1053#35#0(6@0"282102092#0#0#0#0#0"0(13@21"_main in parse_text.o282102092#1088#28#0(6@0"282102092#0#0#0#0#0"0(13@21"_main in parse_text.o282102092#1116#28#0(6@0"282102092#0#0#0#0#0"0(4@28""_PROFILE", referenced from:282102092#1144#31#0(6@0"282102092#0#0#0#0#0"0(13@37"_PROFILE$non_lazy_ptr in parse_text.o282102092#1175#44#0(6@0"282102092#0#0#0#0#0"0(4@31""_num_parses", referenced from:282102092#1219#34#0(6@0"282102092#0#0#0#0#0"0(13@40"_num_parses$non_lazy_ptr in parse_text.o282102092#1253#47#0(6@0"282102092#0#0#0#0#0"0(4@24""_dir", referenced from:282102092#1300#27#0(6@0"282102092#0#0#0#0#0"0(13@33"_dir$non_lazy_ptr in parse_text.o282102092#1327#40#0(6@0"282102092#0#0#0#0#0"0(4@26""_reset", referenced from:282102092#1367#29#0(6@0"282102092#0#0#0#0#0"0(13@21"_main in parse_text.o282102092#1396#28#0(6@0"282102092#0#0#0#0#0"0(13@19"Symbol(s) not found282102092#1424#24#0(6@0"282102092#0#0#0#0#0"0(13@35"Collect2: ld returned 1 exit status282102092#1448#36#0(6@0"282102092#0#0#0#0#0"0(0#0#0"4300885448#533"    cd /Users/bohr/Work/Research/Overhearer/Phoenix    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug -F/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug -filelist /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/parse_text.build/Objects-normal/i386/parse_text.LinkFileList -mmacosx-version-min=10.6 -o /Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/parse_text1#
+

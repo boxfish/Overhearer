@@ -1,0 +1,57 @@
+###### Domain Specific Rules #############
+[Evacuation]
+	(*EXIST *A *[Task_Context] *I_WE NEED EVACUATE)
+EXIST
+	(there's)
+	(there is)
+A
+	(a)
+	(an)
+	(some)
+I_WE
+	(i)
+	(we)
+NEED
+	(need to)
+	(want to)
+	(wanna)
+	(like to)
+	(be needing to)
+EVACUATE
+	(plan evacuation)
+	(evacuate)
+;
+
+[Task_Context]
+	(TASK)
+TASK
+	(nuclear release)
+;
+
+[Incidence_Location]
+	(crystal river nuclear power plant)
+;
+
+[EPZ]
+	(*[Distance] *[Distance] *[Distance] epz)
+;
+	
+[Distance]
+	(ten)
+	(twenty)
+	(thirty)
+	(forty)
+	(fifty)
+;
+
+[PlumeModel]
+	(plume model)
+;
+
+[WindCondition]
+	(current wind condition)
+;
+
+[Order_Evacuation]
+	(order evacuation)
+;

@@ -1,0 +1,8 @@
+819bb8636d848ee4de75667eba761a9e 391f6b55de949244f800ff24c8be10fe ffffffffffffffffffffffffffffffff 70980 /Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/libPhoenix.dylib
+000000004b1eb5680000000000005716 2929d6a2140e68be407869420de23211 ffffffffffffffffffffffffffffffff 11656 /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/print_structs.o
+0000000000001cc000000000000073e4 5ef02271d6ab9807432e6542da41e647 ffffffffffffffffffffffffffffffff 16368 /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/pconf.o
+0000000000004f9c000000000000cc70 b1ef284521e5e2d40f782dbf22415500 ffffffffffffffffffffffffffffffff 55340 /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/parse.o
+0000000000001c66000000000000522b eac65cae80aa43a2bf630d40391d56d5 ffffffffffffffffffffffffffffffff 14092 /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/nfa_to_dfa.o
+000000000142a1bd0000000000006b2b 1baab9173371b80d7250998e911098e6 ffffffffffffffffffffffffffffffff 11416 /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/match.o
+000000004a5c000a0000000000005e87 a89ad50198adb481ff9f263a78689b66 ffffffffffffffffffffffffffffffff 17632 /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/grammar.o
+000000004a5c64d90000000000007547 1e5b544da5551c66e0f7f5359ff13431 ffffffffffffffffffffffffffffffff 7060 /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/dict.o

@@ -1,0 +1,30 @@
+###### Domain Specific Rules #############
+[evacuation]
+	(*EXIST *A *[task_context] *I_WE *NEED EVACUATE)
+EXIST
+	([_existential])
+	(there's)
+	(there is)
+A
+	(a)
+	(an)
+	(some)
+I_WE
+	(i)
+	(we)
+NEED
+	(need to)
+	(want to)
+	(wanna)
+	(like to)
+	(be needing to)
+EVACUATE
+	(plan evacuation)
+	(evacuate)
+;
+
+[task_context]
+	(TASK)
+TASK
+	(nuclear release)
+;
