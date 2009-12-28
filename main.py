@@ -116,6 +116,7 @@ class MessagesHandler:
     else: 
       response["status"] = "error"
       response["message"] = "the dialogue (%s) does not exists!" % dialogueId
+    response["dialogueId"] = dialogueId
     return json.dumps(response)  
   
             
@@ -146,9 +147,7 @@ class DialoguesHandler:
         dialogue.addParticipant(participant)
       dialogues.append(dialogue)
       response["status"] = "success"
-      response["dialogue"] = {
-        "id" : dialogue.id
-      }  
+      response["dialogueId"] = id  
     else:
       response["status"] = "error"
       response["message"] = "the dialogue must involves at least one participant!"
