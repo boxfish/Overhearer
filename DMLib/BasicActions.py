@@ -11,7 +11,7 @@ import sys
 import os
 from MentalState import *
 
-BASE_URL = 'http://spatiallab.ist.psu.edu:8080/'
+BASE_URL = 'http://spatiallab.ist.psu.edu:8080'
 
 def execute(plan, map):
   """docstring for execute"""
