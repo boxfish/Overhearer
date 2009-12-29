@@ -1,0 +1,20 @@
+# the context/scenario to be used by the dialogue manager
+# must have a folder with the same name including all the relevant inforamtion: grammar, parser config file, map templates, and knowledge base if using sqlite
+context: EvacuationExample
+kbase:
+  # -------------------
+  # sqlite
+  type: sqlite
+  fname: EvacuationExample/kboop.sqlite
+  # -------------------
+  # -------------------
+  # postgresql
+  # type: postgresql
+  # host: spatiallab.ist.psu.edu
+  # port: 5432
+  # dbname: evacuation
+  # user: kbase
+  # password: ist309
+  # -------------------
+    
+    
