@@ -97,8 +97,8 @@ $(document).ready(function () {
 		//map.addControl(new OpenLayers.Control.PanZoom());
 		map.addControl(new OpenLayers.Control.LayerSwitcher());
 		//map.addControl(new OpenLayers.Control.MousePosition());
-		map.addControl(new OpenLayers.Control.PanZoomBar()),
-		map.addControl(new OpenLayers.Control.ScaleLine()),
+		map.addControl(new OpenLayers.Control.PanZoomBar());
+		map.addControl(new OpenLayers.Control.ScaleLine());
 		map.addControl(new OpenLayers.Control.Attribution());
 	};
 	var displayMapViz = function(xmlText) {

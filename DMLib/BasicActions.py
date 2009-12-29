@@ -11,6 +11,8 @@ import sys
 import os
 from MentalState import *
 
+BASE_URL = 'http://spatiallab.ist.psu.edu:8080/'
+
 def execute(plan, map):
   """docstring for execute"""
   module = sys.modules[__name__]
@@ -90,7 +92,7 @@ def CalculateBufferZone(plan, map):
       values = {}
       values["name"] = str(dist) + 'EPZ'
       values["title"] = values["name"]
-      values["url"] = '/static/data/' + values["name"] + '.kml'
+      values["url"] = BASE_URL + '/static/data/' + values["name"] + '.kml'
       map.addMapLayer('kml', values)
     
     plan.mentalState.execStatus = exec_success
@@ -112,7 +114,7 @@ def CalculatePlumeModel(plan, map):
     values = {}
     values["name"] = 'Plume'
     values["title"] = values["name"]
-    values["url"] = '/static/data/Plume.kml'
+    values["url"] = BASE_URL + '/static/data/Plume.kml'
     map.addMapLayer('kml', values)
     plan.mentalState.execStatus = exec_success
     plan.searchParamByName("ImpactedArea").status = param_status_hasValue
