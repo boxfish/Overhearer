@@ -60,7 +60,7 @@ def main():
   print "the current map:"
   print data
   f.close()
-  """
+  
 if __name__ == '__main__':
   main()
 

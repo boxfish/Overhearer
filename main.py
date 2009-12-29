@@ -11,6 +11,7 @@ import sys
 import os
 import web
 import json
+import yaml
 from DMLib.DialogueManager import DialogueManager
 
 urls = (
@@ -28,6 +29,8 @@ urls = (
 
 # maintain the list of ongoing dialogues
 dialogues = []
+
+config = None
 
 def getDialogueById(dialogueId):
   """docstring for __getDialogueById"""
@@ -142,12 +145,19 @@ class DialoguesHandler:
           response["message"] = "the dialogue already exists!"
           return json.dumps(response)
     if data.has_key("participants") and len(data["participants"]) > 0:
-      dialogue = DialogueManager(id)
-      for participant in data["participants"]:
-        dialogue.addParticipant(participant)
-      dialogues.append(dialogue)
-      response["status"] = "success"
-      response["dialogueId"] = id  
+      f = open('config.yaml')
+      config = yaml.load(f)
+      f.close()
+      if config:
+        dialogue = DialogueManager(config, id)
+        for participant in data["participants"]:
+          dialogue.addParticipant(participant)
+        dialogues.append(dialogue)
+        response["status"] = "success"
+        response["dialogueId"] = id
+      else:
+        response["status"] = "error"
+        response["message"] = "no config file is found!"  
     else:
       response["status"] = "error"
       response["message"] = "the dialogue must involves at least one participant!"
@@ -165,4 +175,3 @@ app = web.application(urls, locals())
 
 if __name__ == '__main__':
   app.run()
-

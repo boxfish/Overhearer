@@ -16,25 +16,39 @@ import uuid
 from Request import *
 from Response import *
 from PhoenixParser import *
-from KnowledgeBase import *
 from PlanGraph import *
 from MapControl import *
+from KBaseSqlite import *
+from KBasePostgresql import *
+
 
 class DialogueManager():
   """manage the dialogue process"""
-  def __init__(self, id=""):
+  def __init__(self, config, id=""):
     if id:
       self.id = id
     else:
       # make a random id
       self.id = str(uuid.uuid4())
-    context = "EvacuationExample"
-    self.parser = PhoenixParser(context + "/config")
-    self.participants = []
-    self.kb = KnowledgeBase(context + "/kboop.sqlite")
-    self.mapCtrl = OLMapControl(context + "/basemap.xml")
-    self.planGraph = PlanGraph(kb=self.kb, mapCtrl=self.mapCtrl)
-    
+    if config.has_key("context") and config.has_key("kbase"):
+      #context = "EvacuationExample"
+      self.parser = PhoenixParser(config["context"] + "/config")
+      self.participants = []
+      #self.kb = KnowledgeBase(context + "/kboop.sqlite")
+      self.kb = self.__createKBase(config["kbase"])
+      self.mapCtrl = OLMapControl(config["context"] + "/basemap.xml")
+      self.planGraph = PlanGraph(kb=self.kb, mapCtrl=self.mapCtrl)
+  
+  def __createKBase(self, kbase):
+    """docstring for create"""
+    if kbase["type"] == "sqlite":
+      return KBaseSqlite(kbase["fname"])
+    elif kbase["type"] == "postgresql":
+      dsn = " ".join(["%s=%s" % (k, v) for k, v in kbase.items() if k != "type"])
+      return KBasePostgresql(dsn)
+    else:
+      return None
+            
   def addParticipant(self, newParticipant):
     """docstring for addParticipant"""
     if newParticipant.has_key("id"):
