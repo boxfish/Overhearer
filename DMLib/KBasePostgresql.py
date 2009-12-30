@@ -27,6 +27,7 @@ class KBasePostgresql():
     cursor = db.cursor()
     for phrase in phrases:
       query = "SELECT PID, Phrase, Type, Phrases.ActionName, Alias, ActType, Complexity, RefID FROM Phrases, Actions where Phrases.ActionName = Actions.ActionName and Phrase='%s'" % phrase
+      print query
       cursor.execute(query)
       for row in cursor:
         planNode = PlanNode()
@@ -48,7 +49,7 @@ class KBasePostgresql():
   def selectActionsByPhrase(self, phrase):
     """SelectActionsByPhrase"""
     query = "SELECT PID, Phrase, Type, Phrases.ActionName, Alias, ActType, Complexity, RefID FROM Phrases, Actions where Phrases.ActionName = Actions.ActionName and Phrase='%s'" % phrase
-    db = psycopg2.connect(self.dbFile)
+    db = psycopg2.connect(self.dsn)
     cursor = db.cursor()
     cursor.execute(query)
     db.close()
@@ -56,7 +57,7 @@ class KBasePostgresql():
   
   def hasRecipe(self, actionName):
     """docstring for hasRecipe"""
-    db = psycopg2.connect(self.dbFile)
+    db = psycopg2.connect(self.dsn)
     cursor = db.cursor()
     query = "SELECT ActionName FROM Actions where ActionName = '%s'" % actionName
     cursor.execute(query)
@@ -69,7 +70,7 @@ class KBasePostgresql():
   
   def selectRecipe(self, actionName):
     """docstring for selectRecipe"""
-    db = psycopg2.connect(self.dbFile)
+    db = psycopg2.connect(self.dsn)
     cursor = db.cursor()
     query = "SELECT Action_no, ActionName, ActType, Recipe FROM Actions where ActionName = '%s'" % actionName
     cursor.execute(query)
@@ -82,7 +83,7 @@ class KBasePostgresql():
     
   def executeSQL(self, query):
     """docstring for executeSQL"""
-    db = psycopg2.connect(self.dbFile)
+    db = psycopg2.connect(self.dsn)
     cursor = db.cursor()
     cursor.execute(query)
     result = cursor.fetchall()
