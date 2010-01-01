@@ -131,7 +131,10 @@ class DialogueHandler:
 
 class DialoguesHandler:        
   def GET(self):
-    return 'DialoguesHandler: ' + '!'
+    response = []
+    for dialogue in dialogues:
+      response.append(dialogue.id)
+    return json.dumps(response)
   def POST(self):
     # initiate a new dialogue
     response = {}
@@ -154,7 +157,7 @@ class DialoguesHandler:
           dialogue.addParticipant(participant)
         dialogues.append(dialogue)
         response["status"] = "success"
-        response["dialogueId"] = id
+        response["dialogueId"] = dialogue.id
       else:
         response["status"] = "error"
         response["message"] = "no config file is found!"  

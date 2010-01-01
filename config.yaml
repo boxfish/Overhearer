@@ -4,17 +4,17 @@ context: EvacuationExample
 kbase:
   # -------------------
   # sqlite
-  #type: sqlite
-  #fname: EvacuationExample/kboop.sqlite
+  type: sqlite
+  fname: EvacuationExample/kboop.sqlite
   # -------------------
   # -------------------
   # postgresql
-  type: postgresql
-  host: spatiallab.ist.psu.edu
-  port: 5432
-  dbname: evacuation
-  user: kbase
-  password: ist309
+  #type: postgresql
+  #host: spatiallab.ist.psu.edu
+  #port: 5432
+  #dbname: evacuation
+  #user: kbase
+  #password: ist309
   # -------------------
     
     
