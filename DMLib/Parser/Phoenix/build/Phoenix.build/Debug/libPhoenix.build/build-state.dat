@@ -1,992 +1,0 @@
-TlibPhoenix
-v7
-r0
-t283118162.436875
-cCheck dependencies
-cCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/dict.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c normal x86_64 c com.apple.compilers.gcc.4_2
-cCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/grammar.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/grammar.c normal x86_64 c com.apple.compilers.gcc.4_2
-cCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/match.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/match.c normal x86_64 c com.apple.compilers.gcc.4_2
-cCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/nfa_to_dfa.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c normal x86_64 c com.apple.compilers.gcc.4_2
-cCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/parse.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c normal x86_64 c com.apple.compilers.gcc.4_2
-cCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/pconf.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/pconf.c normal x86_64 c com.apple.compilers.gcc.4_2
-cCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/print_structs.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/print_structs.c normal x86_64 c com.apple.compilers.gcc.4_2
-cLd /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/libPhoenix.dylib normal x86_64
-
-N/Developer/SDKs/MacOSX10.6.sdk
-c000000004ABBF0FD00000000000000EE
-t1253830909
-s238
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/ctype.h
-c000000004A5C14A60000000000002C18
-t1247548582
-s11288
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/math.h
-c000000004A5C14A000000000000004F1
-t1247548576
-s1265
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h
-c000000004A5C14A70000000000004174
-t1247548583
-s16756
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/stdlib.h
-c000000004A5C14A70000000000002DF5
-t1247548583
-s11765
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/string.h
-c000000004A5C14A70000000000001731
-t1247548583
-s5937
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/time.h
-c000000004A73D6550000000000001E17
-t1249105493
-s7703
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/types.h
-c000000004A73D6550000000000002905
-t1249105493
-s10501
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c
-c000000004B1EDB8F000000000000066E
-t1260313487
-s1646
-i<stdio.h>
-i<string.h>
-i<ctype.h>
-i"parse.h"
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/functions.h
-c000000004B1EAB510000000000000106
-t1260301137
-s262
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/globals_gram.h
-c000000004B1EAE130000000000000094
-t1260301843
-s148
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/globals_parse.h
-c000000004B1EAB790000000000000698
-t1260301177
-s1688
-i"globals_gram.h"
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/grammar.c
-c000000004B1EBA1F0000000000002DD1
-t1260304927
-s11729
-i<stdio.h>
-i<string.h>
-i<stdlib.h>
-i"parse.h"
-i"globals_gram.h"
-i"functions.h"
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/grammar.h
-c000000004B1EAB8D00000000000002A8
-t1260301197
-s680
-i"lengths.h"
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/lengths.h
-c000000004B1EABA70000000000000098
-t1260301223
-s152
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/match.c
-c000000004B1EB0D10000000000001EE5
-t1260302545
-s7909
-i<stdio.h>
-i<stdlib.h>
-i<string.h>
-i"parse.h"
-i"globals_parse.h"
-i"functions.h"
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c
-c000000004B1EB0D100000000000016FE
-t1260302545
-s5886
-i<stdio.h>
-i<string.h>
-i<ctype.h>
-i<math.h>
-i<sys/time.h>
-i"parse.h"
-i"functions.h"
-i"pconf.h"
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c
-c000000004B24673600000000000088C7
-t1260676918
-s35015
-i<stdio.h>
-i<string.h>
-i<ctype.h>
-i<math.h>
-i<sys/time.h>
-i"parse.h"
-i"functions.h"
-i"pconf.h"
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.h
-c000000004B24675A0000000000000B43
-t1260676954
-s2883
-i"grammar.h"
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/pconf.c
-c000000004B1EB0D10000000000002155
-t1260302545
-s8533
-i<stdio.h>
-i<ctype.h>
-i<sys/types.h>
-i<string.h>
-i<stdlib.h>
-i"pconf.h"
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/pconf.h
-c000000004B1EAC100000000000000519
-t1260301328
-s1305
-i<sys/types.h>
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/print_structs.c
-c000000004B1EB0A20000000000000EC0
-t1260302498
-s3776
-i<stdio.h>
-i<stdlib.h>
-i<ctype.h>
-i<string.h>
-i"parse.h"
-i"globals_parse.h"
-i"functions.h"
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/libPhoenix.dylib
-t1261425362
-s77336
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/Phoenix.LinkFileList
-c000000004B2FD1A10000000000000395
-t1261425057
-s917
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/dict.o
-t1260676958
-s7072
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/grammar.o
-t1260676958
-s17648
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/match.o
-t1260676958
-s11432
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/nfa_to_dfa.o
-t1260676959
-s14108
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/parse.o
-t1260676959
-s55396
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/pconf.o
-t1260408792
-s16368
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/print_structs.o
-t1260676959
-s11668
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/Phoenix.LinkFileList
-c000000004B2FD2D100000000000003A3
-t1261425361
-s931
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/dict.o
-t1261425361
-s7800
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/grammar.o
-t1261425362
-s18784
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/match.o
-t1261425362
-s12932
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/nfa_to_dfa.o
-t1261425362
-s14600
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/parse.o
-t1261425362
-s59168
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/pconf.o
-t1261425362
-s18384
-
-N/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/print_structs.o
-t1261425362
-s12672
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/dict.c
-c000000004B1EDB8F000000000000066E
-t1260313487
-s1646
-i<stdio.h>
-i<string.h>
-i<ctype.h>
-i"parse.h"
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/functions.h
-c000000004B1EAB510000000000000106
-t1260301137
-s262
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/globals_gram.h
-c000000004B1EAE130000000000000094
-t1260301843
-s148
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/globals_parse.h
-c000000004B1EAB790000000000000698
-t1260301177
-s1688
-i"globals_gram.h"
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/grammar.c
-c000000004B1EBA1F0000000000002DD1
-t1260304927
-s11729
-i<stdio.h>
-i<string.h>
-i<stdlib.h>
-i"parse.h"
-i"globals_gram.h"
-i"functions.h"
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/grammar.h
-c000000004B1EAB8D00000000000002A8
-t1260301197
-s680
-i"lengths.h"
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/lengths.h
-c000000004B1EABA70000000000000098
-t1260301223
-s152
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/match.c
-c000000004B1EB0D10000000000001EE5
-t1260302545
-s7909
-i<stdio.h>
-i<stdlib.h>
-i<string.h>
-i"parse.h"
-i"globals_parse.h"
-i"functions.h"
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c
-c000000004B1EB0D100000000000016FE
-t1260302545
-s5886
-i<stdio.h>
-i<string.h>
-i<ctype.h>
-i<math.h>
-i<sys/time.h>
-i"parse.h"
-i"functions.h"
-i"pconf.h"
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c
-c000000004B24673600000000000088C7
-t1260676918
-s35015
-i<stdio.h>
-i<string.h>
-i<ctype.h>
-i<math.h>
-i<sys/time.h>
-i"parse.h"
-i"functions.h"
-i"pconf.h"
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.h
-c000000004B24675A0000000000000B43
-t1260676954
-s2883
-i"grammar.h"
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/pconf.c
-c000000004B1EB0D10000000000002155
-t1260302545
-s8533
-i<stdio.h>
-i<ctype.h>
-i<sys/types.h>
-i<string.h>
-i<stdlib.h>
-i"pconf.h"
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/pconf.h
-c000000004B1EAC100000000000000519
-t1260301328
-s1305
-i<sys/types.h>
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/print_structs.c
-c000000004B1EB0A20000000000000EC0
-t1260302498
-s3776
-i<stdio.h>
-i<stdlib.h>
-i<ctype.h>
-i<string.h>
-i"parse.h"
-i"globals_parse.h"
-i"functions.h"
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug/libPhoenix.dylib
-t1260676959
-s71092
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/Phoenix.LinkFileList
-c000000004B2092A3000000000000036B
-t1260425891
-s875
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/dict.o
-t1260676958
-s7072
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/grammar.o
-t1260676958
-s17648
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/match.o
-t1260676958
-s11432
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/nfa_to_dfa.o
-t1260676959
-s14108
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/parse.o
-t1260676959
-s55396
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/pconf.o
-t1260408792
-s16368
-
-N/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/print_structs.o
-t1260676959
-s11668
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/dict.c
-c000000004B1EDB8F000000000000066E
-t1260313487
-s1646
-i<stdio.h>
-i<string.h>
-i<ctype.h>
-i"parse.h"
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/functions.h
-c000000004B1EAB510000000000000106
-t1260301137
-s262
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/globals_gram.h
-c000000004B1EAE130000000000000094
-t1260301843
-s148
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/globals_parse.h
-c000000004B1EAB790000000000000698
-t1260301177
-s1688
-i"globals_gram.h"
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/grammar.c
-c000000004B1EBA1F0000000000002DD1
-t1260304927
-s11729
-i<stdio.h>
-i<string.h>
-i<stdlib.h>
-i"parse.h"
-i"globals_gram.h"
-i"functions.h"
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/grammar.h
-c000000004B1EAB8D00000000000002A8
-t1260301197
-s680
-i"lengths.h"
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/lengths.h
-c000000004B1EABA70000000000000098
-t1260301223
-s152
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/match.c
-c000000004B1EB0D10000000000001EE5
-t1260302545
-s7909
-i<stdio.h>
-i<stdlib.h>
-i<string.h>
-i"parse.h"
-i"globals_parse.h"
-i"functions.h"
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c
-c000000004B1EB0D100000000000016FE
-t1260302545
-s5886
-i<stdio.h>
-i<string.h>
-i<ctype.h>
-i<math.h>
-i<sys/time.h>
-i"parse.h"
-i"functions.h"
-i"pconf.h"
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c
-c000000004B1EE32B00000000000088A5
-t1260315435
-s34981
-i<stdio.h>
-i<string.h>
-i<ctype.h>
-i<math.h>
-i<sys/time.h>
-i"parse.h"
-i"functions.h"
-i"pconf.h"
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.h
-c000000004B1EABDA0000000000000B44
-t1260301274
-s2884
-i"grammar.h"
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/pconf.c
-c000000004B1EB0D10000000000002155
-t1260302545
-s8533
-i<stdio.h>
-i<ctype.h>
-i<sys/types.h>
-i<string.h>
-i<stdlib.h>
-i"pconf.h"
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/pconf.h
-c000000004B1EAC100000000000000519
-t1260301328
-s1305
-i<sys/types.h>
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/print_structs.c
-c000000004B1EB0A20000000000000EC0
-t1260302498
-s3776
-i<stdio.h>
-i<stdlib.h>
-i<ctype.h>
-i<string.h>
-i"parse.h"
-i"globals_parse.h"
-i"functions.h"
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/libPhoenix.dylib
-t1260408792
-s70980
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/Phoenix.LinkFileList
-c000000004B204FD8000000000000033A
-t1260408792
-s826
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/dict.o
-t1260408792
-s7060
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/grammar.o
-t1260408792
-s17632
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/match.o
-t1260408792
-s11416
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/nfa_to_dfa.o
-t1260408792
-s14092
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/parse.o
-t1260408792
-s55340
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/pconf.o
-t1260408792
-s16368
-
-N/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/print_structs.o
-t1260408792
-s11656
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies283118161#283118161#0(0"0(0#1#0"4300885448#0"0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/dict.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c normal i386 c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/dict.o /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/dict.c normal i386 c com.apple.compilers.gcc.4_2
-s282369758.711133
-e282369758.825656
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/dict.o
-x/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/dict.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/dict.c: In function 'read_dict':
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/dict.c:29: warning: implicit declaration of function 'calloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/dict.c:29: warning: incompatible implicit declaration of built-in function 'calloc'
-lSLF07#2@76"Compile /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/dict.c282369758#282369758#0(365"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/dict.c: In function 'read_dict':/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/dict.c:29: warning: implicit declaration of function 'calloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/dict.c:29: warning: incompatible implicit declaration of built-in function 'calloc'2(22@41"Implicit declaration of function 'calloc'282369758#95#124#0(6@68"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/dict.c282006287#29#0#29#0#36"implicit declaration of function '*'0(22@63"Incompatible implicit declaration of built-in function 'calloc'282369758#219#146#0(6@68"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/dict.c282006287#29#0#29#0#0"0(0#0#68"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/dict.c4300885448#1438"    cd /Users/bohr/Work/Research/Overhearer/Parser/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/i386 -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/dict.c -o /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/dict.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/dict.o /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/dict.c normal i386 c com.apple.compilers.gcc.4_2
-s282101592.027382
-e282101592.307643
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/dict.o
-x/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/dict.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/dict.c: In function 'read_dict':
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/dict.c:29: warning: implicit declaration of function 'calloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/dict.c:29: warning: incompatible implicit declaration of built-in function 'calloc'
-lSLF07#2@69"Compile /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/dict.c282101592#282101592#0(344"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/dict.c: In function 'read_dict':/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/dict.c:29: warning: implicit declaration of function 'calloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/dict.c:29: warning: incompatible implicit declaration of built-in function 'calloc'2(22@41"Implicit declaration of function 'calloc'282101592#88#117#0(6@61"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/dict.c282006287#29#0#29#0#36"implicit declaration of function '*'0(22@63"Incompatible implicit declaration of built-in function 'calloc'282101592#205#139#0(6@61"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/dict.c282006287#29#0#29#0#0"0(0#0#61"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/dict.c8245930584228258816#1361"    cd /Users/bohr/Work/Research/Overhearer/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/i386 -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/dict.c -o /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/dict.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/grammar.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/grammar.c normal i386 c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/grammar.o /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/grammar.c normal i386 c com.apple.compilers.gcc.4_2
-s282369758.712043
-e282369758.976387
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/grammar.o
-x/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/grammar.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/grammar.c282369758#282369759#0(0"0(0#0#71"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/grammar.c4300885448#1444"    cd /Users/bohr/Work/Research/Overhearer/Parser/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/i386 -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/grammar.c -o /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/grammar.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/grammar.o /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/grammar.c normal i386 c com.apple.compilers.gcc.4_2
-s282101592.055675
-e282101592.338477
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/grammar.o
-x/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/grammar.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@72"Compile /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/grammar.c282101592#282101592#0(0"0(0#0#64"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/grammar.c4300885448#1367"    cd /Users/bohr/Work/Research/Overhearer/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/i386 -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/grammar.c -o /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/grammar.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/match.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/match.c normal i386 c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/match.o /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/match.c normal i386 c com.apple.compilers.gcc.4_2
-s282369758.825751
-e282369758.962331
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/match.o
-x/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/match.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@77"Compile /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/match.c282369758#282369759#0(0"0(0#0#69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/match.c4300885448#1440"    cd /Users/bohr/Work/Research/Overhearer/Parser/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/i386 -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/match.c -o /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/match.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/match.o /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/match.c normal i386 c com.apple.compilers.gcc.4_2
-s282101592.307854
-e282101592.371136
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/match.o
-x/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/match.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@70"Compile /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/match.c282101592#282101592#0(0"0(0#0#62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/match.c4300885448#1363"    cd /Users/bohr/Work/Research/Overhearer/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/i386 -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/match.c -o /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/match.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/nfa_to_dfa.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c normal i386 c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/nfa_to_dfa.o /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c normal i386 c com.apple.compilers.gcc.4_2
-s282369758.962805
-e282369759.039403
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/nfa_to_dfa.o
-x/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c: In function 'main':
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c:77: warning: implicit declaration of function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c:77: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c:100: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c:123: warning: implicit declaration of function 'free'
-lSLF07#2@82"Compile /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c282369758#282369759#0(660"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c: In function 'main':/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c:77: warning: implicit declaration of function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c:77: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c:100: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c:123: warning: implicit declaration of function 'free'4(22@41"Implicit declaration of function 'malloc'282369759#96#130#0(6@74"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c281995345#77#0#77#0#36"implicit declaration of function '*'0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#226#152#0(6@74"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c281995345#77#0#77#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#378#153#0(6@74"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c281995345#100#0#100#0#0"0(22@39"Implicit declaration of function 'free'282369759#531#129#0(6@74"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c281995345#123#0#123#0#36"implicit declaration of function '*'0(0#0#74"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c4300885448#1450"    cd /Users/bohr/Work/Research/Overhearer/Parser/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/i386 -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/nfa_to_dfa.c -o /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/nfa_to_dfa.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/nfa_to_dfa.o /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c normal i386 c com.apple.compilers.gcc.4_2
-s282101592.338571
-e282101592.401588
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/nfa_to_dfa.o
-x/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c: In function 'main':
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c:77: warning: implicit declaration of function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c:77: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c:100: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c:123: warning: implicit declaration of function 'free'
-lSLF07#2@75"Compile /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c282101592#282101592#0(625"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c: In function 'main':/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c:77: warning: implicit declaration of function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c:77: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c:100: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c:123: warning: implicit declaration of function 'free'4(22@41"Implicit declaration of function 'malloc'282101592#89#123#0(6@67"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c281995345#77#0#77#0#36"implicit declaration of function '*'0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#212#145#0(6@67"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c281995345#77#0#77#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#357#146#0(6@67"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c281995345#100#0#100#0#0"0(22@39"Implicit declaration of function 'free'282101592#503#122#0(6@67"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c281995345#123#0#123#0#36"implicit declaration of function '*'0(0#0#67"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c4300885448#1373"    cd /Users/bohr/Work/Research/Overhearer/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/i386 -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/nfa_to_dfa.c -o /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/nfa_to_dfa.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/parse.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c normal i386 c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/parse.o /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c normal i386 c com.apple.compilers.gcc.4_2
-s282369758.976474
-e282369759.144687
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/parse.o
-x/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c: In function 'map_to_frames':
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:486: warning: implicit declaration of function 'free'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c: In function 'extend_map':
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:508: warning: implicit declaration of function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:508: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c: In function 'init_parse':
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:931: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:938: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:945: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:952: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:959: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:967: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:974: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:981: warning: implicit declaration of function 'calloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:981: warning: incompatible implicit declaration of built-in function 'calloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:988: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:995: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:1001: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:1007: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:1013: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:1019: warning: incompatible implicit declaration of built-in function 'calloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:1031: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c: In function 'copy_tree':
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:1192: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:1208: warning: incompatible implicit declaration of built-in function 'malloc'
-lSLF07#2@77"Compile /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369758#282369759#0(3437"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c: In function 'map_to_frames':/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:486: warning: implicit declaration of function 'free'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c: In function 'extend_map':/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:508: warning: implicit declaration of function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:508: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c: In function 'init_parse':/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:931: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:938: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:945: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:952: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:959: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:967: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:974: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:981: warning: implicit declaration of function 'calloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:981: warning: incompatible implicit declaration of built-in function 'calloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:988: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:995: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:1001: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:1007: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:1013: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:1019: warning: incompatible implicit declaration of built-in function 'calloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:1031: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c: In function 'copy_tree':/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:1192: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c:1208: warning: incompatible implicit declaration of built-in function 'malloc'21(22@39"Implicit declaration of function 'free'282369759#100#124#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#486#0#486#0#36"implicit declaration of function '*'0(22@41"Implicit declaration of function 'malloc'282369759#321#126#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#508#0#508#0#36"implicit declaration of function '*'0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#447#148#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#508#0#508#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#692#148#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#931#0#931#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#840#148#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#938#0#938#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#988#148#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#945#0#945#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#1136#148#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#952#0#952#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#1284#148#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#959#0#959#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#1432#148#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#967#0#967#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#1580#148#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#974#0#974#0#0"0(22@41"Implicit declaration of function 'calloc'282369759#1728#126#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#981#0#981#0#36"implicit declaration of function '*'0(22@63"Incompatible implicit declaration of built-in function 'calloc'282369759#1854#148#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#981#0#981#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#2002#148#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#988#0#988#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#2150#148#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#995#0#995#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#2298#149#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#1001#0#1001#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#2447#149#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#1007#0#1007#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#2596#149#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#1013#0#1013#0#0"0(22@63"Incompatible implicit declaration of built-in function 'calloc'282369759#2745#149#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#1019#0#1019#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#2894#149#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#1031#0#1031#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#3139#149#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#1192#0#1192#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282369759#3288#149#0(6@69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c282369718#1208#0#1208#0#0"0(0#0#69"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c4300885448#1440"    cd /Users/bohr/Work/Research/Overhearer/Parser/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/i386 -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/parse.c -o /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/parse.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/parse.o /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c normal i386 c com.apple.compilers.gcc.4_2
-s282101592.371230
-e282101592.536386
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/parse.o
-x/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c: In function 'map_to_frames':
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:486: warning: implicit declaration of function 'free'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c: In function 'extend_map':
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:508: warning: implicit declaration of function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:508: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c: In function 'init_parse':
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:929: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:936: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:943: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:950: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:957: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:965: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:972: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:979: warning: implicit declaration of function 'calloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:979: warning: incompatible implicit declaration of built-in function 'calloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:986: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:993: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:999: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:1005: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:1011: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:1017: warning: incompatible implicit declaration of built-in function 'calloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:1029: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c: In function 'copy_tree':
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:1190: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:1206: warning: incompatible implicit declaration of built-in function 'malloc'
-lSLF07#2@70"Compile /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282101592#282101592#0(3261"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c: In function 'map_to_frames':/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:486: warning: implicit declaration of function 'free'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c: In function 'extend_map':/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:508: warning: implicit declaration of function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:508: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c: In function 'init_parse':/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:929: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:936: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:943: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:950: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:957: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:965: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:972: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:979: warning: implicit declaration of function 'calloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:979: warning: incompatible implicit declaration of built-in function 'calloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:986: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:993: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:999: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:1005: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:1011: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:1017: warning: incompatible implicit declaration of built-in function 'calloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:1029: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c: In function 'copy_tree':/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:1190: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c:1206: warning: incompatible implicit declaration of built-in function 'malloc'21(22@39"Implicit declaration of function 'free'282101592#93#117#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#486#0#486#0#36"implicit declaration of function '*'0(22@41"Implicit declaration of function 'malloc'282101592#300#119#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#508#0#508#0#36"implicit declaration of function '*'0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#419#141#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#508#0#508#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#650#141#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#929#0#929#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#791#141#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#936#0#936#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#932#141#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#943#0#943#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#1073#141#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#950#0#950#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#1214#141#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#957#0#957#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#1355#141#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#965#0#965#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#1496#141#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#972#0#972#0#0"0(22@41"Implicit declaration of function 'calloc'282101592#1637#119#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#979#0#979#0#36"implicit declaration of function '*'0(22@63"Incompatible implicit declaration of built-in function 'calloc'282101592#1756#141#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#979#0#979#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#1897#141#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#986#0#986#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#2038#141#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#993#0#993#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#2179#141#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#999#0#999#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#2320#142#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#1005#0#1005#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#2462#142#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#1011#0#1011#0#0"0(22@63"Incompatible implicit declaration of built-in function 'calloc'282101592#2604#142#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#1017#0#1017#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#2746#142#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#1029#0#1029#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#2977#142#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#1190#0#1190#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'282101592#3119#142#0(6@62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c282008235#1206#0#1206#0#0"0(0#0#62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c4300885448#1363"    cd /Users/bohr/Work/Research/Overhearer/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/i386 -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/parse.c -o /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/parse.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/pconf.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/pconf.c normal i386 c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/pconf.o /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/pconf.c normal i386 c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/pconf.o /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/pconf.c normal i386 c com.apple.compilers.gcc.4_2
-s282101592.401679
-e282101592.492989
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/pconf.o
-x/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/pconf.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@70"Compile /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/pconf.c282101592#282101592#0(0"0(0#0#62"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/pconf.c4300885448#1363"    cd /Users/bohr/Work/Research/Overhearer/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/i386 -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/pconf.c -o /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/pconf.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/print_structs.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/print_structs.c normal i386 c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/print_structs.o /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/print_structs.c normal i386 c com.apple.compilers.gcc.4_2
-s282369759.039704
-e282369759.102326
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/print_structs.o
-x/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/print_structs.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@85"Compile /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/print_structs.c282369759#282369759#0(0"0(0#0#77"/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/print_structs.c4300885448#1456"    cd /Users/bohr/Work/Research/Overhearer/Parser/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/i386 -I/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib/print_structs.c -o /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/print_structs.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/print_structs.o /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/print_structs.c normal i386 c com.apple.compilers.gcc.4_2
-s282101592.493082
-e282101592.550861
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/print_structs.o
-x/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/print_structs.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@78"Compile /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/print_structs.c282101592#282101592#0(0"0(0#0#70"/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/print_structs.c8245930584228258816#1379"    cd /Users/bohr/Work/Research/Overhearer/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/i386 -I/Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib/print_structs.c -o /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/print_structs.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/dict.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c normal x86_64 c com.apple.compilers.gcc.4_2
-s283118161.275602
-e283118161.918436
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/dict.o
-x/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c: In function 'read_dict':
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c:29: warning: implicit declaration of function 'calloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c:29: warning: incompatible implicit declaration of built-in function 'calloc'
-lSLF07#2@82"Compile /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c283118161#283118161#0(383"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c: In function 'read_dict':/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c:29: warning: implicit declaration of function 'calloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c:29: warning: incompatible implicit declaration of built-in function 'calloc'2(22@41"Implicit declaration of function 'calloc'283118161#101#130#0(6@74"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c282006287#29#0#29#0#36"implicit declaration of function '*'0(22@63"Incompatible implicit declaration of built-in function 'calloc'283118161#231#152#0(6@74"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c282006287#29#0#29#0#0"0(0#0#74"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c4300885448#1510"    cd /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/x86_64 -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/dict.c -o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/dict.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/grammar.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/grammar.c normal x86_64 c com.apple.compilers.gcc.4_2
-s283118161.276671
-e283118162.072895
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/grammar.o
-x/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/grammar.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@85"Compile /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/grammar.c283118161#283118162#0(0"0(0#0#77"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/grammar.c4300885448#1516"    cd /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/x86_64 -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/grammar.c -o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/grammar.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/match.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/match.c normal x86_64 c com.apple.compilers.gcc.4_2
-s283118161.918524
-e283118162.060473
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/match.o
-x/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/match.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@83"Compile /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/match.c283118161#283118162#0(0"0(0#0#75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/match.c8245930584228258816#1512"    cd /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/x86_64 -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/match.c -o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/match.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/nfa_to_dfa.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c normal x86_64 c com.apple.compilers.gcc.4_2
-s283118162.060569
-e283118162.209128
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/nfa_to_dfa.o
-x/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c: In function 'main':
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c:77: warning: implicit declaration of function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c:77: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c:100: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c:123: warning: implicit declaration of function 'free'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c: In function 'write_dfa':
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c:211: warning: format '%d' expects type 'int', but argument 5 has type 'long int'
-lSLF07#2@88"Compile /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c283118162#283118162#0(959"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c: In function 'main':/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c:77: warning: implicit declaration of function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c:77: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c:100: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c:123: warning: implicit declaration of function 'free'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c: In function 'write_dfa':/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c:211: warning: format '%d' expects type 'int', but argument 5 has type 'long int'5(22@41"Implicit declaration of function 'malloc'283118162#102#136#0(6@80"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c281995345#77#0#77#0#36"implicit declaration of function '*'0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#238#158#0(6@80"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c281995345#77#0#77#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#396#159#0(6@80"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c281995345#100#0#100#0#0"0(22@39"Implicit declaration of function 'free'283118162#555#135#0(6@80"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c281995345#123#0#123#0#36"implicit declaration of function '*'0(22@66"Format '%d' expects type 'int', but argument 5 has type 'long int'283118162#797#162#0(6@80"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c281995345#211#0#211#0#56"format '*' expects type '*', but argument * has type '*'0(0#0#80"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c4300885448#1522"    cd /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/x86_64 -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/nfa_to_dfa.c -o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/nfa_to_dfa.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/parse.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c normal x86_64 c com.apple.compilers.gcc.4_2
-s283118162.072983
-e283118162.304832
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/parse.o
-x/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c: In function 'map_to_frames':
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:486: warning: implicit declaration of function 'free'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c: In function 'extend_map':
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:508: warning: implicit declaration of function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:508: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c: In function 'init_parse':
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:931: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:938: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:945: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:952: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:959: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:967: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:974: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:981: warning: implicit declaration of function 'calloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:981: warning: incompatible implicit declaration of built-in function 'calloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:988: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:995: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1001: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1007: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1013: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1019: warning: incompatible implicit declaration of built-in function 'calloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1031: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c: In function 'copy_tree':
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1192: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1208: warning: incompatible implicit declaration of built-in function 'malloc'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c: In function 'print_profile':
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1241: warning: format '%d' expects type 'int', but argument 3 has type 'long int'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1244: warning: format '%d' expects type 'int', but argument 3 has type 'long int'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1247: warning: format '%d' expects type 'int', but argument 3 has type 'long int'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1255: warning: format '%d' expects type 'int', but argument 3 has type 'long int'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1259: warning: format '%d' expects type 'int', but argument 3 has type 'long int'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1262: warning: format '%d' expects type 'int', but argument 3 has type 'long int'
-o/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1265: warning: format '%d' expects type 'int', but argument 3 has type 'long int'
-lSLF07#2@83"Compile /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c283118162#283118162#0(4799"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c: In function 'map_to_frames':/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:486: warning: implicit declaration of function 'free'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c: In function 'extend_map':/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:508: warning: implicit declaration of function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:508: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c: In function 'init_parse':/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:931: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:938: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:945: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:952: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:959: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:967: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:974: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:981: warning: implicit declaration of function 'calloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:981: warning: incompatible implicit declaration of built-in function 'calloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:988: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:995: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1001: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1007: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1013: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1019: warning: incompatible implicit declaration of built-in function 'calloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1031: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c: In function 'copy_tree':/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1192: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1208: warning: incompatible implicit declaration of built-in function 'malloc'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c: In function 'print_profile':/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1241: warning: format '%d' expects type 'int', but argument 3 has type 'long int'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1244: warning: format '%d' expects type 'int', but argument 3 has type 'long int'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1247: warning: format '%d' expects type 'int', but argument 3 has type 'long int'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1255: warning: format '%d' expects type 'int', but argument 3 has type 'long int'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1259: warning: format '%d' expects type 'int', but argument 3 has type 'long int'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1262: warning: format '%d' expects type 'int', but argument 3 has type 'long int'/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c:1265: warning: format '%d' expects type 'int', but argument 3 has type 'long int'28(22@39"Implicit declaration of function 'free'283118162#106#130#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#486#0#486#0#36"implicit declaration of function '*'0(22@41"Implicit declaration of function 'malloc'283118162#339#132#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#508#0#508#0#36"implicit declaration of function '*'0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#471#154#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#508#0#508#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#728#154#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#931#0#931#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#882#154#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#938#0#938#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#1036#154#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#945#0#945#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#1190#154#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#952#0#952#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#1344#154#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#959#0#959#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#1498#154#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#967#0#967#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#1652#154#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#974#0#974#0#0"0(22@41"Implicit declaration of function 'calloc'283118162#1806#132#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#981#0#981#0#36"implicit declaration of function '*'0(22@63"Incompatible implicit declaration of built-in function 'calloc'283118162#1938#154#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#981#0#981#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#2092#154#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#988#0#988#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#2246#154#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#995#0#995#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#2400#155#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#1001#0#1001#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#2555#155#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#1007#0#1007#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#2710#155#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#1013#0#1013#0#0"0(22@63"Incompatible implicit declaration of built-in function 'calloc'283118162#2865#155#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#1019#0#1019#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#3020#155#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#1031#0#1031#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#3277#155#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#1192#0#1192#0#0"0(22@63"Incompatible implicit declaration of built-in function 'malloc'283118162#3432#155#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#1208#0#1208#0#0"0(22@66"Format '%d' expects type 'int', but argument 3 has type 'long int'283118162#3693#158#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#1241#0#1241#0#56"format '*' expects type '*', but argument * has type '*'0(22@66"Format '%d' expects type 'int', but argument 3 has type 'long int'283118162#3851#158#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#1244#0#1244#0#56"format '*' expects type '*', but argument * has type '*'0(22@66"Format '%d' expects type 'int', but argument 3 has type 'long int'283118162#4009#158#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#1247#0#1247#0#56"format '*' expects type '*', but argument * has type '*'0(22@66"Format '%d' expects type 'int', but argument 3 has type 'long int'283118162#4167#158#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#1255#0#1255#0#56"format '*' expects type '*', but argument * has type '*'0(22@66"Format '%d' expects type 'int', but argument 3 has type 'long int'283118162#4325#158#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#1259#0#1259#0#56"format '*' expects type '*', but argument * has type '*'0(22@66"Format '%d' expects type 'int', but argument 3 has type 'long int'283118162#4483#158#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#1262#0#1262#0#56"format '*' expects type '*', but argument * has type '*'0(22@66"Format '%d' expects type 'int', but argument 3 has type 'long int'283118162#4641#158#0(6@75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c282369718#1265#0#1265#0#56"format '*' expects type '*', but argument * has type '*'0(0#0#75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c4300885448#1512"    cd /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/x86_64 -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/parse.c -o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/parse.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/pconf.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/pconf.c normal x86_64 c com.apple.compilers.gcc.4_2
-s283118162.209217
-e283118162.306860
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/pconf.o
-x/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/pconf.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@83"Compile /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/pconf.c283118162#283118162#0(0"0(0#0#75"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/pconf.c4300885448#1512"    cd /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/x86_64 -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/pconf.c -o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/pconf.o0#
-
-CCompileC build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/print_structs.o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/print_structs.c normal x86_64 c com.apple.compilers.gcc.4_2
-s283118162.304942
-e283118162.360372
-r1
-xCompileC
-xbuild/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/print_structs.o
-x/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/print_structs.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@91"Compile /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/print_structs.c283118162#283118162#0(0"0(0#0#83"/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/print_structs.c4300885448#1528"    cd /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-generated-files.hmap -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-own-target-headers.hmap -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-all-target-headers.hmap -iquote /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Phoenix-project-headers.hmap -F/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/include -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources/x86_64 -I/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/DerivedSources -c /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib/print_structs.c -o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/print_structs.o0#
-
-CLd /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/libPhoenix.dylib normal i386
-s283117857.888033
-e283117858.306231
-r1
-xLd
-x/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/libPhoenix.dylib
-xnormal
-xi386
-lSLF07#2@91"Link /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/libPhoenix.dylib283117857#283117858#0(0"0(0#0#0"31244169096724528#788"    cd /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch i386 -dynamiclib -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug -L/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib -F/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug -filelist /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/Phoenix.LinkFileList -install_name /usr/local/lib/libPhoenix.dylib -mmacosx-version-min=10.6 -single_module -compatibility_version 1 -current_version 1 -o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/libPhoenix.dylib0#
-
-CLd /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/libPhoenix.dylib normal x86_64
-s283118162.360461
-e283118162.436826
-r1
-xLd
-x/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/libPhoenix.dylib
-xnormal
-xx86_64
-lSLF07#2@91"Link /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/libPhoenix.dylib283118162#283118162#0(0"0(0#0#0"4300885448#792"    cd /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -dynamiclib -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug -L/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/ParserLib -F/Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug -filelist /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/x86_64/Phoenix.LinkFileList -install_name /usr/local/lib/libPhoenix.dylib -mmacosx-version-min=10.6 -single_module -compatibility_version 1 -current_version 1 -o /Users/bohr/Work/Research/Overhearer/DMLib/Parser/Phoenix/build/Debug/libPhoenix.dylib0#
-
-CLd /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug/libPhoenix.dylib normal i386
-s282369759.144764
-e282369759.538241
-r1
-xLd
-x/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug/libPhoenix.dylib
-xnormal
-xi386
-lSLF07#2@85"Link /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug/libPhoenix.dylib282369759#282369759#0(0"0(0#0#0"4300885448#752"    cd /Users/bohr/Work/Research/Overhearer/Parser/Phoenix    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch i386 -dynamiclib -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug -L/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/ParserLib -F/Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug -filelist /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/Phoenix.LinkFileList -install_name /usr/local/lib/libPhoenix.dylib -mmacosx-version-min=10.6 -single_module -compatibility_version 1 -current_version 1 -o /Users/bohr/Work/Research/Overhearer/Parser/Phoenix/build/Debug/libPhoenix.dylib0#
-
-CLd /Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/libPhoenix.dylib normal i386
-s282101592.550947
-e282101592.788511
-r1
-xLd
-x/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/libPhoenix.dylib
-xnormal
-xi386
-lSLF07#2@78"Link /Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/libPhoenix.dylib282101592#282101592#0(0"0(0#0#0"4300885448#710"    cd /Users/bohr/Work/Research/Overhearer/Phoenix    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch i386 -dynamiclib -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug -L/Users/bohr/Work/Research/Overhearer/Phoenix/ParserLib -F/Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug -filelist /Users/bohr/Work/Research/Overhearer/Phoenix/build/Phoenix.build/Debug/libPhoenix.build/Objects-normal/i386/Phoenix.LinkFileList -install_name /usr/local/lib/libPhoenix.dylib -mmacosx-version-min=10.6 -single_module -compatibility_version 1 -current_version 1 -o /Users/bohr/Work/Research/Overhearer/Phoenix/build/Debug/libPhoenix.dylib0#
-

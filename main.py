@@ -16,6 +16,8 @@ from DMLib.DialogueManager import DialogueManager
 
 urls = (
   "/dialogues/(.+)/map/?", "MapHandler",
+  "/dialogues/(.+)/responses/?", "ResponsesHandler",
+  "/dialogues/(.+)/responses/(.+)/?", "ResponseHandler",
   "/dialogues/(.+)/plangraph/?", "PlanGraphHandler",
   "/dialogues/(.+)/participants/(.+)/?", "ParticipantHandler",
   "/dialogues/(.+)/participants/?", "ParticipantsHandler",
@@ -49,7 +51,37 @@ class MapHandler:
     else:
       response = {}
       response["status"] = "error"
-      response["message"] = "the dialogue (%d) does not exists!" % dialogueId
+      response["message"] = "the dialogue (%s) does not exists!" % dialogueId
+      return json.dumps(response)
+
+class ResponsesHandler:        
+  def GET(self, dialogueId):
+    dialogue = getDialogueById(dialogueId)
+    if dialogue:
+      response = dialogue.getResponses()
+    else:
+      response = {}
+      response["status"] = "error"
+      response["message"] = "the dialogue (%s) does not exists!" % dialogueId
+    return json.dumps(response)
+
+class ResponseHandler:        
+  def GET(self, dialogueId, responderId):
+    dialogue = getDialogueById(dialogueId)
+    if dialogue:
+      response = dialogue.getResponseContent(responderId)
+      if response.has_key("status") and response["status"] == "error":
+        return json.dumps(response)
+      elif response["type"] == "map":
+        web.header('Content-Type', 'text/xml')
+        return response["content"]
+      elif response["type"] == "text":
+        web.header('Content-Type', 'text/plain')
+        return response["content"]
+    else:
+      response = {}
+      response["status"] = "error"
+      response["message"] = "the dialogue (%s) does not exists!" % dialogueId
       return json.dumps(response)
 
 class PlanGraphHandler:        
@@ -61,7 +93,7 @@ class PlanGraphHandler:
     else:
       response = {}
       response["status"] = "error"
-      response["message"] = "the dialogue (%d) does not exists!" % dialogueId
+      response["message"] = "the dialogue (%s) does not exists!" % dialogueId
       return json.dumps(response)
       
     
@@ -92,7 +124,7 @@ class ParticipantsHandler:
         response["message"] = "the participant id must be specified!"
     else: 
       response["status"] = "error"
-      response["message"] = "the dialogue (%d) does not exists!" % dialogueId
+      response["message"] = "the dialogue (%s) does not exists!" % dialogueId
     return json.dumps(response)  
     
 class MessageHandler:        
@@ -119,7 +151,6 @@ class MessagesHandler:
     else: 
       response["status"] = "error"
       response["message"] = "the dialogue (%s) does not exists!" % dialogueId
-    response["dialogueId"] = dialogueId
     return json.dumps(response)  
   
             

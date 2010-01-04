@@ -20,10 +20,10 @@ import BasicActions
 
 class PlanGraph():
   """model the plan graph"""
-  def __init__(self, kb, mapCtrl):
+  def __init__(self, kb, executor):
     self.properties = ("root", "focus", "agenda")
     self.kb = kb
-    self.mapCtrl = mapCtrl
+    self.executor = executor
     self.root = None
     self.focus = []
     self.agenda = []
@@ -223,7 +223,7 @@ class PlanGraph():
       else:
         plan.mentalState.intention = int_intendTo
         self.agenda.append(plan)
-        BasicActions.execute(plan, self.mapCtrl)
+        self.executor.execute(plan)
               
   def __elaborateParamNode(self, param):
     """docstring for __elaborateParamNode"""

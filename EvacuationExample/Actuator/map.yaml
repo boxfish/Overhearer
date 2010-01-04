@@ -1,0 +1,12 @@
+output_dir: /Users/bohr/Work/Research/Overhearer/static/data/map_resp
+output_url: http://localhost:8080/static/data/map_resp
+data_dir: MapData
+mapnik_template_dir: MapTemplates/mapnik
+ol_template_dir: MapTemplates
+title_server:
+  base_url: http://localhost:8080/maps
+projection: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over
+preview:
+  width: 450
+  height: 450
+  type: png

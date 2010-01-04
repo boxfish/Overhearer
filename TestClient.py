@@ -44,6 +44,15 @@ def main():
   print "add new message: %s" % message["message"]
   print data
   f.close()
+  responderId = "-1"
+  data = json.loads(data)
+  if type(data) == list:
+    for response in data:
+      if response["type"] == "map":
+        # get the first map response
+        print "ID:" + response["id"]
+        responderId = response["id"]
+        break
   
   # 4. Get the current planGraph
   url = "http://127.0.0.1:8080/dialogues/test123/plangraph/"
@@ -53,8 +62,8 @@ def main():
   print data
   f.close()
 
-  # 5. Get the current map
-  url = "http://127.0.0.1:8080/dialogues/test123/map/"
+  # 5. Get the first map response
+  url = "http://127.0.0.1:8080/dialogues/test123/responses/%s" % responderId
   f = urllib2.urlopen(url)
   data = f.read()
   print "the current map:"

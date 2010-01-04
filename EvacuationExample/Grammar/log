@@ -1,8 +1,0 @@
-[Evacuation]  14 states  26 arcs
-[Task_Context]  3 states  2 arcs
-[Incidence_Location]  6 states  5 arcs
-[EPZ]  5 states  7 arcs
-[Distance]  2 states  5 arcs
-[PlumeModel]  3 states  2 arcs
-[WindCondition]  4 states  3 arcs
-[Order_Evacuation]  3 states  2 arcs

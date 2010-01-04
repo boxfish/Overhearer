@@ -13,15 +13,23 @@ import copy
 import xml.dom.minidom as minidom
 import uuid
 
-from Request import *
-from Response import *
 from PhoenixParser import *
 from PlanGraph import *
 from MapControl import *
 from KBaseSqlite import *
 from KBasePostgresql import *
 
+def append_dir(dir):
+  print dir
+  sys.path.append(dir)
 
+def check_validity(config):
+  """check the validity of Config"""
+  if config.has_key("context") and config.has_key("parser_dir") and config.has_key("kbase") and config.has_key("actuator_dir") and config.has_key("executor") and config.has_key("responders"):
+    if len(config["responders"]) > 0:
+      return True
+  return False
+  
 class DialogueManager():
   """manage the dialogue process"""
   def __init__(self, config, id=""):
@@ -30,19 +38,32 @@ class DialogueManager():
     else:
       # make a random id
       self.id = str(uuid.uuid4())
-    if config.has_key("context") and config.has_key("kbase"):
-      #context = "EvacuationExample"
-      self.parser = PhoenixParser(config["context"] + "/config")
-      self.participants = []
-      #self.kb = KnowledgeBase(context + "/kboop.sqlite")
+    self.participants = []
+    if check_validity(config):
+      self.context = config["context"]
+      # create parser
+      self.parser = PhoenixParser(self.context + config["parser_dir"] + "/config")
+      # create knowledge base
       self.kb = self.__createKBase(config["kbase"])
-      self.mapCtrl = OLMapControl(config["context"] + "/basemap.xml")
-      self.planGraph = PlanGraph(kb=self.kb, mapCtrl=self.mapCtrl)
+      # add the actuator directory to PYTHONPATH
+      append_dir(os.path.dirname(__file__) + "/../"  + self.context + config["actuator_dir"]) 
+      # import the executor and create a new instance
+      _executor = __import__(config["executor"]["module"])
+      self.executor = getattr(_executor, config["executor"]["class"])()
+      # create the plangraph
+      self.planGraph = PlanGraph(kb=self.kb, executor=self.executor)
+      # import all the responders and create new instances
+      self.responders = []
+      counter = 0
+      for responder in config["responders"]:
+        _responder = __import__(responder["module"])
+        self.responders.append(getattr(_responder, responder["class"])(str(counter), self))
+        counter = counter + 1
   
   def __createKBase(self, kbase):
     """docstring for create"""
     if kbase["type"] == "sqlite":
-      return KBaseSqlite(kbase["fname"])
+      return KBaseSqlite(self.context + kbase["dbfile"])
     elif kbase["type"] == "postgresql":
       dsn = " ".join(["%s=%s" % (k, v) for k, v in kbase.items() if k != "type"])
       return KBasePostgresql(dsn)
@@ -81,13 +102,25 @@ class DialogueManager():
     # Step 3: Elaborating
     self.planGraph.elaborate()
     # Step 4: Geenrating Response
-    # generate the response message
-    return self.__generateResponse()
+    # generate the responses    
+    for responder in self.responders:
+      responder.generate()
+    return self.getResponses()
   
   def getPlanGraphXML(self):
     """docstring for getPlanGraphXML"""
     return self.planGraph.saveXML()
   
+  def getResponseContent(self, responderId):
+    """get the response content of a particular responder"""
+    for responder in self.responders:
+      if responder.id == responderId:
+        return responder.getResponseContent()
+    response = {}
+    response["status"] = "error"
+    response["message"] = "the responder (%s) does not exists!" % responderId
+    return response
+    
   def getMapXML(self):
     """docstring for getMapXML"""
     """
@@ -102,11 +135,19 @@ class DialogueManager():
     """
     return self.mapCtrl.saveXML()
 
-  def __generateResponse(self):
-    """docstring for __generateResponse"""
-    response = {}
-    response["status"] = "success"
-    return response
+  def getResponses(self):
+    """get the responses from all responders"""
+    responses = []
+    for responder in self.responders:
+      response = responder.getResponse()
+      if response:
+        responses.append(response)
+    if len(responses) == 0:
+      response = {}
+      response["status"] = "error"
+      response["message"] = "there is no response at this moment!"
+      return response
+    return responses
     
 def main():
   dlgManager = DialogueManager()
