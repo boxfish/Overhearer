@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Replace these three settings.
+PROJNAME="Overhearer"
+PROJDIR=`pwd`
+PIDFILE="$PROJDIR/$PROJNAME.pid"
+SOCKET="$PROJDIR/$PROJNAME.sock"
+
+cd $PROJDIR
+if [ "$1" = "stop" ]
+then
+        kill `cat -- $PIDFILE`
+        rm -f -- $PIDFILE
+        rm -f -- $SOCKET
+elif [ "$1" = "start" ]
+then
+    ./manage.py runfcgi socket=$SOCKET pidfile=$PIDFILE
+    chmod 777 $SOCKET
+fi

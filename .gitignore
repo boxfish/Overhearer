@@ -5,3 +5,4 @@ backup/
 static/data/map_resp/
 DMLib/libPhoenix.dylib
 Parser/Phoenix/build/
+*.sqlite

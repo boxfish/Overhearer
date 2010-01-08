@@ -1,0 +1,65 @@
+# Setting up Web Server using Lighttpd
+
+## lighttpd Configuration
+
++	Make sure lighttpd is installed on the machine.
+
++	The configuration file for lighttpd is located at: `/opt/local/etc/lighttpd/lighttpd.conf`
+
++	Test the server using the commond:
+	
+		sudo lighttpd -f /opt/local/etc/lighttpd/lighttpd.conf -D
+	
++ 	Use the launchctl commands to allow automatically lauch lighttpd on (re)boot
+	
+	Start Service:
+	 
+		sudo launchctl load -w /Library/LaunchDaemons/org.macports.lighttpd.plist
+	
+	Stop Service: 
+	
+		sudo launchctl unload /Library/LaunchDaemons/org.macports.lighttpd.plist
+	
+	`-w` option is used to record the action when the system is restarted next time
+
+## Hosting static web pages
+		
++	Make directories to host static files and make sure the appropriate access rights to them: 
+	  	
+		sudo mkdir /www/pages
+		sudo mkdir /www/logs
+		
++	In the configuration file, specify the document-root and log directories:
+		
+		server.document-root = "/www/pages/"
+		server.errorlog	= "/www/logs/error.log"
+		server.accesslog	= "/www/logs/access.log"
+		
++	Copy web page files into the /www/pages/ or use `rsync`
+			
+		rsync -ave ssh /Users/bohr/Sites/spatiallab.ist.psu.edu/_site/ byu@spatiallab.ist.psu.edu:/www/pages/
+
+## Hosting django project
+
++	Start the [FastCGI daemon](http://docs.djangoproject.com/en/dev/howto/deployment/fastcgi/) on the django project. The `runfcgi` script inside the django project can be used to start and stop the fastcgi daemon:
+			
+		./runfcgi start
+		./runfcgi stop
+		
+	Before running the script, remember to modify the script to make sure the project name and project directory are correct.
+		
++	Modify the fastcgi section of the lighttpd configuration file (`/opt/local/etc/lighttpd/lighttpd.conf`):
+	
+	+	Make sure the `mod_fastcgi` and `mod_rewrite` are uncommented.
+	+	Modify the socket setting for each of the fastcgi module to match the one used in the factcgi daemon
+	+	Make sure the `url.rewrite-once` section is correct, so that the url is sent to the corresponding fastcgi module.
+	+ 	Reload the lighttpd to make it work.
+		
+## References
+
++ <http://docs.djangoproject.com/en/dev/howto/deployment/fastcgi/>
++ <http://redmine.lighttpd.net/wiki/lighttpd/Docs:ModFastCGI>
++ <http://akelos.org/wiki/setting-up-akelos-on-lighttpd-in-a-mac>
++ <http://developer.apple.com/macosx/launchd.html>
+
+	

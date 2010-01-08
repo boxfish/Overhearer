@@ -58,7 +58,7 @@ class ResponsesHandler:
   def GET(self, dialogueId):
     dialogue = getDialogueById(dialogueId)
     if dialogue:
-      response = dialogue.getResponses()
+      response = dialogue.getCurrentResponses()
     else:
       response = {}
       response["status"] = "error"
