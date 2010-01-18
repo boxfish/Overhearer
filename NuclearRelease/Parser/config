@@ -1,0 +1,5 @@
+verbose:2
+extract:1
+dir:NuclearRelease/Parser/Grammar
+grammar:NR.net
+PROFILE:0

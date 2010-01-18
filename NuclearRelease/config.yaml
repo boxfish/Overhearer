@@ -1,0 +1,72 @@
+# the context/scenario to be used by the dialogue manager
+# must have a folder with the same name including all the relevant inforamtion: grammar, parser config file, map templates, and knowledge base if using sqlite
+context: NuclearRelease
+parser_dir: /Parser
+kbase:
+  # -------------------
+  # sqlite
+  # type: sqlite
+  # dbfile: /KBase/kboop.sqlite
+  # -------------------
+  # -------------------
+  # postgresql
+  type: postgresql
+  host: localhost
+  port: 5432
+  dbname: nuclear_release
+  user: admin
+  password: 309ist
+  # -------------------
+# the directory including at least one executor and one responder
+actuator_dir: /Actuator
+# the executor defines the basic actions that the system can perform as defined in the knowledge base
+executor: 
+  module: NRExecutor
+  class: NRExecutor
+  params:
+      datasource:
+          type: postgresql
+          host: localhost
+          port: 5432
+          dbname: nuclear_release
+          user: admin
+          password: 309ist
+responders: 
+  # it is possible to have multiple responders, e.g. different modals, or different experimental strategies
+  #- module: TextResponder
+  #  class: TextResponder
+  - module: MapnikResponder
+    class: MapnikResponder
+    params:
+        kbase: ReasoningRules
+        testcase: 1
+  - module: MapnikResponder
+    class: MapnikResponder
+    params:
+        kbase: ReasoningRules
+        testcase: 2
+  #- module: MapnikResponder
+  #  class: MapnikResponder
+  #  params:
+  #      kbase: ReasoningRules
+  #      testcase: 3
+  - module: MapnikResponder
+    class: MapnikResponder
+    params:
+        kbase: ReasoningRules
+        testcase: 4
+  - module: MapnikResponder
+    class: MapnikResponder
+    params:
+        kbase: ReasoningRules
+        testcase: 5
+  - module: MapnikResponder
+    class: MapnikResponder
+    params:
+        kbase: ReasoningRules
+        testcase: 6
+  #- module: MapnikResponder
+  #  class: MapnikResponder
+  #  params:
+  #      kbase: ReasoningRules
+  #      testcase: 7

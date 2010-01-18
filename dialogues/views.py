@@ -19,6 +19,7 @@ except ImportError:
 
 # maintain the list of ongoing dialogues
 currDialogues = []
+
 def getDialogueById(dialogueId):
   """docstring for __getDialogueById"""
   if dialogueId:

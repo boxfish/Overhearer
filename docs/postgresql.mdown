@@ -1,0 +1,121 @@
+# Mapnik + PostGIS + OSM
+
+## Install Mapnik
+
+Follow the instruction at <http://trac.mapnik.org/wiki/MacInstallation>
+
+## Install PostgresSQL + PostGIS
+
++	Install PostgresSQL at <http://www.kyngchaos.com/software:postgres>
+
++	Install GEOS and PROJ framework at <http://www.kyngchaos.com/software:frameworks>
+
++	Install PostGIS at http://www.kyngchaos.com/software:postgres
+
++	Install PgAdmin3
+
++	Build the intarray module that osm2pgsql uses to create updatable Postgres OSM mirrors
+	
+	+	First, download the source [tarball](http://www.postgresql.org/ftp/source/v8.4.1/) corresponding to the version you already have installed
+	
+	+	Extract it to /usr/local/src
+	
+	+	Do a simplified build:
+		
+			$ cd postgresql-8.4.1/
+			$ CFLAGS="-Os -D_FILE_OFFSET_BITS=64" \
+    		./configure --with-openssl --with-pam --with-krb5 --with-ldap \
+    		--enable-thread-safety --with-bonjour --with-python --without-perl
+			$ make -j8
+			
+	+	Now that intarray can be linked in a build environment, build it:
+	
+			$ cd contrib/intarray
+			$ make
+			$ sudo make install
+			
+## Setup PostgreSQL + PostGIS
+
++	Initialize the database
+
+		sudo -u postgres /usr/local/pgsql/bin/initdb -D /usr/local/pgsql/data --encoding=UTF8 --locale=en_US
+
++	Start the database manually:
+
+		sudo -u postgres /usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data
+		sudo -u postgres /usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data
+	
+	or add it as a system service:
+
+		sudo launchctl unload -w /Library/LaunchDaemons/org.postgresql.postgres.plist
+		sudo launchctl load -w /Library/LaunchDaemons/org.postgresql.postgres.plist
+
++	Create the admin user and change `/usr/local/pgsql/data/postgresql.conf` and `pg_hba.conf` to allow remote access.
+		
++	Create a database named `template_postgis` as the template database for PostGIS. Then perform the following operations to add the spatial components
+	
+		sudo -u postgres /usr/local/pgsql/bin/createlang plpgsql template_postgis
+		sudo -u postgres /usr/local/pgsql/bin/psql -d template_postgis -f /usr/local/pgsql/share/contrib/postgis.sql
+		sudo -u postgres /usr/local/pgsql/bin/psql -d template_postgis -f /usr/local/pgsql/share/contrib/spatial_ref_sys.sql
+
+## Setup Knowledge Base
+
++	Create a database named `kbase` as the template database for knowledge base. Then create the tables using the `kbase.sql`
+
++	Create a database named `evacuation` for the evacuation scenario, using `kbase` as the template. Then add data into the knowledge using the `evacuation.sql`
+
+## Setup OSM 
+
++	Create a database named `osm` with `admin` as the owner, `template_postgis` as the template
+, and change the owners of the spatial metadata tables (`spatial_ref_sys` and `spatial_ref_sys`) to `admin`
+
++	Add support for `intarray` module:
+		
+		sudo -u postgres /usr/local/pgsql/bin/psql -d osm -f /usr/local/pgsql/share/contrib/_int.sql
+
++	Install `osm2pgsql`
+		
+	+	Download from the svn:
+	
+			svn co http://svn.openstreetmap.org/applications/utils/export/osm2pgsql/
+	
+	+	Add `/usr/local/pgsql/bin` to `$PATH`
+		
+			export PATH=${PATH}:/usr/local/pgsql/bin
+	
+	+	Run `make` in the `osm2pgsql` directory
+	
+	+	Install it for system use:
+		
+			sudo install -m 0755 osm2pgsql /usr/local/bin
+			sudo mkdir /usr/share/osm2pgsql
+			sudo install default.style /usr/share/osm2pgsql
+	
+	+	Download the osm data and use `osm2pgsql` to import the data:
+	
+			osm2pgsql -U admin -m -d osm ~/Downloads/pennsylvania.osm.administrative.bz2
+
+# Using OSM
+
++	Download the Coastlines Shapefiles
+	
+		curl -O http://tile.openstreetmap.org/world_boundaries-spherical.tgz # (50M)
+		curl -O http://tile.openstreetmap.org/processed_p.tar.bz2 # (227M)
+		curl -O http://tile.openstreetmap.org/shoreline_300.tar.bz2 # (46M)
+		
+		tar xvf world_boundaries-spherical.tgz # creates a 'world_boundaries' folder
+    	tar xvf processed_p.tar.bz2
+    	mv processed_p* world_boundaries/
+    	tar xvf shoreline_300.tar.bz2
+    	mv shoreline_300* world_boundaries/
+
++	Generate the map xml file
+
+		./generate_xml.py osm.xml my_map.xml --host 'localhost' --port 5432 --dbname osm --user admin --password '309ist' --world_boundaries '../data/world_boundaries'
+		
+# References:
+
++	<http://www.kyngchaos.com/macosx:index>
++	<http://mojodna.net/2009/12/05/the-os-x-spatial-stack.html>
++	<http://wiki.openstreetmap.org/wiki/Mapnik#Rendering_with_Mapnik>
++	<http://trac.mapnik.org/wiki/MacInstallation>	

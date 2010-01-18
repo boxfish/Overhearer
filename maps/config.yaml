@@ -1,0 +1,10 @@
+mapfile_dir: mapfiles
+static:
+    width: 450
+    height: 450
+tiles:
+    size: 256
+    buffer_size: 128
+    max_zoom: 22
+    caching_map: 50
+    caching_image: false

@@ -12,21 +12,13 @@ import os
 
 class TextResponder():
   """the default responder, which outputs the result from the executor"""
-  def __init__(self, id, dialogue, kb = None, planGraph = None, executor = None):
+  def __init__(self, id, dialogue, params = None):
     self.id = id
     self.dialogue = dialogue
-    if kb != None:
-      self.kb = kb
-    else:
-      self.kb = self.dialogue.kb
-    if planGraph != None:
-      self.planGraph = planGraph
-    else:
-      self.planGraph = self.dialogue.planGraph
-    if executor != None:
-      self.executor = executor
-    else:
-      self.executor = self.dialogue.executor
+    self.params = params
+    self.kb = self.dialogue.kb
+    self.planGraph = self.dialogue.planGraph
+    self.executor = self.dialogue.executor
     self.type = "text"  # the type of generated response content (e.g. text message, map, etc...)
 
   def getResponseContent(self):

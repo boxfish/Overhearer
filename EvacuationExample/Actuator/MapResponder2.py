@@ -10,92 +10,82 @@ __author__ = 'byu@ist.psu.edu (Bo Yu)'
 import sys
 import os
 import datetime
-import shutil
-import yaml
 import mapnik
 
-class MapResponder2():
+# append the DMLib and local directories to PYTHONPATH
+local_dir = os.path.dirname(__file__)
+sys.path.append(local_dir)
+from olMapControl import olMapControl
+from MapnikResponder import MapnikResponder
+from MapnikResponder import PreviewThread
+
+class MapResponder2(MapnikResponder):
   """the default map responder, which outputs the result from the executor"""
-  def __init__(self, id, dialogue, kb = None, planGraph = None, executor = None):
-    self.id = id
-    self.dialogue = dialogue
-    if kb != None:
-      self.kb = kb
-    else:
-      self.kb = self.dialogue.kb
-    if planGraph != None:
-      self.planGraph = planGraph
-    else:
-      self.planGraph = self.dialogue.planGraph
-    if executor != None:
-      self.executor = executor
-    else:
-      self.executor = self.dialogue.executor
-    self.type = "map"  # the type of generated response content (e.g. text message, map, etc...)
-    f = open(os.path.dirname(__file__) +'/map.yaml')
-    self.config = yaml.load(f)
-    f.close()
-    self.output_dir = self.config["output_dir"] + "/" + self.dialogue.id + "/" + self.id
-    if not os.path.exists(self.output_dir):
-      os.makedirs(self.output_dir)
-    self.output_url = self.config["output_url"] + "/" + self.dialogue.id + "/" + self.id
+  def __init__(self, id, dialogue, params = None):
+    MapnikResponder.__init__(self, id, dialogue, params)
     
   def getResponseContent(self):
     """return the generated content of this responder"""
+    
+    self.olMapCtrl.setMapExtent(self.bbox[0], self.bbox[1], self.bbox[2], self.bbox[3])
+    layerInfo = {}
+    layerInfo["name"] = "mapnik"
+    layerInfo["title"] = "mapnik"
+    layerInfo["url"] = self.output_base_url + "/" + self.timestamp + "/tiles/${z}/${x}/${y}.png"
+    self.olMapCtrl.addMapLayer("XYZ", layerInfo)
     response = {}
     response["type"] = self.type
-    response["content"] = self.executor.mapCtrl.saveXML()
+    response["content"] = self.olMapCtrl.saveXML()
     return response
   
   def __generateMapFile(self):
     """docstring for __generateMapFile"""
     # load the base map template
-    mapnik_map_file = os.path.dirname(__file__) + "/" + self.config["mapnik_template_dir"] + "/basemap.xml"
+    mapnik_map_file = os.path.join(os.path.dirname(__file__), self.config["mapnik_template_dir"], "basemap.xml")
     # do some modification to the map file
-    m = mapnik.Map(256, 256, str(self.config["projection"]))
-    mapnik.load_map(m, mapnik_map_file)
+    m = mapnik.Map(256, 256)
+    mapnik.load_map(m, str(mapnik_map_file))
     
-    lyr = mapnik.Layer('administrative', '+proj=latlong +datum=WGS84')
-    lyr.datasource = mapnik.Shapefile(file=os.path.dirname(__file__) + "/" + self.config["data_dir"] + "/PA_Shape/pennsylvania_administrative")
-    lyr.styles.append('admin')
+    lyr = mapnik.Layer('world_merc', m.srs)
+    layer_file = os.path.join(os.path.dirname(__file__), self.config["data_dir"], "world_merc")
+    lyr.datasource = mapnik.Shapefile(file=str(layer_file))
+    lyr.styles.append('population')
+    lyr.styles.append('countries_label')
     m.layers.append(lyr)
     # copy the map file to the output directory
-    self.mapfile = str(self.output_dir+"/map.xml")
-    mapnik.save_map(m, self.mapfile)
-    #shutil.copy2(mapnik_map_file, self.mapfile)
+    
+    output_dir = os.path.join(self.output_base_dir, self.timestamp)
+    if not os.path.exists(output_dir):
+      os.makedirs(output_dir)
+    output_mapfile = os.path.join(output_dir, 'map.xml')
+    mapnik.save_map(m, str(output_mapfile))
   
   def __generatePreview(self):
     """docstring for __generatePreview"""
-    width = self.config["preview"]["width"]
-    height = self.config["preview"]["height"]
-    m = mapnik.Map(width, height)
-    mapnik.load_map(m, self.mapfile)
-    prj = mapnik.Projection(self.config["projection"])
-    c0 = prj.forward(mapnik.Coord(self.bbox[0],self.bbox[1]))
-    c1 = prj.forward(mapnik.Coord(self.bbox[2],self.bbox[3]))
-    m.zoom_to_box(mapnik.Envelope(c0.x, c0.y, c1.x, c1.y))
-    img = mapnik.Image(width, height)
-    mapnik.render(m, img)
-    view = img.view(0, 0, width, height)
-    filename = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S") + "." + self.config["preview"]["type"]
-    view.save(str(self.output_dir + "/" + filename), str(self.config["preview"]["type"]))
-    self.preview = self.output_url + "/" + filename      
+    request = {}
+    request["width"] = int(self.config["preview"]["width"])
+    request["height"] = int(self.config["preview"]["height"])
+    request["minx"] = self.bbox[0]
+    request["miny"] = self.bbox[1]
+    request["maxx"] = self.bbox[2]
+    request["maxy"] = self.bbox[3]
+    url = self.output_base_url + "/" + self.timestamp + "/static." + self.config["preview"]["format"]
+    PreviewThread(url, request).start()
+    self.preview = url
     
   def generate(self):
     """generate the response"""
     # make decisions on the map scale, map layers
     #mockup
-    #self.bbox = (-117, 25.0, -73, 51.0)
-    #self.bbox = (-79.93, 39.19, -75.84, 41.92)
-    self.bbox = (-77.97, 40.7, -77.75, 40.87)
-    
+    self.bbox = (-70.0, 0.0, 70.0, 45.0)
+    #self.bbox = (-77.97, 40.7, -77.75, 40.87)
+    # 0. get the current timestamp
+    self.timestamp = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
     # generate the xml map file
     # 1. load the base map from the template and output it
     self.__generateMapFile()
     # 2. generate the static preview pictures
     self.__generatePreview()
-    
-    pass
     
   def getResponse(self):
     """docstring for getResponse"""
@@ -107,7 +97,7 @@ class MapResponder2():
     return response
     
 def main():
-  pass
+    pass
 
 if __name__ == '__main__':
 	main()

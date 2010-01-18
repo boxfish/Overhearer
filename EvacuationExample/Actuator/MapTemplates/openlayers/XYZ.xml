@@ -1,0 +1,25 @@
+<Layer queryable="0" hidden="0">
+	<Server service="XYZ" version="1.0.0">
+		<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="${layerInfo['url']}"/>
+	</Server>
+	<Name>${layerInfo['name']}</Name>
+	<Title>${layerInfo['title']}</Title>
+	<FormatList>
+		<Format current="1"/>
+	</FormatList>
+	<sld:MaxScaleDenominator xmlns:sld="http://www.opengis.net/sld">443744272.7</sld:MaxScaleDenominator>
+	<StyleList>
+		<Style current="1">
+			<Name/>
+			<Title>Default</Title>
+		</Style>
+	</StyleList>
+	<Extension>
+		<ol:isBaseLayer xmlns:ol="http://openlayers.org/context">true</ol:isBaseLayer>
+		<ol:displayInLayerSwitcher xmlns:ol="http://openlayers.org/context">true</ol:displayInLayerSwitcher>
+		<ol:sphericalMercator xmlns:ol="http://openlayers.org/context">true</ol:sphericalMercator>
+		<ol:singleTile xmlns:ol="http://openlayers.org/context">false</ol:singleTile>
+		<ol:maxExtent xmlns:ol="http://openlayers.org/context" minx="-20037508.34" miny="-20037508.34" maxx="20037508.34" maxy="20037508.34"/>
+		<ol:numZoomLevels xmlns:ol="http://openlayers.org/context">22</ol:numZoomLevels>
+	</Extension>
+</Layer>

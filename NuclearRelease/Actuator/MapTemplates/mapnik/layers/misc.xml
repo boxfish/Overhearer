@@ -1,0 +1,239 @@
+<Layers>
+    <Layer name="leisure" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>leisure</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,aeroway,amenity,landuse,leisure,man_made,military,"natural",power,shop,tourism,name
+       from planet_osm_polygon
+       where landuse is not null
+          or leisure is not null
+          or shop is not null
+          or aeroway in ('apron','aerodrome')
+          or amenity in ('parking','university','college','school','hospital','kindergarten','grave_yard')
+          or military in ('barracks','danger_area')
+          or "natural" in ('field','beach','heath','mud','wood')
+          or power in ('station','sub_station')
+          or tourism in ('attraction','camp_site','caravan_site','picnic_site','zoo')
+       order by z_order,way_area desc
+      ) as leisure
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="line features" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>cliffs</StyleName>
+        <StyleName>barriers</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,barrier,"natural",man_made from planet_osm_line where barrier is not null or "natural" in ('hedge','cliff') or man_made='embankment') as roads
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="polygon barriers" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>barriers</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+       (select way,barrier,"natural" from planet_osm_polygon where barrier is not null or "natural"='hedge') as barriers
+       </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="amenity-stations" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>stations</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,name,railway,aerialway,disused
+      from planet_osm_point
+      where railway in ('station','halt','tram_stop')
+         or aerialway='station'
+      ) as stations
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="amenity-stations-poly" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>stations</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,name,railway,aerialway,disused
+      from planet_osm_polygon
+      where railway in ('station','halt','tram_stop')
+         or aerialway='station'
+      ) as stations
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="amenity-symbols" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>symbols</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select *
+      from planet_osm_point
+      where aeroway in ('airport','aerodrome')
+         or barrier in ('bollard','gate')
+         or highway in ('mini_roundabout','gate')
+         or man_made in ('lighthouse','power_wind','windmill','mast')
+         or (power='generator' and power_source='wind')
+         or "natural" in ('peak','spring','tree')
+         or railway='level_crossing'
+      ) as symbols</Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="amenity-symbols-poly" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>symbols</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select *
+      from planet_osm_polygon
+      where aeroway in ('airport','aerodrome')
+         or barrier in ('bollard','gate')
+         or highway in ('mini_roundabout','gate')
+         or man_made in ('lighthouse','power_wind','windmill','mast')
+         or (power='generator' and power_source='wind')
+         or "natural" in ('peak','spring','tree')
+         or railway='level_crossing'
+      ) as symbols</Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="amenity-points" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>points</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,amenity,shop,tourism,highway,man_made,access,religion
+      from planet_osm_point
+      where amenity is not null
+         or shop is not null
+         or tourism in ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','museum','viewpoint')
+         or highway in ('bus_stop','traffic_signals')
+         or man_made in ('mast','water_tower')
+      ) as points</Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="amenity-points-poly" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>points</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,amenity,shop,tourism,highway,man_made,access,religion
+      from planet_osm_polygon
+      where amenity is not null
+         or shop is not null
+         or tourism in ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','museum','viewpoint')
+         or highway in ('bus_stop','traffic_signals')
+         or man_made in ('mast','water_tower')
+      ) as points</Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="power" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>power</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">(select way from planet_osm_line where "power"='line') as power</Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="power_towers" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>power_towers</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">(select way from planet_osm_point where power='tower') as power_towers</Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="misc_boundaries" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>boundary</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,name from planet_osm_polygon where boundary='national_park') as boundary
+      </Parameter>
+        </Datasource>
+    </Layer>
+</Layers>

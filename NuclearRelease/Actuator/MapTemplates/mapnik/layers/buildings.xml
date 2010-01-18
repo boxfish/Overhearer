@@ -1,0 +1,24 @@
+<Layers>
+    <Layer name="buildings" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>buildings</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,building,leisure,railway,amenity,aeroway from planet_osm_polygon
+       where building is not null
+          or leisure in ('pitch','track')
+          or railway='station'
+          or amenity='place_of_worship'
+          or aeroway='terminal'
+       order by z_order,way_area desc) as buildings
+    		</Parameter>
+        </Datasource>
+    </Layer>
+</Layers>

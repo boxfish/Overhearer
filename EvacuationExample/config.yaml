@@ -25,13 +25,13 @@ executor:
   class: EvacExecutor
 responders: 
   # it is possible to have multiple responders, e.g. different modals, or different experimental strategies
-  #- module: TextResponder
-  #  class: TextResponder
-  #- module: MapResponder
-  #  class: MapResponder
-  - module: MapResponder1
-    class: MapResponder1
-  - module: MapResponder2
-    class: MapResponder2
-  - module: MapResponder3
-    class: MapResponder3
+  - module: TextResponder
+    class: TextResponder
+  - module: MapResponder
+    class: MapResponder
+  #- module: MapResponder1
+  #  class: MapResponder1
+  #- module: MapResponder2
+  #  class: MapResponder2
+  #- module: MapResponder3
+  #  class: MapResponder3

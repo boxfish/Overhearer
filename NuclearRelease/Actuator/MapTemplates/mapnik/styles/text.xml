@@ -1,0 +1,236 @@
+<Styles>
+    <Style name="text">
+        <Rule>
+            <Filter>([place]='island')</Filter>
+            <MinScaleDenominator>1000</MinScaleDenominator>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="oblique-fonts" size="9" fill="rgb(0,0,0)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(((([amenity]='pub') or ([amenity]='restaurant')) or ([amenity]='cafe')) or ([amenity]='fast_food'))</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="bold-fonts" size="10" fill="rgb(115,74,8)" dy="14" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='bar')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="bold-fonts" size="10" fill="rgb(115,74,8)" dy="15" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>((([amenity]='cinema') or ([amenity]='library')) or ([amenity]='theatre'))</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="bold-fonts" size="10" fill="rgb(115,74,8)" dy="18" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='parking')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="9" fill="rgb(0,102,255)" dy="14" halo_radius="1" wrap_width="34"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='police')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(115,74,8)" dy="16" halo_radius="1" wrap_width="30"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='fire_station')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(115,74,8)" dy="20" halo_radius="1" wrap_width="30"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='place_of_worship')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(0,0,51)" dy="16" halo_radius="1" wrap_width="30"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([natural]='wood')</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(0,0,0)" halo_radius="2" wrap_width="10"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([natural]='peak')</Filter>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(165,42,42)" dy="10" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([natural]='peak')</Filter>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <TextSymbolizer name="ele" fontset_name="oblique-fonts" size="9" fill="rgb(165,42,42)" dy="20" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(((([natural]='water') or ([natural]='lake')) or ([landuse]='reservoir')) or ([landuse]='basin'))</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(102,153,204)" halo_radius="1" wrap_width="20"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>((([leisure]&lt;&gt;'') or ([landuse]&lt;&gt;'')) and ([point]='yes'))</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="9" fill="rgb(0,0,0)" halo_radius="2" wrap_width="10"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([natural]='bay')</Filter>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(102,153,204)" halo_radius="1" wrap_width="20"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([natural]='spring')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="8" fill="rgb(102,153,204)" dy="10" halo_radius="1" wrap_width="20"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([tourism]='alpine_hut') or ([amenity]='shelter'))</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="9" fill="rgb(102,153,204)" dy="15" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([tourism]='alpine_hut') or ([amenity]='shelter'))</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <TextSymbolizer name="ele" fontset_name="oblique-fonts" size="8" fill="rgb(102,153,204)" dy="25" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='bank')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="9" fill="rgb(0,0,0)" dy="16" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([tourism]='hotel') or ([tourism]='hostel'))</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(0,102,255)" dy="15" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='embassy')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="9" fill="rgb(0,102,255)" dy="13" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([tourism]='guest_house')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="8" fill="rgb(0,102,255)" dy="13" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([amenity]='fuel') or ([amenity]='bus_station'))</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="9" fill="rgb(0,102,255)" dy="14" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([tourism]='camp_site')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(0,102,255)" dy="15" halo_radius="1" wrap_width="70"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([tourism]='caravan_site')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(0,102,255)" dy="19" halo_radius="1" wrap_width="70"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([tourism]='museum')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(115,74,8)" dy="16" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='prison')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(115,74,8)" dy="16" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([tourism]='attraction')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(102,0,51)" halo_radius="2" wrap_width="10"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='university')</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="bold-fonts" size="9" fill="rgb(0,0,51)" halo_radius="1" wrap_width="16"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([amenity]='school') or ([amenity]='college'))</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="9" fill="rgb(0,0,51)" halo_radius="1" wrap_width="14"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='kindergarten')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="8" fill="rgb(0,0,51)" halo_radius="1" wrap_width="14"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([man_made]='lighthouse')</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="9" fill="rgb(0,0,51)" dy="16" halo_radius="2" wrap_width="12"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([man_made]='windmill')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="9" fill="rgb(115,74,8)" dy="12" halo_radius="1" wrap_width="20"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='hospital')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="8" fill="rgb(218,0,146)" dy="16" halo_radius="2" wrap_width="12"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='pharmacy')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="8" fill="rgb(218,0,146)" dy="13" halo_radius="1" wrap_width="12"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>((((([shop]='bakery') or ([shop]='clothes')) or ([shop]='convenience')) or ([shop]='diy')) or ([shop]='hairdresser'))</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="8" fill="rgb(153,51,153)" dy="13" halo_radius="1" wrap_width="12"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([shop]='supermarket')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="9" fill="rgb(153,51,153)" dy="14" halo_radius="1" wrap_width="12"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([highway]='motorway_junction')</Filter>
+            <MinScaleDenominator>200000</MinScaleDenominator>
+            <MaxScaleDenominator>400000</MaxScaleDenominator>
+            <TextSymbolizer name="ref" fontset_name="book-fonts" size="9" fill="rgb(102,102,255)" halo_radius="1" wrap_width="12" min_distance="20"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([highway]='motorway_junction')</Filter>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <TextSymbolizer name="ref" fontset_name="book-fonts" size="9" fill="rgb(102,102,255)" halo_radius="1" wrap_width="12" min_distance="20"></TextSymbolizer>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="8" fill="rgb(102,102,255)" dy="-8" halo_radius="1" wrap_width="12" min_distance="20"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([highway]='motorway_junction')</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <TextSymbolizer name="ref" fontset_name="book-fonts" size="13" fill="rgb(102,102,255)" halo_radius="1" wrap_width="12" min_distance="20"></TextSymbolizer>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="14" fill="rgb(102,102,255)" dy="-14" halo_radius="1" wrap_width="12" min_distance="20"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([military]='danger_area')</Filter>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="bold-fonts" size="9" fill="rgb(255,192,203)" halo_radius="1" wrap_width="10"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([aeroway]='gate')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="ref" fontset_name="book-fonts" size="10" fill="rgb(170,102,204)" halo_radius="1" wrap_width="10"></TextSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="area-text">
+        <Rule>
+            <Filter>([way_area]&gt;=150000)</Filter>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(0,0,51)" halo_radius="1" wrap_width="20"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([way_area]&gt;=80000) and ([way_area]&lt;150000))</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(0,0,51)" halo_radius="1" wrap_width="20"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([way_area]&gt;=20000) and ([way_area]&lt;80000))</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(0,0,51)" halo_radius="1" wrap_width="20"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([way_area]&lt;20000)</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(0,0,51)" halo_radius="1" wrap_width="20"></TextSymbolizer>
+        </Rule>
+    </Style>
+</Styles>

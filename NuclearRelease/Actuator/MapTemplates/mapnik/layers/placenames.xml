@@ -1,0 +1,63 @@
+<Layers>
+    <Layer name="placenames-large" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>country</StyleName>
+        <StyleName>state</StyleName>
+        <StyleName>capital</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,place,name,ref
+      from planet_osm_point
+      where place in ('country','state')
+         or (place in ('city','metropolis') and capital='yes')
+      ) as placenames</Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="placenames-medium" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>city</StyleName>
+        <StyleName>town</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,place,name
+      from planet_osm_point
+      where place in ('city','metropolis','town','large_town','small_town')
+        and (capital is null or capital&lt;&gt;'yes')
+      ) as placenames</Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="placenames-small" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>suburb</StyleName>
+        <StyleName>village</StyleName>
+        <StyleName>hamlet</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,place,name
+      from planet_osm_point
+      where place in ('suburb','village','large_village','hamlet','locality')
+      ) as placenames</Parameter>
+        </Datasource>
+    </Layer>
+</Layers>

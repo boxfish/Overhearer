@@ -3,7 +3,8 @@ import os
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
 # Application context
-CONTEXT = 'EvacuationExample'
+#CONTEXT = 'EvacuationExample'
+CONTEXT = 'NuclearRelease'
 
 # Total number of concurrent dialogues maintained in memory
 DIALOGUE_NUM = 50

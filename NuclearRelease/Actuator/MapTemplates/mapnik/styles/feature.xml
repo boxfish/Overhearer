@@ -1,0 +1,26 @@
+<Styles>
+    <Style name="epz">
+        <Rule>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(51,204,153)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="plume">
+        <Rule>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(51,204,153)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="marker">
+        <Rule>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/red-arrow.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="label">
+        <Rule>
+            <TextSymbolizer name="label" fontset_name="bold-fonts" size="10" fill="rgb(153,204,153)" dy="-8" halo_radius="1" wrap_width="14"></TextSymbolizer>
+        </Rule>
+    </Style>
+</Styles>

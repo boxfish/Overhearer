@@ -1,0 +1,131 @@
+# PlanGraph:
+has_intention_to
+    foreach
+        plangraph.int_status($agent, $action, 'int_intendTo')
+    assert
+        plangraph.has_intention($agent, $action)
+
+has_intention_that
+    foreach
+        plangraph.int_status($agent, $action, 'int_intendThat')
+    assert
+        plangraph.has_intention($agent, $action)
+
+parent_of_action
+    foreach
+        plangraph.subaction_of($subaction, $plannode)
+    assert
+        plangraph.parent_of($plannode, $subaction)
+    
+parent_of_parameter
+    foreach
+        plangraph.param_of($param, $action)
+    assert
+        plangraph.parent_of($action, $param)
+
+ancestor_of_parent
+    foreach
+        plangraph.parent_of($parent, $son)
+    assert
+        plangraph.ancestor_of($parent, $son)
+    
+ancestor_of_grand
+    foreach
+        plangraph.parent_of($parent, $son)
+        plangraph.parent_of($grand, $parent)
+    assert
+        plangraph.ancestor_of($grand, $son)
+
+ancestor_of_ancestor
+    foreach
+        plangraph.parent_of($parent, $son)
+        plangraph.ancestor_of($ancestor, $parent)
+    assert
+        plangraph.ancestor_of($ancestor, $son)
+
+belief_value_of
+    foreach
+        plangraph.has_intention($agent, $action)
+        plangraph.ancestor_of($param, $action)
+        plangraph.value_of($value1, $param)
+        plangraph.generated_value_of($value2, $action)
+        check $value1 == $value2
+    assert
+        plangraph.belief_value_of($agent, $value1, $param)
+    
+# Map Roles:
+inform_belief_value_of
+    foreach
+        test.case_number($case, )
+        check $case in [1, 2, 3, 4, 5, 6]
+        plangraph.belief_value_of($agent, $value, $param)
+        geocontent.type_of($_, $value)
+        plangraph.param_of($param, $action)
+        plangraph.status_of($status, $action)
+        check $status != 'exec_success'
+    assert
+        maprole.inform_belief_value_of($agent, $value, $param)
+
+contextualize_action
+    foreach
+        test.case_number($case,)
+        check $case in (4, 5, 6)
+        plangraph.has_intention($agent, $action)
+        plangraph.context_of($value, $action)
+        plangraph.status_of($status, $action)
+        check $status != 'exec_success'
+    assert
+        maprole.contextualize_action($value, $action)
+    
+# Map Use Tasks:
+locate
+    foreach
+        maprole.inform_belief_value_of($agent, $value, $param)
+        geocontent.type_of('location', $value)
+    assert
+        maptask.locate($value)
+    
+background
+    foreach
+        maprole.contextualize_action($value, $action)
+        geocontent.type_of('layer', $value)
+    assert
+        maptask.background($value)
+    
+# Map Visualization Strategies:
+locate_stra_1
+    foreach
+        test.case_number($case)
+        check $case in [1, 4]
+        maptask.locate($value)
+    assert
+        mapview.scale_level('state')
+        mapview.marker($value)
+        mapview.label($value)
+
+locate_stra_2
+    foreach
+        test.case_number($case)
+        check $case in [2, 5]
+        maptask.locate($value)
+    assert
+        mapview.scale_level('local')
+        mapview.center($value)
+        mapview.label($value)
+
+locate_stra_3
+    foreach
+        test.case_number($case)
+        check $case in [3, 6]
+        maptask.locate($value)
+    assert
+        mapview.scale_level('county')
+        mapview.marker($value)
+        mapview.label($value)
+        mapview.center($value)
+
+background_stra
+    foreach
+        maptask.background($value)
+    assert
+        mapview.layer($value)

@@ -267,6 +267,7 @@ class PlanNode():
     self.mentalState = MentalState()
     self.recipeXML = ""
     self.isOpt = True
+    self.generatedValues = []
     
   def __repr__(self):
     """docstring for __repr__"""
@@ -288,7 +289,7 @@ class PlanNode():
     # Assumption 2: If the agent intends that they perform an action, by default it belives that the parameters of the parent action is rdy  
     parent = self.parent
     while parent:
-      if isinstance(parent, PlanNode):
+      if parent.__class__.__name__ == 'PlanNode':#isinstance(parent, PlanNode):
         exists = False
         for agent in parent.agents:
           if agent.id == agentId:

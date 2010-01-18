@@ -1,0 +1,13 @@
+Jill: There is a nuclear release and we need to plan evacuation
+Jim: Where is the release site?
+Jill: It is at the Crystal River Nuclear Power plant
+Jim: Show me the twenty thirty and forty mile EPZ Zones around the plant
+Jill: It might be OK to evacuate people within twenty mile EPZ zone
+Jim: I suggest we use thirty mile EPZ zone for evacuation to stay on the safe side
+Jill: OK. Let's use thirty mile EPZ zone instead
+Jim: Let us add a plume model
+Jill: What is the wind condition to be applied?
+Jim: Use the current wind condition
+Jill: Let us order evacuation of people within thirty mile EPZ zone and the plume model
+
+http://overhearingrobot.appspot.com/public/map.xml

@@ -26,8 +26,9 @@ BASE_URL = 'http://localhost:8080'
 
 class EvacExecutor(Executor):
   """docstring for ClassName"""
-  def __init__(self):
+  def __init__(self, params):
     self.mapCtrl = OLMapControl(os.path.dirname(__file__) + "/MapTemplates/basemap.xml")
+    self.params = params
 
   def IdentifyFeatureFromSpeech(self, plan):
     """docstring for IdentifyFeatureFromSpeech"""

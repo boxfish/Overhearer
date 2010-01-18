@@ -1,0 +1,133 @@
+#!/usr/bin/env python
+# encoding: utf-8
+"""
+The class definition for MapResponder
+
+Created by Bo Yu on 2010-01-02.
+"""
+__author__ = 'byu@ist.psu.edu (Bo Yu)'
+
+import sys
+import os
+import datetime
+import yaml
+import mapnik
+import urllib, urllib2
+import json
+
+# append the DMLib and local directories to PYTHONPATH
+local_dir = os.path.dirname(__file__)
+sys.path.append(local_dir)
+from olMapControl import olMapControl
+
+import threading
+
+class PreviewThread(threading.Thread):
+    """create a thread to generate the preview"""
+    def __init__(self, url, data):
+        super(PreviewThread, self).__init__()
+        self.url = url
+        self.data = data
+    def run (self):
+        f = urllib2.urlopen(self.url, json.dumps(self.data))
+        f.close()
+    
+        
+class MapnikResponder():
+  """the default map responder, which outputs the result from the executor"""
+  def __init__(self, id, dialogue, params=None):
+    self.id = id
+    self.dialogue = dialogue
+    self.params = params
+    self.kb = self.dialogue.kb
+    self.planGraph = self.dialogue.planGraph
+    self.executor = self.dialogue.executor
+    self.type = "map"  # the type of generated response content (e.g. text message, map, etc...)
+    f = open(os.path.join(os.path.dirname(__file__), 'map.yaml'))
+    self.config = yaml.load(f)
+    f.close()
+    self.output_base_dir = os.path.join(self.config["output_base_dir"], self.dialogue.id, self.id)
+    if not os.path.exists(self.output_base_dir):
+      os.makedirs(self.output_base_dir)
+    self.output_base_url = self.config["map_server"] + "/" + self.dialogue.id + "/" + self.id
+    self.timestamp = ""
+    self.ol_template_dir = os.path.join(os.path.dirname(__file__), self.config["ol_template_dir"])
+    self.olMapCtrl = olMapControl(self.ol_template_dir)
+    
+  def getResponseContent(self):
+    """return the generated content of this responder"""
+    
+    self.olMapCtrl.setMapExtent(self.bbox[0], self.bbox[1], self.bbox[2], self.bbox[3])
+    layerInfo = {}
+    layerInfo["name"] = "mapnik"
+    layerInfo["title"] = "mapnik"
+    layerInfo["url"] = self.output_base_url + "/" + self.timestamp + "/tiles/${z}/${x}/${y}.png"
+    self.olMapCtrl.addMapLayer("XYZ", layerInfo)
+    response = {}
+    response["type"] = self.type
+    response["content"] = self.olMapCtrl.saveXML()
+    return response
+  
+  def __generateMapFile(self):
+    """docstring for __generateMapFile"""
+    # load the base map template
+    mapnik_map_file = os.path.join(os.path.dirname(__file__), self.config["mapnik_template_dir"], "basemap.xml")
+    # do some modification to the map file
+    m = mapnik.Map(256, 256)
+    mapnik.load_map(m, str(mapnik_map_file))
+    
+    lyr = mapnik.Layer('world_merc', m.srs)
+    layer_file = os.path.join(os.path.dirname(__file__), self.config["data_dir"], "world_merc")
+    lyr.datasource = mapnik.Shapefile(file=str(layer_file))
+    lyr.styles.append('population')
+    lyr.styles.append('countries_label')
+    m.layers.append(lyr)
+    # copy the map file to the output directory
+    
+    output_dir = os.path.join(self.output_base_dir, self.timestamp)
+    if not os.path.exists(output_dir):
+      os.makedirs(output_dir)
+    output_mapfile = os.path.join(output_dir, 'map.xml')
+    mapnik.save_map(m, str(output_mapfile))
+  
+  def __generatePreview(self):
+    """docstring for __generatePreview"""
+    request = {}
+    request["width"] = int(self.config["preview"]["width"])
+    request["height"] = int(self.config["preview"]["height"])
+    request["minx"] = self.bbox[0]
+    request["miny"] = self.bbox[1]
+    request["maxx"] = self.bbox[2]
+    request["maxy"] = self.bbox[3]
+    url = self.output_base_url + "/" + self.timestamp + "/static." + self.config["preview"]["format"]
+    PreviewThread(url, request).start()
+    self.preview = url
+    
+  def generate(self):
+    """generate the response"""
+    # make decisions on the map scale, map layers
+    #mockup
+    self.bbox = (-150.0, -75.0, 150.0, 75.0)
+    #self.bbox = (-77.97, 40.7, -77.75, 40.87)
+    # 0. get the current timestamp
+    self.timestamp = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+    # generate the xml map file
+    # 1. load the base map from the template and output it
+    self.__generateMapFile()
+    # 2. generate the static preview pictures
+    self.__generatePreview()
+    
+  def getResponse(self):
+    """docstring for getResponse"""
+    response = {}
+    response["type"] = self.type
+    response["id"] = self.id
+    response["preview"] = self.preview  # the url of the preview map picture
+    response["explanation"] = "the explanation of the response"
+    return response
+    
+def main():
+    pass
+
+if __name__ == '__main__':
+	main()

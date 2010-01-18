@@ -51,6 +51,7 @@ class PhoenixParser():
     self.libParse.print_parse(0, byref(s))
     
     parse = repr(s.value).replace("\'","").replace(" \\n", ":").split(":")
+    print parse
     result["frame"] = parse[0]
     phrases = parse[1].lower().split("].")
     newPhrases = []

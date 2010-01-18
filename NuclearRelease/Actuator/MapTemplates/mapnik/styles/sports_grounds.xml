@@ -1,0 +1,10 @@
+<Styles>
+    <Style name="sports_grounds">
+        <Rule>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(51,204,153)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+    </Style>
+</Styles>

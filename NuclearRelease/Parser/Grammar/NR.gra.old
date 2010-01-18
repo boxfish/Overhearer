@@ -1,0 +1,42 @@
+###### Domain Specific Rules #############
+[Response_Planning]
+	(*EXIST *A [Task_Context] *[Incidence_Location] *I_WE NEED [Plan_Response])
+	(PLAN_RESPONSE)
+EXIST
+	(there's)
+	(there is)
+A
+	(a)
+	(an)
+	(some)
+I_WE
+	(i)
+	(we)
+NEED
+	(need to)
+	(want to)
+	(wanna)
+	(like to)
+	(be needing to)
+;
+
+[Plan_Response]	
+	(plan response)
+;
+[Task_Context]
+	(TASK)
+TASK
+	(nuclear release)
+;
+
+[Incidence_Location]
+	(three mile island nuclear station)
+;
+
+[EPZs]
+	(epzs)
+;
+	
+[PlumeModel]
+	(plume model)
+;

@@ -1,0 +1,922 @@
+<Styles>
+    <Style name="leisure">
+        <Rule>
+            <Filter>([leisure]='marina')</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(181,208,208)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([leisure]='playground')</Filter>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(204,255,241)</CssParameter>
+            </PolygonSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(102,102,102)</CssParameter>
+                <CssParameter name="stroke-width">0.3</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>((([tourism]='camp_site') or ([tourism]='caravan_site')) or ([tourism]='picnic_site'))</Filter>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(204,255,153)</CssParameter>
+                <CssParameter name="fill-opacity">0.5</CssParameter>
+            </PolygonSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(102,102,102)</CssParameter>
+                <CssParameter name="stroke-width">0.3</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([tourism]='attraction')</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(242,202,234)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([landuse]='quarry')</Filter>
+            <MaxScaleDenominator>400000</MaxScaleDenominator>
+            <PolygonPatternSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/quarry2.png" type="png" width="30" height="30"></PolygonPatternSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(128,128,128)</CssParameter>
+                <CssParameter name="stroke-width">0.5</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([leisure]='nature_reserve') or ([landuse]='vineyard'))</Filter>
+            <MinScaleDenominator>100000</MinScaleDenominator>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(171,223,150)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([landuse]='vineyard')</Filter>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <PolygonPatternSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/vineyard.png" type="png" width="19" height="21"></PolygonPatternSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([landuse]='vineyard')</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <PolygonPatternSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/vineyard.png" type="png" width="29" height="29"></PolygonPatternSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([leisure]='nature_reserve')</Filter>
+            <MinScaleDenominator>50000</MinScaleDenominator>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <PolygonPatternSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/nature_reserve.png" type="png" width="21" height="24"></PolygonPatternSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([leisure]='nature_reserve')</Filter>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <PolygonPatternSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/nature_reserve2.png" type="png" width="42" height="48"></PolygonPatternSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>((([landuse]='cemetery') or ([landuse]='grave_yard')) or ([amenity]='grave_yard'))</Filter>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(170,203,175)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([landuse]='residential')</Filter>
+            <MinScaleDenominator>1000</MinScaleDenominator>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(221,221,221)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([military]='barracks')</Filter>
+            <MinScaleDenominator>1000</MinScaleDenominator>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(255,143,143)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([landuse]='military')</Filter>
+            <MinScaleDenominator>1000</MinScaleDenominator>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(255,168,168)</CssParameter>
+                <CssParameter name="fill-opacity">0.4</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([landuse]='field') or ([natural]='field'))</Filter>
+            <MinScaleDenominator>50000</MinScaleDenominator>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(102,102,0)</CssParameter>
+                <CssParameter name="fill-opacity">0.2</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([landuse]='field') or ([natural]='field'))</Filter>
+            <MinScaleDenominator>1000</MinScaleDenominator>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(102,102,0)</CssParameter>
+                <CssParameter name="fill-opacity">0.2</CssParameter>
+            </PolygonSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(102,102,0)</CssParameter>
+                <CssParameter name="stroke-width">0.3</CssParameter>
+                <CssParameter name="stroke-opacity">0.4</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([military]='danger_area')</Filter>
+            <MinScaleDenominator>400000</MinScaleDenominator>
+            <MaxScaleDenominator>1500000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(255,192,203)</CssParameter>
+                <CssParameter name="fill-opacity">0.3</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([military]='danger_area')</Filter>
+            <MinScaleDenominator>1000</MinScaleDenominator>
+            <MaxScaleDenominator>400000</MaxScaleDenominator>
+            <PolygonPatternSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/danger.png" type="png" width="30" height="30"></PolygonPatternSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>((([landuse]='cemetery') or ([landuse]='grave_yard')) or ([amenity]='grave_yard'))</Filter>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <PolygonPatternSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/grave_yard.png" type="png" width="16" height="16"></PolygonPatternSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([landuse]='meadow') or ([landuse]='grass'))</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(207,236,168)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([leisure]='park') or ([leisure]='recreation_ground'))</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(182,253,182)</CssParameter>
+                <CssParameter name="fill-opacity">0.6</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([tourism]='zoo')</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonPatternSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/zoo.png" type="png" width="21" height="24"></PolygonPatternSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([leisure]='common')</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(207,236,168)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([leisure]='garden')</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(207,236,168)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([leisure]='golf_course')</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(181,227,181)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([landuse]='allotments')</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(200,176,132)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([landuse]='forest')</Filter>
+            <MinScaleDenominator>50000</MinScaleDenominator>
+            <MaxScaleDenominator>1500000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(141,197,108)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([landuse]='forest')</Filter>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <PolygonPatternSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/forest.png" type="png" width="21" height="24"></PolygonPatternSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([landuse]='farmyard')</Filter>
+            <MaxScaleDenominator>1500000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(221,191,146)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([landuse]='farm') or ([landuse]='farmland'))</Filter>
+            <MaxScaleDenominator>1500000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(234,216,189)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([landuse]='recreation_ground') or ([landuse]='conservation'))</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(207,236,168)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([landuse]='village_green')</Filter>
+            <MaxScaleDenominator>400000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(207,236,168)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([landuse]='retail')</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(241,218,218)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([landuse]='retail')</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(255,0,0)</CssParameter>
+                <CssParameter name="stroke-width">0.3</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([landuse]='industrial') or ([landuse]='railway'))</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(223,209,214)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([power]='station')</Filter>
+            <MinScaleDenominator>200000</MinScaleDenominator>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(187,187,187)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([power]='station')</Filter>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(187,187,187)</CssParameter>
+            </PolygonSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(85,85,85)</CssParameter>
+                <CssParameter name="stroke-width">0.4</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([power]='sub_station')</Filter>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(187,187,187)</CssParameter>
+            </PolygonSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(85,85,85)</CssParameter>
+                <CssParameter name="stroke-width">0.4</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([landuse]='commercial')</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(239,200,200)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(((([landuse]='brownfield') or ([landuse]='landfill')) or ([landuse]='greenfield')) or ([landuse]='construction'))</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(157,157,108)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([natural]='wood') or ([landuse]='wood'))</Filter>
+            <MaxScaleDenominator>1500000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(174,209,160)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([natural]='heath')</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(255,255,192)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>((((([amenity]='university') or ([amenity]='college')) or ([amenity]='school')) or ([amenity]='hospital')) or ([amenity]='kindergarten'))</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(240,240,216)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>((((([amenity]='university') or ([amenity]='college')) or ([amenity]='school')) or ([amenity]='hospital')) or ([amenity]='kindergarten'))</Filter>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(165,42,42)</CssParameter>
+                <CssParameter name="stroke-width">0.3</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='parking')</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(247,239,183)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='parking')</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(238,238,209)</CssParameter>
+                <CssParameter name="stroke-width">0.3</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([aeroway]='apron')</Filter>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(233,209,255)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([aeroway]='aerodrome')</Filter>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(204,204,204)</CssParameter>
+                <CssParameter name="fill-opacity">0.2</CssParameter>
+            </PolygonSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(85,85,85)</CssParameter>
+                <CssParameter name="stroke-width">0.2</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([natural]='beach')</Filter>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <PolygonPatternSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/beach.png" type="png" width="10" height="10"></PolygonPatternSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([natural]='mud')</Filter>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <PolygonPatternSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/mud.png" type="png" width="10" height="10"></PolygonPatternSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([leisure]='pitch')</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(138,211,175)</CssParameter>
+            </PolygonSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(136,136,136)</CssParameter>
+                <CssParameter name="stroke-width">0.5</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="cliffs">
+        <Rule>
+            <Filter>([natural]='cliff')</Filter>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <LinePatternSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/cliff.png" type="png" width="10" height="4"></LinePatternSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([natural]='cliff')</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <LinePatternSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/cliff2.png" type="png" width="12" height="6"></LinePatternSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([man_made]='embankment')</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <LinePatternSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/cliff.png" type="png" width="10" height="4"></LinePatternSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="barriers">
+        <Rule>
+            <Filter>(([natural]='hedge') or ([barrier]='hedge'))</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(174,209,160)</CssParameter>
+                <CssParameter name="stroke-width">3</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([barrier]&lt;&gt;'') and not (([barrier]='hedge')))</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <LineSymbolizer>
+                <CssParameter name="stroke-width">0.4</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="stations">
+        <Rule>
+            <Filter>(([railway]='station') and not (([disused]='yes')))</Filter>
+            <MinScaleDenominator>100000</MinScaleDenominator>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/halt.png" type="png" width="4" height="4"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([railway]='station') and not (([disused]='yes')))</Filter>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/station_small.png" type="png" width="6" height="6"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([railway]='station') and ([disused]='yes'))</Filter>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/station_disused.png" type="png" width="6" height="6"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([railway]='station') and not (([disused]='yes')))</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/station.png" type="png" width="9" height="9"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>((([railway]='halt') or ([railway]='tram_stop')) or ([aerialway]='station'))</Filter>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/halt.png" type="png" width="4" height="4"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>((([railway]='halt') or ([railway]='tram_stop')) or ([aerialway]='station'))</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/station_small.png" type="png" width="6" height="6"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>((([railway]='halt') or ([railway]='tram_stop')) or ([aerialway]='station'))</Filter>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="8" fill="rgb(102,102,255)" dy="-8" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>((([railway]='halt') or ([railway]='tram_stop')) or ([aerialway]='station'))</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(102,102,255)" dy="-10" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([railway]='station') and not (([disused]='yes')))</Filter>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="bold-fonts" size="9" fill="rgb(102,102,255)" dy="-8" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([railway]='station') and not (([disused]='yes')))</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="bold-fonts" size="11" fill="rgb(102,102,255)" dy="-14" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([railway]='station') and ([disused]='yes'))</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="bold-fonts" size="9" fill="rgb(128,128,128)" dy="-9" halo_radius="1"></TextSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="symbols">
+        <Rule>
+            <Filter>([aeroway]='airport')</Filter>
+            <MinScaleDenominator>400000</MinScaleDenominator>
+            <MaxScaleDenominator>1500000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/airport.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <TextSymbolizer name="name" fontset_name="bold-fonts" size="8" fill="rgb(102,146,218)" dy="-12" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([aeroway]='airport')</Filter>
+            <MinScaleDenominator>100000</MinScaleDenominator>
+            <MaxScaleDenominator>400000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="bold-fonts" size="9" fill="rgb(102,146,218)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([aeroway]='aerodrome')</Filter>
+            <MinScaleDenominator>400000</MinScaleDenominator>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/aerodrome.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <TextSymbolizer name="name" fontset_name="oblique-fonts" size="8" fill="rgb(102,146,218)" dy="-12" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([aeroway]='aerodrome')</Filter>
+            <MinScaleDenominator>100000</MinScaleDenominator>
+            <MaxScaleDenominator>400000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="oblique-fonts" size="8" fill="rgb(102,146,218)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([railway]='level_crossing')</Filter>
+            <MinScaleDenominator>12500</MinScaleDenominator>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/level_crossing.png" type="png" width="7" height="7"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([railway]='level_crossing')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/level_crossing2.png" type="png" width="11" height="11"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([man_made]='lighthouse')</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/lighthouse.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([natural]='peak')</Filter>
+            <MaxScaleDenominator>400000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/peak.png" type="png" width="8" height="8"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([natural]='spring')</Filter>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/spring.png" type="png" width="5" height="7"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([natural]='tree')</Filter>
+            <MinScaleDenominator>5000</MinScaleDenominator>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/tree.png" type="png" width="3" height="3"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([natural]='tree')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/tree2.png" type="png" width="5" height="5"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([man_made]='power_wind') or (([power]='generator') and ([power_source]='wind')))</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/power_wind.png" type="png" width="16" height="26"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([man_made]='windmill')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/windmill.png" type="png" width="10" height="15"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([man_made]='mast')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/communications.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([highway]='mini_roundabout')</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/mini_round.png" type="png" width="9" height="9"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([highway]='gate') or ([barrier]='gate'))</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/gate2.png" type="png" width="7" height="5"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([barrier]='bollard')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/bollard.png" type="png" width="3" height="3"></PointSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="points">
+        <Rule>
+            <Filter>([tourism]='alpine_hut')</Filter>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/alpinehut.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='shelter')</Filter>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/shelter2.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='atm')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/atm2.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='bank')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/bank2.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='bar')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/bar.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='bicycle_rental')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/rental_bicycle.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([amenity]='bus_stop') or ([highway]='bus_stop'))</Filter>
+            <MinScaleDenominator>5000</MinScaleDenominator>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/bus_stop_small.png" type="png" width="3" height="3"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([amenity]='bus_stop') or ([highway]='bus_stop'))</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/bus_stop.p.12.png" type="png" width="12" height="12"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='bus_station')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/bus_station.n.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([highway]='traffic_signals')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/traffic_light.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='cafe')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/cafe.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([tourism]='camp_site')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/camping.n.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([tourism]='caravan_site')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/caravan_park.p.24.png" type="png" width="24" height="24"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='car_sharing')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/car_share.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='cinema')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/cinema.p.24.png" type="png" width="24" height="24"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='fire_station')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/firestation.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='fuel')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/fuel.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([tourism]='guest_house')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/guest_house.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='hospital')</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/hospital.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([tourism]='hostel')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/hostel.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([tourism]='hotel')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/hotel2.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='embassy')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/embassy.png" type="png" width="12" height="12"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='library')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/library.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([man_made]='mast')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/communications.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([tourism]='museum')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/museum.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([amenity]='parking') and (([access]='public') or not (([access]&lt;&gt;''))))</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/parking.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='pharmacy')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/pharmacy.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([amenity]='place_of_worship') and ([religion]='christian'))</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/christian3.p.14.png" type="png" width="14" height="14"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([amenity]='place_of_worship') and ([religion]='muslim'))</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/islamic3.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([amenity]='place_of_worship') and ([religion]='sikh'))</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/sikh3.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([amenity]='place_of_worship') and ([religion]='jewish'))</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/jewish3.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='place_of_worship')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/place_of_worship3.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='police')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/police.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='post_box')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/post_box.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='post_office')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/post_office.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='pub')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/pub.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='recycling')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/recycling.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='restaurant')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/restaurant.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='fast_food')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/fast_food.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='telephone')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/telephone.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='theatre')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/theatre.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='toilets')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/toilets.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='drinking_water')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/food_drinkingtap.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='prison')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/amenity_prison.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([tourism]='viewpoint')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/view_point.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([man_made]='water_tower')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/tower_water.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([shop]='supermarket')</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/shop_supermarket.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([shop]='bakery')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/shop_bakery.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([shop]='clothes')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/shop_clothes.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([shop]='convenience')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/shop_convenience.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([shop]='diy')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/shop_diy.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([shop]='hairdresser')</Filter>
+            <MaxScaleDenominator>5000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/shop_hairdresser.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="power">
+        <Rule>
+            <MinScaleDenominator>12500</MinScaleDenominator>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(119,119,119)</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(119,119,119)</CssParameter>
+                <CssParameter name="stroke-width">1.5</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="power_towers">
+        <Rule>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/power_tower.png" type="png" width="7" height="7"></PointSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="boundary">
+        <Rule>
+            <MinScaleDenominator>750000</MinScaleDenominator>
+            <MaxScaleDenominator>6500000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(0,128,0)</CssParameter>
+                <CssParameter name="fill-opacity">0.05</CssParameter>
+            </PolygonSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(0,128,0)</CssParameter>
+                <CssParameter name="stroke-width">1.5</CssParameter>
+                <CssParameter name="stroke-opacity">0.15</CssParameter>
+                <CssParameter name="stroke-dasharray">4, 2</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <MinScaleDenominator>100000</MinScaleDenominator>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(0,128,0)</CssParameter>
+                <CssParameter name="fill-opacity">0.05</CssParameter>
+            </PolygonSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(0,128,0)</CssParameter>
+                <CssParameter name="stroke-width">3</CssParameter>
+                <CssParameter name="stroke-opacity">0.15</CssParameter>
+                <CssParameter name="stroke-dasharray">6, 2</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <MinScaleDenominator>1000</MinScaleDenominator>
+            <MaxScaleDenominator>100000</MaxScaleDenominator>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(0,128,0)</CssParameter>
+                <CssParameter name="stroke-width">3</CssParameter>
+                <CssParameter name="stroke-opacity">0.15</CssParameter>
+                <CssParameter name="stroke-dasharray">6, 2</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <MinScaleDenominator>750000</MinScaleDenominator>
+            <MaxScaleDenominator>3000000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="bold-fonts" size="8" fill="rgb(153,204,153)" dy="-8" halo_radius="1" wrap_width="14"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <MinScaleDenominator>200000</MinScaleDenominator>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="bold-fonts" size="11" fill="rgb(153,204,153)" halo_radius="1" wrap_width="14"></TextSymbolizer>
+        </Rule>
+    </Style>
+</Styles>

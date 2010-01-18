@@ -1,0 +1,140 @@
+<Styles>
+    <Style name="country">
+        <Rule>
+            <Filter>([place]='country')</Filter>
+            <MinScaleDenominator>50000000</MinScaleDenominator>
+            <MaxScaleDenominator>200000000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="9" fill="rgb(157,108,157)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([place]='country')</Filter>
+            <MinScaleDenominator>6500000</MinScaleDenominator>
+            <MaxScaleDenominator>50000000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="11" fill="rgb(157,108,157)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="state">
+        <Rule>
+            <Filter>([place]='state')</Filter>
+            <MinScaleDenominator>25000000</MinScaleDenominator>
+            <MaxScaleDenominator>50000000</MaxScaleDenominator>
+            <TextSymbolizer name="ref" fontset_name="oblique-fonts" size="9" fill="rgb(157,108,157)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([place]='state')</Filter>
+            <MinScaleDenominator>6500000</MinScaleDenominator>
+            <MaxScaleDenominator>25000000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="oblique-fonts" size="9" fill="rgb(157,108,157)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([place]='state')</Filter>
+            <MinScaleDenominator>1500000</MinScaleDenominator>
+            <MaxScaleDenominator>6500000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="oblique-fonts" size="11" fill="rgb(157,108,157)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="capital">
+        <Rule>
+            <Filter>(([place]='city') or ([place]='metropolis'))</Filter>
+            <MinScaleDenominator>12500000</MinScaleDenominator>
+            <MaxScaleDenominator>50000000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="9" fill="rgb(0,0,0)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([place]='city') or ([place]='metropolis'))</Filter>
+            <MinScaleDenominator>1500000</MinScaleDenominator>
+            <MaxScaleDenominator>12500000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="11" fill="rgb(0,0,0)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([place]='city') or ([place]='metropolis'))</Filter>
+            <MinScaleDenominator>400000</MinScaleDenominator>
+            <MaxScaleDenominator>1500000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="11" fill="rgb(0,0,0)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([place]='city') or ([place]='metropolis'))</Filter>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <MaxScaleDenominator>400000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="14" fill="rgb(0,0,0)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="city">
+        <Rule>
+            <Filter>(([place]='city') or ([place]='metropolis'))</Filter>
+            <MinScaleDenominator>1500000</MinScaleDenominator>
+            <MaxScaleDenominator>12500000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="8" fill="rgb(0,0,0)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([place]='city') or ([place]='metropolis'))</Filter>
+            <MinScaleDenominator>400000</MinScaleDenominator>
+            <MaxScaleDenominator>1500000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="11" fill="rgb(0,0,0)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([place]='city') or ([place]='metropolis'))</Filter>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <MaxScaleDenominator>400000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="14" fill="rgb(0,0,0)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="town">
+        <Rule>
+            <Filter>((([place]='town') or ([place]='large_town')) or ([place]='small_town'))</Filter>
+            <MinScaleDenominator>400000</MinScaleDenominator>
+            <MaxScaleDenominator>1500000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="8" fill="rgb(0,0,0)" halo_radius="1" wrap_width="20"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>((([place]='town') or ([place]='large_town')) or ([place]='small_town'))</Filter>
+            <MinScaleDenominator>50000</MinScaleDenominator>
+            <MaxScaleDenominator>400000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(0,0,0)" halo_radius="1" wrap_width="20"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>((([place]='town') or ([place]='large_town')) or ([place]='small_town'))</Filter>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="14" fill="rgb(119,119,119)" halo_radius="1" wrap_width="20"></TextSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="suburb">
+        <Rule>
+            <Filter>([place]='suburb')</Filter>
+            <MinScaleDenominator>50000</MinScaleDenominator>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="10" fill="rgb(0,0,0)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([place]='suburb')</Filter>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="13" fill="rgb(119,119,119)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="village">
+        <Rule>
+            <Filter>(([place]='village') or ([place]='large_village'))</Filter>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="9" fill="rgb(0,0,0)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([place]='village') or ([place]='large_village'))</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="12" fill="rgb(119,119,119)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="hamlet">
+        <Rule>
+            <Filter>(([place]='hamlet') or ([place]='locality'))</Filter>
+            <MinScaleDenominator>12500</MinScaleDenominator>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="8" fill="rgb(0,0,0)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(([place]='hamlet') or ([place]='locality'))</Filter>
+            <MaxScaleDenominator>12500</MaxScaleDenominator>
+            <TextSymbolizer name="name" fontset_name="book-fonts" size="11" fill="rgb(119,119,119)" halo_radius="1"></TextSymbolizer>
+        </Rule>
+    </Style>
+</Styles>

@@ -35,20 +35,26 @@ class DialogueManager():
             self.context = config["context"]
             # create parser
             self.parser = PhoenixParser(self.context + config["parser_dir"] + "/config")
+            
             # create knowledge base
             self.kb = self.__createKBase(config["kbase"])
+
             # add the actuator directory to PYTHONPATH
             append_dir(os.path.dirname(__file__) + "/../"    + self.context + config["actuator_dir"]) 
             # import the executor and create a new instance
+            
             _executor = __import__(config["executor"]["module"])
-            self.executor = getattr(_executor, config["executor"]["class"])()
+
+            executor_params = config["executor"].get("params", None)
+            self.executor = getattr(_executor, config["executor"]["class"])(executor_params)
             # create the plangraph
             self.planGraph = PlanGraph(kb=self.kb, executor=self.executor)
             # import all the responders and create new instances
             self.responders = []
             for i, responder in enumerate(config["responders"]):
                 _responder = __import__(responder["module"])
-                self.responders.append(getattr(_responder, responder["class"])(str(i), self))
+                responder_params = responder.get("params", None)
+                self.responders.append(getattr(_responder, responder["class"])(str(i), self, responder_params))
     
     def __createKBase(self, kbase):
         """docstring for create"""
@@ -86,6 +92,7 @@ class DialogueManager():
         result = self.parser.parse(message)
         # parse phrases to tempPlans
         tempPlans = self.planGraph.parsePhrases(result["phrases"], speakerId)
+        
         # if no phrases are parsed, return the error message
         if len(tempPlans) == 0:
             response["status"] = "error"

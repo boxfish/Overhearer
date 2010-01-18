@@ -1,0 +1,375 @@
+<Layers>
+    <Layer name="tunnels" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>tunnels-casing</StyleName>
+        <StyleName>tunnels-fill</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,highway from planet_osm_line where highway in ('motorway','motorway_link','trunk','trunk_link','primary','primary_link','secondary','secondary_link','tertiary','residential','unclassified','minor') and tunnel in ('yes','true','1') order by z_order) as roads
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="turning_circle" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>turning_circle</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">(select way from planet_osm_point where highway='turning_circle') as turning_circle</Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="footbikecycle-tunnels" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>footbikecycle-tunnels</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,highway,horse,foot,bicycle from planet_osm_line where highway in ('bridleway','footway','cycleway','path') and tunnel in ('yes','true','1') order by z_order) as roads
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="tracks-notunnel-nobridge" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>tracks-notunnel-nobridge</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,tracktype from planet_osm_line where highway='track' and (bridge is null or bridge in ('no','false','0')) and (tunnel is null or tunnel in ('no','false','0'))) as tracks
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="tracks-tunnels" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>tracks-tunnels</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,tracktype from planet_osm_line where highway='track' and tunnel in ('yes','true','1')) as tracks
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="highway-area-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>highway-area-casing</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,highway from planet_osm_polygon
+       where highway in ('residential','unclassified','pedestrian','service','footway','track')
+       order by z_order,way_area desc) as roads
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="minor-roads-casing" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>minor-roads-casing-links</StyleName>
+        <StyleName>minor-roads-casing</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,highway,service,
+       case when tunnel in ('yes','true','1') then 'yes'::text else tunnel end as tunnel
+       from planet_osm_line
+       where highway in ('motorway','motorway_link','trunk','trunk_link','primary','primary_link','secondary','secondary_link','tertiary','residential','unclassified','minor','road','service','pedestrian','raceway','living_street')
+       order by z_order) as roads
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="highway-area-fill" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>highway-area-fill</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,highway from planet_osm_polygon
+       where highway in ('residential','unclassified','pedestrian','service','footway','living_street','track')
+       order by z_order,way_area desc) as roads
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="minor-roads-fill" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>minor-roads-fill-links</StyleName>
+        <StyleName>minor-roads-fill</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,highway,horse,bicycle,foot,construction,aeroway,service,
+       case when tunnel in ('yes','true','1') then 'yes'::text else tunnel end as tunnel,
+       case when bridge in ('yes','true','1') then 'yes'::text else bridge end as bridge,
+       case when railway in ('spur','siding')
+              or (railway='rail' and service in ('spur','siding','yard'))
+            then 'spur-siding-yard'::text else railway end as railway
+       from planet_osm_line
+       where highway is not null
+          or aeroway in ('runway','taxiway')
+          or railway in ('light_rail','narrow_gauge','funicular','rail','subway','tram','spur','siding','platform','disused','abandoned','construction')
+       order by z_order) as roads
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="ferry-routes" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>ferry-routes</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way from planet_osm_line where route='ferry' ) as routes
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="aerialways" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>aerialways</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,aerialway from planet_osm_line where aerialway is not null) as aerialways
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="roads" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>roads</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,highway,railway,
+       case when tunnel in ('yes','true','1') then 'yes'::text else tunnel end as tunnel
+       from planet_osm_roads
+       where highway is not null
+          or railway is not null
+       order by z_order
+      ) as roads
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="access" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>access</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,access,highway from planet_osm_line where access is not null) as access
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="trams" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>trams</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way from planet_osm_line where railway='tram' and (tunnel is null or tunnel not in ('yes','true','1'))) as trams
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="guideways" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>guideways</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way from planet_osm_line where highway='bus_guideway' and (tunnel is null or tunnel not in ('yes','true','1'))) as guideways
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="directions" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>directions</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,
+       case when oneway in ('yes','true','1') then 'yes'::text else oneway end as oneway
+       from planet_osm_line
+       where oneway is not null
+         and (highway is not null or railway is not null or waterway is not null)
+      ) as directions
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="planet roads text osm low zoom" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>roads-text-low-zoom</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,highway,ref,char_length(ref) as length
+       from planet_osm_roads
+       where highway in ('motorway','trunk','primary')
+         and ref is not null
+      ) as roads
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="planet roads text osm" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>roads-text</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,highway,aeroway,name,ref,char_length(ref) as length,
+       case when bridge in ('yes','true','1') then 'yes'::text else bridge end as bridge
+       from planet_osm_line
+       where waterway IS NULL
+         and leisure IS NULL
+         and landuse IS NULL
+         and (name is not null or ref is not null)
+      ) as roads
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="interpolation_lines" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>interpolation</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+       (select way from planet_osm_line where "addr:interpolation" is not null) as interpolation
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="housenumb_ways" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>way_numbers</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">(select way,"addr:housenumber" from planet_osm_polygon where "addr:housenumber" is not null and building is not null) as way_numbers</Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="housenumb_nodes" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>node_numbers</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">(select way,"addr:housenumber" from planet_osm_point where "addr:housenumber" is not null) as node_numbers</Parameter>
+        </Datasource>
+    </Layer>
+</Layers>

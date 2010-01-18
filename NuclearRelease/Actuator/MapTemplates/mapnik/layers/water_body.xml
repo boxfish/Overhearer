@@ -1,0 +1,164 @@
+<Layers>
+    <Layer name="water_areas" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>water_areas</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,"natural",waterway,landuse,name
+      from planet_osm_polygon
+      where waterway in ('dock','mill_pond','riverbank','canal')
+         or landuse in ('reservoir','water','basin')
+         or "natural" in ('lake','water','land','marsh','scrub','wetland','glacier')
+      order by z_order,way_area desc
+      ) as water_areas</Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="water_lines" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>water_lines</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,waterway,disused,name,
+      case when tunnel in ('yes','true','1') then 'yes'::text else tunnel end as tunnel
+      from planet_osm_line
+      where waterway in ('weir','river','canal','derelict_canal','stream','drain')
+        and (bridge is null or bridge not in ('yes','true','1','aqueduct'))
+      order by z_order
+      ) as water_lines</Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="dam" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>dam</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,name from planet_osm_line where waterway='dam') as dam</Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="piers-area" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>piers-area</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way from planet_osm_polygon where man_made='pier') as piers
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="piers" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>piers</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way from planet_osm_line where man_made='pier') as piers
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="bridges" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>road-bridges-casing</StyleName>
+        <StyleName>road-bridges-fill</StyleName>
+        <StyleName>noncased-ways-bridges</StyleName>
+        <StyleName>primarybridge_layer0_casing</StyleName>
+        <StyleName>mwaybridge_layer0_casing</StyleName>
+        <StyleName>primarybridge_layer0_fill</StyleName>
+        <StyleName>mwaybridge_layer0_fill</StyleName>
+        <StyleName>primarybridge_layer1_casing</StyleName>
+        <StyleName>mwaybridge_layer1_casing</StyleName>
+        <StyleName>primarybridge_layer1_fill</StyleName>
+        <StyleName>mwaybridge_layer1_fill</StyleName>
+        <StyleName>primarybridge_layer2_casing</StyleName>
+        <StyleName>mwaybridge_layer2_casing</StyleName>
+        <StyleName>primarybridge_layer2_fill</StyleName>
+        <StyleName>mwaybridge_layer2_fill</StyleName>
+        <StyleName>mwaybridge_layer3_casing</StyleName>
+        <StyleName>mwaybridge_layer3_fill</StyleName>
+        <StyleName>mwaybridge_layer4_casing</StyleName>
+        <StyleName>mwaybridge_layer4_fill</StyleName>
+        <StyleName>mwaybridge_layer5_casing</StyleName>
+        <StyleName>mwaybridge_layer5_fill</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,highway,aeroway,railway,layer,horse,bicycle,foot,bridge
+       from planet_osm_line
+       where (highway is not null
+              or aeroway in ('runway','taxiway')
+              or railway in ('light_rail','subway'))
+         and bridge not in ('no','false','0')
+       order by z_order
+      ) as roads
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="tracks-bridges" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>tracks-bridges</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">
+      (select way,tracktype from planet_osm_line where highway='track' and bridge in ('yes','true','1')) as tracks
+      </Parameter>
+        </Datasource>
+    </Layer>
+    <Layer name="waterway-bridges" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
+        <StyleName>waterway-bridges</StyleName>
+        <Datasource>
+            <Parameter name="type">postgis</Parameter>
+            <Parameter name="user">${mapInfo['user']}</Parameter>
+            <Parameter name="dbname">${mapInfo['dbname']}</Parameter>
+            <Parameter name="estimate_extent">false</Parameter>
+            <Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+            <Parameter name="host">${mapInfo['host']}</Parameter>
+            <Parameter name="password">${mapInfo['password']}</Parameter>
+            <Parameter name="port">${mapInfo['port']}</Parameter>
+            <Parameter name="table">(select way,name from planet_osm_line where waterway='canal' and bridge in ('yes','true','1','aqueduct') order by z_order) as water</Parameter>
+        </Datasource>
+    </Layer>
+</Layers>

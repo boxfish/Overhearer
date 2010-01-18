@@ -1,0 +1,73 @@
+<Styles>
+    <Style name="buildings">
+        <Rule>
+            <Filter>(([railway]='station') or ([building]='station'))</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(212,170,170)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([building]='supermarket')</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(255,192,203)</CssParameter>
+                <CssParameter name="fill-opacity">0.5</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='place_of_worship')</Filter>
+            <MinScaleDenominator>25000</MinScaleDenominator>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(119,119,119)</CssParameter>
+                <CssParameter name="fill-opacity">0.5</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([amenity]='place_of_worship')</Filter>
+            <MaxScaleDenominator>25000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(119,119,119)</CssParameter>
+                <CssParameter name="fill-opacity">0.5</CssParameter>
+            </PolygonSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(17,17,17)</CssParameter>
+                <CssParameter name="stroke-width">0.3</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([leisure]='track')</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(116,220,186)</CssParameter>
+            </PolygonSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(136,136,136)</CssParameter>
+                <CssParameter name="stroke-width">0.5</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>(((([building]&lt;&gt;'station') and ([building]&lt;&gt;'supermarket')) and ([building]&lt;&gt;'')) and (not (([amenity]&lt;&gt;'')) or ([amenity]&lt;&gt;'place_of_worship')))</Filter>
+            <MaxScaleDenominator>750000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(188,169,169)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([aeroway]='terminal')</Filter>
+            <MaxScaleDenominator>200000</MaxScaleDenominator>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(204,153,255)</CssParameter>
+            </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+            <Filter>([aeroway]='terminal')</Filter>
+            <MaxScaleDenominator>50000</MaxScaleDenominator>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(51,0,102)</CssParameter>
+                <CssParameter name="stroke-width">0.2</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+    </Style>
+</Styles>

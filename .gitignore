@@ -6,3 +6,5 @@ static/data/map_resp/
 DMLib/libPhoenix.dylib
 Parser/Phoenix/build/
 *.sqlite
+NuclearRelease/Actuator/MapData/world_boundaries/
+maps/mapfiles/
