@@ -21,16 +21,58 @@ except ImportError:
 currDialogues = []
 
 def getDialogueById(dialogueId):
-  """docstring for __getDialogueById"""
-  if dialogueId:
-    for dialogue in currDialogues:
-      if dialogue.id == dialogueId:
-        return dialogue
-  return None
+    """docstring for __getDialogueById"""
+    if dialogueId:
+        # check the current ongoing dialogue first
+        for dialogue in currDialogues:
+            if dialogue.id == dialogueId:
+                return dialogue
+        # try to retrieve the dialogue from the database
+        if settings.PERSISTENCE:
+            try:
+                dialogue = Dialogue.objects.get(dlgId=dialogueId)
+                dlg_obj = dialogue.pickled_obj
+                if dlg_obj:
+                    appendDialogue(dlg_obj)
+                    return dlg_obj
+            except Dialogue.DoesNotExist:
+                pass
+    return None
+
+def doesDialogueExist(dialogueId):
+    """docstring for __getDialogueById"""
+    if dialogueId:
+        # check the current ongoing dialogue first
+        for dialogue in currDialogues:
+            if dialogue.id == dialogueId:
+                return True
+        # try to retrieve the dialogue from the database
+        if settings.PERSISTENCE:
+            try:
+                dialogue = Dialogue.objects.get(dlgId=dialogueId)
+                return True
+            except Dialogue.DoesNotExist:
+                pass
+    return False
+    
+def appendDialogue(dlg_obj):
+    # if more than the total number of dialogues, pop out the first dialogue
+    if len(currDialogues) >= settings.DIALOGUE_NUM:
+        old_dlg_obj = currDialogues.pop(0)
+        # save the dialogue to the database
+        if settings.PERSISTENCE:
+            try:
+                dialogue = Dialogue.objects.get(dlgId=old_dlg_obj.id)
+                dialogue.pickled_obj = old_dlg_obj
+                dialogue.save()
+            except Dialogue.DoesNotExist:
+                pass
+    currDialogues.append(dlg_obj)
+                
 
 def check_validity(config):
     """check the validity of Config"""
-    if config.has_key("context") and config.has_key("parser_dir") and config.has_key("kbase") and config.has_key("actuator_dir") and config.has_key("executor") and config.has_key("responders"):
+    if config.has_key("context") and config.has_key("parser_dir") and config.has_key("kbase") and config.has_key("executor") and config.has_key("responders"):
         if len(config["responders"]) > 0:
             return True
     return False
@@ -39,8 +81,20 @@ def check_validity(config):
 def dialoguesHandler(request):
     if request.method == "GET":
         response = []
-        for dialogue in currDialogues:
-            response.append(dialogue.id)
+        user_id = request.GET.get("user_id", "")
+        if user_id:
+            try:
+                participant = Participant.objects.get(pId=user_id)
+                participated_dlgs = participant.dialogue_participated.order_by('-created_time')[:10]
+                for dlg in participated_dlgs:
+                    response.append(dlg.dlgId)
+            except Participant.DoesNotExist:
+                response = {}
+                response["status"] = "error"
+                response["message"] = "the user (%s) does not exists!" % user_id
+        else:       
+            for dialogue in currDialogues:
+                response.append(dialogue.id)
         return HttpResponse(json.dumps(response), mimetype='application/json')
     elif request.method == "POST":
         response = {}
@@ -48,19 +102,14 @@ def dialoguesHandler(request):
         id = data.get("id", "")
         if id:
             # check whether the id exists in database
-            if getDialogueById(id):
+            if doesDialogueExist(id):
                 response["status"] = "error"
                 response["message"] = "the dialogue already exists!"
                 return HttpResponse(json.dumps(response), mimetype='application/json')
-            # check whether the id exists in database
-            try:
-                dialogue = Dialogue.objects.get(dlgId=id)
-                # TODO load the dialogue from the database
-            except Dialogue.DoesNotExist:
-                pass
         participants = data.get("participants", [])
         if participants:
             f = open(os.path.join(settings.PROJECT_PATH, settings.CONTEXT, 'config.yaml'))
+            print os.path.join(settings.PROJECT_PATH, settings.CONTEXT, 'config.yaml')
             config = yaml.load(f)
             f.close()
             if config and check_validity(config):
@@ -69,10 +118,7 @@ def dialoguesHandler(request):
                 for participant in participants:
                     if dialogue.addParticipant(participant):
                         participants_added.append(participant)
-                # if more than the total number of dialogues, pop out the first dialogue
-                if len(currDialogues) >= settings.DIALOGUE_NUM:
-                    currDialogues.pop(0)
-                currDialogues.append(dialogue)
+                appendDialogue(dialogue)
                 response["status"] = "success"
                 response["dialogueId"] = dialogue.id
                 if settings.PERSISTENCE:
@@ -93,6 +139,7 @@ def dialoguesHandler(request):
                     for responder in dialogue.getResponders():
                         resp_model = Responder(dialogue=dlg, respId=responder.get("id", ""), type=responder.get("type", ""), name=responder.get("name", ""))
                         resp_model.save()
+                    dlg.pickled_obj = dialogue
                     dlg.save()
             else:
                 response["status"] = "error"
@@ -104,7 +151,24 @@ def dialoguesHandler(request):
     
 def messagesHandler(request, dlgId):
     if request.method == "GET":
-        return HttpResponse("Hello, world. You're at the messagesHandler index.")
+        try:
+            dlg = Dialogue.objects.get(dlgId=dlgId)
+            msgs = Message.objects.filter(dialogue=dlg).order_by('-created_time')[:50]
+            response = []
+            for msg in msgs:
+                msg_dict = {}
+                msg_dict["dialogue"] = dlgId
+                msg_dict["content"] = msg.content
+                msg_dict["created_time"] = msg.created_time.strftime("%Y-%m-%d %H:%M:%S")
+                msg_dict["author_id"] = msg.author.pId
+                msg_dict["author_username"] = msg.author.username
+                msg_dict["status"] = msg.status
+                response.append(msg_dict)    
+        except Dialogue.DoesNotExist:
+            response = {}
+            response["status"] = "error"
+            response["message"] = "the dialogue (%s) does not exists!" % dlgId            
+        return HttpResponse(json.dumps(response), mimetype='application/json')
     elif request.method == "POST":    
         response = {}
         dialogue = getDialogueById(dlgId)
@@ -142,7 +206,9 @@ def messagesHandler(request, dlgId):
                             resp.save()
                         except Responder.DoesNotExist:
                             pass    
-                msg.save()        
+                msg.save()
+            dlg.pickled_obj = dialogue
+            dlg.save()        
         return HttpResponse(json.dumps(response), mimetype='application/json')
 
 
@@ -152,6 +218,7 @@ def participantsHandler(request, dlgId):
     elif request.method == "POST":
         response = {}
         dialogue = getDialogueById(dlgId)
+                        
         if dialogue:
             participant = json.loads(request.raw_post_data)
             if dialogue.addParticipant(participant):
@@ -165,11 +232,14 @@ def participantsHandler(request, dlgId):
                         p.save()
                     try:
                         dlg = Dialogue.objects.get(dlgId=dlgId)
+                        
                         dlg.participants.add(p)
                         response["status"] = "success"
                         response["participant"] = {
                             "id" : pId
                         }
+                        dlg.pickled_obj = dialogue
+                        dlg.save()
                     except Dialogue.DoesNotExist:
                         response["status"] = "error"
                         response["message"] = "the dialogue (%s) does not exists!" % dlgId
@@ -229,6 +299,17 @@ def messageHandler(request, dlgId, msgId):
 def participantHandler(request, pId):
     return HttpResponse("Hello, world. You're at the participantHandler index.")
 
-
+def testHandler(request):
+    id = "testforpickled15"
+    dlg = Dialogue.objects.get(dlgId=id)
+    '''
+    f = open(os.path.join(settings.PROJECT_PATH, settings.CONTEXT, 'config.yaml'))
+    config = yaml.load(f)
+    dialogue = DialogueManager(config, id)
+    dlg = Dialogue(dlgId=id, name="name", description="desc", context="test")
+    dlg.pickled_obj = dialogue
+    dlg.save()
+    '''
+    return HttpResponse("Hello, world. You're at the testHandler index.")
 
 

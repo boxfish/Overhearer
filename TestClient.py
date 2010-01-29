@@ -17,6 +17,7 @@ def TestDialogues():
     base_url = "http://127.0.0.1:8080/"
     url = base_url + "dialogues/"
     data = {
+        "id" : "testforevacuation",
         "participants" : [{"name": "Jim", "id":"jim@abc.com"}]
     }
     f = urllib2.urlopen(url, json.dumps(data))
@@ -99,6 +100,27 @@ def TestMaps():
     #data = f.read()
     print "post static map:"
     f.close()
+
+def TestDialogues2():
+    """docstring for TestDialogues2"""
+    base_url = "http://127.0.0.1:8080/"
+    dlgId = "testforpickled15"
+    url = base_url + "dialogues/%s/messages/" % dlgId
+    message = {"speakerId":"jill@abc.com", "message":"It is at the Crystal River Nuclear Power plant"}
+    f = urllib2.urlopen(url, json.dumps(message))
+    data = f.read()
+    print "add new message: %s" % message["message"]
+    print data
+    f.close()
+    responderId = "-1"
+    data = json.loads(data)
+    if type(data) == list:
+        for response in data:
+            if response["type"] == "map":
+                # get the first map response
+                print "ID:" + response["id"]
+                responderId = response["id"]
+                break
         
 if __name__ == '__main__':
   #TestMaps()

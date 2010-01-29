@@ -31,28 +31,35 @@ class DialogueManager():
             # make a random id
             self.id = str(uuid.uuid4())
         self.participants = []
-        if config:
-            self.context = config["context"]
+        self.config = config
+        if self.config:
+            self.context = self.config["context"]
             # create parser
-            self.parser = PhoenixParser(self.context + config["parser_dir"] + "/config")
+            self.parser = PhoenixParser(self.context + self.config["parser_dir"] + "/config")
             
             # create knowledge base
-            self.kb = self.__createKBase(config["kbase"])
+            self.kb = self.__createKBase(self.config["kbase"])
 
             # add the actuator directory to PYTHONPATH
-            append_dir(os.path.dirname(__file__) + "/../"    + self.context + config["actuator_dir"]) 
-            # import the executor and create a new instance
-            
-            _executor = __import__(config["executor"]["module"])
+            #self.actuator_dir = os.path.join(os.path.dirname(__file__), "..", self.context, self.config["actuator_dir"])
+            #sys.path.append(self.actuator_dir)
+            #append_dir(os.path.dirname(__file__) + "/../"    + self.context + self.config["actuator_dir"]) 
+            #_executor = __import__(self.config["executor"]["module"])
 
-            executor_params = config["executor"].get("params", None)
-            self.executor = getattr(_executor, config["executor"]["class"])(executor_params)
+            # import the executor and create a new instance
+            executor_module_name = ".".join(["Overhearer", self.context, self.config["executor"]["module"]])
+            __import__(executor_module_name) 
+            _executor = sys.modules[executor_module_name]
+            executor_params = self.config["executor"].get("params", None)
+            self.executor = getattr(_executor, self.config["executor"]["class"])(executor_params)
             # create the plangraph
             self.planGraph = PlanGraph(kb=self.kb, executor=self.executor)
             # import all the responders and create new instances
             self.responders = []
-            for i, responder in enumerate(config["responders"]):
-                _responder = __import__(responder["module"])
+            for i, responder in enumerate(self.config["responders"]):
+                responder_module_name = ".".join(["Overhearer", self.context, responder["module"]])
+                __import__(responder_module_name)
+                _responder = sys.modules[responder_module_name]
                 responder_params = responder.get("params", None)
                 self.responders.append(getattr(_responder, responder["class"])(str(i), self, responder_params))
     

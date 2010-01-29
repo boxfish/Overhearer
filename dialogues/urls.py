@@ -3,6 +3,7 @@ from django.conf.urls.defaults import *
 from dialogues.views import *
 
 urlpatterns = patterns('',
+    url(r'^test/$', testHandler),
     url(r'^(?P<dlgId>.+)/messages/(?P<msgId>.+)/$', messageHandler),
     url(r'^(?P<dlgId>.+)/messages/$', messagesHandler),
     url(r'^(?P<dlgId>.+)/participants/(?P<pId>.+)/$', participantHandler),

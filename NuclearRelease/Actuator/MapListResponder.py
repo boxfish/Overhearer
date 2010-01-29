@@ -43,8 +43,8 @@ class PreviewThread(threading.Thread):
                 f.close()
         
                 
-class MapnikResponder():
-    """the default map responder, which outputs the result from the executor"""
+class MapListResponder():
+    """show a list of possible map reponses based on the reasoning rules"""
     def __init__(self, id, dialogue, params=None):
         self.id = id
         self.dialogue = dialogue
@@ -52,7 +52,7 @@ class MapnikResponder():
         self.kb = self.dialogue.kb
         self.planGraph = self.dialogue.planGraph
         self.executor = self.dialogue.executor
-        self.type = "map"    # the type of generated response content (e.g. text message, map, etc...)
+        self.type = "maplist"    # the type of generated response content (e.g. text message, map, etc...)
         self.bbox = None
         self.center = None
         self.mapContents = {}

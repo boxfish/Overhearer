@@ -166,37 +166,31 @@ def inform_belief_value_of(rule, context = None, index = None):
   if context is None: context = contexts.simple_context()
   try:
     with knowledge_base.Gen_once if index == 0 \
-             else engine.lookup('test', 'case_number', context,
+             else engine.lookup('plangraph', 'belief_value_of', context,
                                 rule.foreach_patterns(0)) \
       as gen_0:
       for dummy in gen_0:
-        if context.lookup_data('case') in [1, 2, 3, 4, 5, 6]:
-          with knowledge_base.Gen_once if index == 1 \
-                   else engine.lookup('plangraph', 'belief_value_of', context,
-                                      rule.foreach_patterns(1)) \
-            as gen_1:
-            for dummy in gen_1:
-              with knowledge_base.Gen_once if index == 2 \
-                       else engine.lookup('geocontent', 'type_of', context,
-                                          rule.foreach_patterns(2)) \
-                as gen_2:
-                for dummy in gen_2:
-                  with knowledge_base.Gen_once if index == 3 \
-                           else engine.lookup('plangraph', 'param_of', context,
-                                              rule.foreach_patterns(3)) \
-                    as gen_3:
-                    for dummy in gen_3:
-                      with knowledge_base.Gen_once if index == 4 \
-                               else engine.lookup('plangraph', 'status_of', context,
-                                                  rule.foreach_patterns(4)) \
-                        as gen_4:
-                        for dummy in gen_4:
-                          if context.lookup_data('status') != 'exec_success':
-                            engine.assert_('maprole', 'inform_belief_value_of',
-                                           (rule.pattern(0).as_data(context),
-                                            rule.pattern(1).as_data(context),
-                                            rule.pattern(2).as_data(context),)),
-                            rule.rule_base.num_fc_rules_triggered += 1
+        with knowledge_base.Gen_once if index == 1 \
+                 else engine.lookup('geocontent', 'type_of', context,
+                                    rule.foreach_patterns(1)) \
+          as gen_1:
+          for dummy in gen_1:
+            with knowledge_base.Gen_once if index == 2 \
+                     else engine.lookup('plangraph', 'param_of', context,
+                                        rule.foreach_patterns(2)) \
+              as gen_2:
+              for dummy in gen_2:
+                with knowledge_base.Gen_once if index == 3 \
+                         else engine.lookup('plangraph', 'status_of', context,
+                                            rule.foreach_patterns(3)) \
+                  as gen_3:
+                  for dummy in gen_3:
+                    if context.lookup_data('status') != 'exec_success':
+                      engine.assert_('maprole', 'inform_belief_value_of',
+                                     (rule.pattern(0).as_data(context),
+                                      rule.pattern(1).as_data(context),
+                                      rule.pattern(2).as_data(context),)),
+                      rule.rule_base.num_fc_rules_triggered += 1
   finally:
     context.done()
 
@@ -205,31 +199,25 @@ def contextualize_action(rule, context = None, index = None):
   if context is None: context = contexts.simple_context()
   try:
     with knowledge_base.Gen_once if index == 0 \
-             else engine.lookup('test', 'case_number', context,
+             else engine.lookup('plangraph', 'has_intention', context,
                                 rule.foreach_patterns(0)) \
       as gen_0:
       for dummy in gen_0:
-        if context.lookup_data('case') in (4, 5, 6):
-          with knowledge_base.Gen_once if index == 1 \
-                   else engine.lookup('plangraph', 'has_intention', context,
-                                      rule.foreach_patterns(1)) \
-            as gen_1:
-            for dummy in gen_1:
-              with knowledge_base.Gen_once if index == 2 \
-                       else engine.lookup('plangraph', 'context_of', context,
-                                          rule.foreach_patterns(2)) \
-                as gen_2:
-                for dummy in gen_2:
-                  with knowledge_base.Gen_once if index == 3 \
-                           else engine.lookup('plangraph', 'status_of', context,
-                                              rule.foreach_patterns(3)) \
-                    as gen_3:
-                    for dummy in gen_3:
-                      if context.lookup_data('status') != 'exec_success':
-                        engine.assert_('maprole', 'contextualize_action',
-                                       (rule.pattern(0).as_data(context),
-                                        rule.pattern(1).as_data(context),)),
-                        rule.rule_base.num_fc_rules_triggered += 1
+        with knowledge_base.Gen_once if index == 1 \
+                 else engine.lookup('plangraph', 'context_of', context,
+                                    rule.foreach_patterns(1)) \
+          as gen_1:
+          for dummy in gen_1:
+            with knowledge_base.Gen_once if index == 2 \
+                     else engine.lookup('plangraph', 'status_of', context,
+                                        rule.foreach_patterns(2)) \
+              as gen_2:
+              for dummy in gen_2:
+                if context.lookup_data('status') != 'exec_success':
+                  engine.assert_('maprole', 'contextualize_action',
+                                 (rule.pattern(0).as_data(context),
+                                  rule.pattern(1).as_data(context),)),
+                  rule.rule_base.num_fc_rules_triggered += 1
   finally:
     context.done()
 
@@ -248,7 +236,8 @@ def locate(rule, context = None, index = None):
           as gen_1:
           for dummy in gen_1:
             engine.assert_('maptask', 'locate',
-                           (rule.pattern(0).as_data(context),)),
+                           (rule.pattern(0).as_data(context),
+                            rule.pattern(1).as_data(context),)),
             rule.rule_base.num_fc_rules_triggered += 1
   finally:
     context.done()
@@ -268,7 +257,8 @@ def background(rule, context = None, index = None):
           as gen_1:
           for dummy in gen_1:
             engine.assert_('maptask', 'background',
-                           (rule.pattern(0).as_data(context),)),
+                           (rule.pattern(0).as_data(context),
+                            rule.pattern(1).as_data(context),)),
             rule.rule_base.num_fc_rules_triggered += 1
   finally:
     context.done()
@@ -278,75 +268,17 @@ def locate_stra_1(rule, context = None, index = None):
   if context is None: context = contexts.simple_context()
   try:
     with knowledge_base.Gen_once if index == 0 \
-             else engine.lookup('test', 'case_number', context,
+             else engine.lookup('maptask', 'locate', context,
                                 rule.foreach_patterns(0)) \
       as gen_0:
       for dummy in gen_0:
-        if context.lookup_data('case') in [1, 4]:
-          with knowledge_base.Gen_once if index == 1 \
-                   else engine.lookup('maptask', 'locate', context,
-                                      rule.foreach_patterns(1)) \
-            as gen_1:
-            for dummy in gen_1:
-              engine.assert_('mapview', 'scale_level',
-                             (rule.pattern(0).as_data(context),)),
-              engine.assert_('mapview', 'marker',
-                             (rule.pattern(1).as_data(context),)),
-              engine.assert_('mapview', 'label',
-                             (rule.pattern(1).as_data(context),)),
-              rule.rule_base.num_fc_rules_triggered += 1
-  finally:
-    context.done()
-
-def locate_stra_2(rule, context = None, index = None):
-  engine = rule.rule_base.engine
-  if context is None: context = contexts.simple_context()
-  try:
-    with knowledge_base.Gen_once if index == 0 \
-             else engine.lookup('test', 'case_number', context,
-                                rule.foreach_patterns(0)) \
-      as gen_0:
-      for dummy in gen_0:
-        if context.lookup_data('case') in [2, 5]:
-          with knowledge_base.Gen_once if index == 1 \
-                   else engine.lookup('maptask', 'locate', context,
-                                      rule.foreach_patterns(1)) \
-            as gen_1:
-            for dummy in gen_1:
-              engine.assert_('mapview', 'scale_level',
-                             (rule.pattern(0).as_data(context),)),
-              engine.assert_('mapview', 'center',
-                             (rule.pattern(1).as_data(context),)),
-              engine.assert_('mapview', 'label',
-                             (rule.pattern(1).as_data(context),)),
-              rule.rule_base.num_fc_rules_triggered += 1
-  finally:
-    context.done()
-
-def locate_stra_3(rule, context = None, index = None):
-  engine = rule.rule_base.engine
-  if context is None: context = contexts.simple_context()
-  try:
-    with knowledge_base.Gen_once if index == 0 \
-             else engine.lookup('test', 'case_number', context,
-                                rule.foreach_patterns(0)) \
-      as gen_0:
-      for dummy in gen_0:
-        if context.lookup_data('case') in [3, 6]:
-          with knowledge_base.Gen_once if index == 1 \
-                   else engine.lookup('maptask', 'locate', context,
-                                      rule.foreach_patterns(1)) \
-            as gen_1:
-            for dummy in gen_1:
-              engine.assert_('mapview', 'scale_level',
-                             (rule.pattern(0).as_data(context),)),
-              engine.assert_('mapview', 'marker',
-                             (rule.pattern(1).as_data(context),)),
-              engine.assert_('mapview', 'label',
-                             (rule.pattern(1).as_data(context),)),
-              engine.assert_('mapview', 'center',
-                             (rule.pattern(1).as_data(context),)),
-              rule.rule_base.num_fc_rules_triggered += 1
+        engine.assert_('mapview', 'scale_level',
+                       (rule.pattern(0).as_data(context),)),
+        engine.assert_('mapview', 'marker',
+                       (rule.pattern(1).as_data(context),)),
+        engine.assert_('mapview', 'label',
+                       (rule.pattern(1).as_data(context),)),
+        rule.rule_base.num_fc_rules_triggered += 1
   finally:
     context.done()
 
@@ -456,10 +388,7 @@ def populate(engine):
      contexts.variable('param'),))
   
   fc_rule.fc_rule('inform_belief_value_of', This_rule_base, inform_belief_value_of,
-    (('test', 'case_number',
-      (contexts.variable('case'),),
-      False),
-     ('plangraph', 'belief_value_of',
+    (('plangraph', 'belief_value_of',
       (contexts.variable('agent'),
        contexts.variable('value'),
        contexts.variable('param'),),
@@ -481,10 +410,7 @@ def populate(engine):
      contexts.variable('param'),))
   
   fc_rule.fc_rule('contextualize_action', This_rule_base, contextualize_action,
-    (('test', 'case_number',
-      (contexts.variable('case'),),
-      False),
-     ('plangraph', 'has_intention',
+    (('plangraph', 'has_intention',
       (contexts.variable('agent'),
        contexts.variable('action'),),
       False),
@@ -509,7 +435,8 @@ def populate(engine):
       (pattern.pattern_literal('location'),
        contexts.variable('value'),),
       False),),
-    (contexts.variable('value'),))
+    (contexts.variable('value'),
+     pattern.pattern_literal('The map is to inform other users of this location'),))
   
   fc_rule.fc_rule('background', This_rule_base, background,
     (('maprole', 'contextualize_action',
@@ -520,41 +447,21 @@ def populate(engine):
       (pattern.pattern_literal('layer'),
        contexts.variable('value'),),
       False),),
-    (contexts.variable('value'),))
+    (contexts.variable('value'),
+     pattern.pattern_literal('The map provides relevant layers about the current activity'),))
   
   fc_rule.fc_rule('locate_stra_1', This_rule_base, locate_stra_1,
-    (('test', 'case_number',
-      (contexts.variable('case'),),
-      False),
-     ('maptask', 'locate',
-      (contexts.variable('value'),),
+    (('maptask', 'locate',
+      (contexts.variable('value'),
+       contexts.anonymous('_'),),
       False),),
     (pattern.pattern_literal('state'),
      contexts.variable('value'),))
   
-  fc_rule.fc_rule('locate_stra_2', This_rule_base, locate_stra_2,
-    (('test', 'case_number',
-      (contexts.variable('case'),),
-      False),
-     ('maptask', 'locate',
-      (contexts.variable('value'),),
-      False),),
-    (pattern.pattern_literal('local'),
-     contexts.variable('value'),))
-  
-  fc_rule.fc_rule('locate_stra_3', This_rule_base, locate_stra_3,
-    (('test', 'case_number',
-      (contexts.variable('case'),),
-      False),
-     ('maptask', 'locate',
-      (contexts.variable('value'),),
-      False),),
-    (pattern.pattern_literal('county'),
-     contexts.variable('value'),))
-  
   fc_rule.fc_rule('background_stra', This_rule_base, background_stra,
     (('maptask', 'background',
-      (contexts.variable('value'),),
+      (contexts.variable('value'),
+       contexts.anonymous('_'),),
       False),),
     (contexts.variable('value'),))
 
@@ -584,45 +491,26 @@ Krb_lineno_map = (
     ((155, 155), (52, 52)),
     ((156, 159), (54, 54)),
     ((168, 172), (59, 59)),
-    ((173, 173), (60, 60)),
-    ((174, 178), (61, 61)),
-    ((179, 183), (62, 62)),
-    ((184, 188), (63, 63)),
-    ((189, 193), (64, 64)),
-    ((194, 194), (65, 65)),
-    ((195, 198), (67, 67)),
-    ((207, 211), (71, 71)),
-    ((212, 212), (72, 72)),
-    ((213, 217), (73, 73)),
-    ((218, 222), (74, 74)),
-    ((223, 227), (75, 75)),
-    ((228, 228), (76, 76)),
-    ((229, 231), (78, 78)),
-    ((240, 244), (83, 83)),
-    ((245, 249), (84, 84)),
-    ((250, 251), (86, 86)),
-    ((260, 264), (90, 90)),
-    ((265, 269), (91, 91)),
-    ((270, 271), (93, 93)),
-    ((280, 284), (98, 98)),
-    ((285, 285), (99, 99)),
-    ((286, 290), (100, 100)),
-    ((291, 292), (102, 102)),
-    ((293, 294), (103, 103)),
-    ((295, 296), (104, 104)),
-    ((305, 309), (108, 108)),
-    ((310, 310), (109, 109)),
-    ((311, 315), (110, 110)),
-    ((316, 317), (112, 112)),
-    ((318, 319), (113, 113)),
-    ((320, 321), (114, 114)),
-    ((330, 334), (118, 118)),
-    ((335, 335), (119, 119)),
-    ((336, 340), (120, 120)),
-    ((341, 342), (122, 122)),
-    ((343, 344), (123, 123)),
-    ((345, 346), (124, 124)),
-    ((347, 348), (125, 125)),
-    ((357, 361), (129, 129)),
-    ((362, 363), (131, 131)),
+    ((173, 177), (60, 60)),
+    ((178, 182), (61, 61)),
+    ((183, 187), (62, 62)),
+    ((188, 188), (63, 63)),
+    ((189, 192), (65, 65)),
+    ((201, 205), (69, 69)),
+    ((206, 210), (70, 70)),
+    ((211, 215), (71, 71)),
+    ((216, 216), (72, 72)),
+    ((217, 219), (74, 74)),
+    ((228, 232), (79, 79)),
+    ((233, 237), (80, 80)),
+    ((238, 240), (82, 82)),
+    ((249, 253), (86, 86)),
+    ((254, 258), (87, 87)),
+    ((259, 261), (89, 89)),
+    ((270, 274), (94, 94)),
+    ((275, 276), (96, 96)),
+    ((277, 278), (97, 97)),
+    ((279, 280), (98, 98)),
+    ((289, 293), (119, 119)),
+    ((294, 295), (121, 121)),
 )

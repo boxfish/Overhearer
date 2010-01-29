@@ -93,9 +93,10 @@ locate_stra_1
     foreach
         maptask.locate($value, $_)
     assert
-        mapview.scale_level('state')
-        mapview.marker($value)
-        mapview.label($value)
+        mapstra.fulfill('locate_stra_1', 'locate', 'To locate a position, the map will show the location in a larger context, and mark the location to raise user's attention')
+        mapstra.locate_stra_1('scale_level', 'state')
+        mapstra.locate_stra_1('marker', $value)
+        mapstra.locate_stra_1('label', $value)
 
 #locate_stra_2
 #    foreach
@@ -118,4 +119,5 @@ background_stra
     foreach
         maptask.background($value, $_)
     assert
-        mapview.layer($value)
+        mapstra.fulfill('background_stra', 'background', 'The map will add the relevant layers as background layers.')
+        mapstra.background_stra('layer', $value)

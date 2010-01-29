@@ -18,16 +18,16 @@ kbase:
   #password: ist309
   # -------------------
 # the directory including at least one executor and one responder
-actuator_dir: /Actuator
+actuator: Actuator
 # the executor defines the basic actions that the system can perform as defined in the knowledge base
 executor: 
-  module: EvacExecutor
+  module: Actuator.EvacExecutor
   class: EvacExecutor
 responders: 
   # it is possible to have multiple responders, e.g. different modals, or different experimental strategies
-  - module: TextResponder
+  - module: Actuator.TextResponder
     class: TextResponder
-  - module: MapResponder
+  - module: Actuator.MapResponder
     class: MapResponder
   #- module: MapResponder1
   #  class: MapResponder1

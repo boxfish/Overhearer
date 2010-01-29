@@ -11,14 +11,16 @@ import sys
 import os
 
 # append the DMLib and local directories to PYTHONPATH
-local_dir = os.path.dirname(__file__)
-DMLib_dir = local_dir + "/../../DMLib"
-sys.path.append(local_dir)
-sys.path.append(DMLib_dir)    
+#local_dir = os.path.dirname(__file__)
+#DMLib_dir = local_dir + "/../../DMLib"
+#sys.path.append(local_dir)
+#sys.path.append(DMLib_dir)    
     
-from MentalState import *
-from Executor import Executor
+from Overhearer.DMLib.MentalState import *
+from Overhearer.DMLib.Executor import Executor
 
+#from MentalState import *
+#from Executor import Executor
 from MapControl import OLMapControl
 
 #BASE_URL = 'http://spatiallab.ist.psu.edu:8080'
