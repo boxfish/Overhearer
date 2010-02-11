@@ -7304,7 +7304,7 @@
     </Style>
     <Style name="guide_team">
         <Rule>            
-            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/red-arrow.png" type="png" width="16" height="16" allow_overlap="true"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ambulance.gif" type="png" width="16" height="16" allow_overlap="true"></PointSymbolizer>
             <TextSymbolizer name="label" fontset_name="oblique-fonts" size="10" fill="rgb(255,4,0)" halo_radius="1" placement="point" dy="20" dx="50"></TextSymbolizer>
         </Rule>
     </Style>
