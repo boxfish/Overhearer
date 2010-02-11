@@ -167,6 +167,7 @@ class EvacExecutor(Executor):
     values["type"] = "structure"
     values["styles"] = ['_'.join(values["name"].split(' ')),]
     self.mapCtrl.addMapLayer(values)  
+    self.mapCtrl.setMapExtent(-8560082.0, 4869277.0,-8513847.0 4907464.5)
     if not values["name"] in plan.generatedValues:
         plan.generatedValues.append(values["name"])          
     plan.mentalState.execStatus = exec_success
@@ -174,10 +175,8 @@ class EvacExecutor(Executor):
 
   def IdentifyDiffLocFromGesture(self, plan):
     print "Execute: IdentifyDiffLocFromGesture"
-    print plan.refGestures
     if plan.refGestures:
       center = self.GetCenterPoint(plan.refGestures)
-      print center    
       width = self.mapCtrl.bbox[2] - self.mapCtrl.bbox[0]
       height = self.mapCtrl.bbox[3] - self.mapCtrl.bbox[1]
       minX = center[0] - 0.5 * width
