@@ -10,4 +10,5 @@ maps/mapfiles/
 static/data/DAVEG_Demo/*
 DAVEG_Demo/Actuator/MapTemplates/mapnik/world_boundaries/
 DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/
+DAVEG_Demo/Actuator/map.yaml
 overhearer.sqlite
