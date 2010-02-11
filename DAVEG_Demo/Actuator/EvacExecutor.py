@@ -198,11 +198,11 @@ class EvacExecutor(Executor):
         values["type"] = "points"
         values["styles"] = ['_'.join(values["name"].split(' ')),]
         values["values"] = []
-        values["values"].append({"coords": center, "label":plan.agents[0].id})
+        values["values"].append({"coords": center, "label":str(plan.agents[0].id)})
         self.mapCtrl.addMapLayer(values)
         print values
       else:
-        layer["values"].append({"coords": center, "label":plan.initiator.id})
+        layer["values"].append({"coords": center, "label":str(plan.agents[0].id)})
         
   def GetCenterPoint(self, gestures):
     minX = gestures[0][0][0]
