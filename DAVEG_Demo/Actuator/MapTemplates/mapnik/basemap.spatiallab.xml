@@ -7263,7 +7263,7 @@
                 <CssParameter name="stroke-opacity">0.8</CssParameter>
                 <CssParameter name="stroke-dasharray">4, 2</CssParameter>
             </LineSymbolizer>
-            <TextSymbolizer name="label" fontset_name="oblique-fonts" size="10" fill="rgb(255,4,0)" halo_radius="1" placement="line"></TextSymbolizer>
+            <TextSymbolizer name="label" fontset_name="oblique-fonts" size="13" fill="rgb(255,4,0)" halo_radius="1" placement="line"></TextSymbolizer>
         </Rule>
     </Style>
     <Style name="ten_mile_epz">
@@ -7278,7 +7278,7 @@
                 <CssParameter name="stroke-opacity">0.8</CssParameter>
                 <CssParameter name="stroke-dasharray">4, 2</CssParameter>
             </LineSymbolizer>
-            <TextSymbolizer name="label" fontset_name="oblique-fonts" size="10" fill="rgb(255,4,0)" halo_radius="1" placement="line"></TextSymbolizer>
+            <TextSymbolizer name="label" fontset_name="oblique-fonts" size="13" fill="rgb(255,4,0)" halo_radius="1" placement="line"></TextSymbolizer>
         </Rule>
     </Style>
     <Style name="plume_model">
