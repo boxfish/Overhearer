@@ -7304,7 +7304,7 @@
     </Style>
     <Style name="guide_team">
         <Rule>            
-            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ambulance.gif" type="png" width="34" height="35" allow_overlap="true"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ambulance.png" type="png" width="34" height="35" allow_overlap="true"></PointSymbolizer>
         </Rule>
     </Style>
     <Style name="three_mile_island_nuclear_station">
