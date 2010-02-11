@@ -1,0 +1,19 @@
+# the context/scenario to be used by the dialogue manager
+# must have a folder with the same name including all the relevant inforamtion: grammar, parser config file, map templates, and knowledge base if using sqlite
+context: DAVEG_Demo
+parser_dir:
+kbase:
+    # -------------------
+    # sqlite
+    type: sqlite
+    dbfile: /KBase/kboop.sqlite
+    # -------------------
+# the directory including at least one executor and one responder
+actuator: Actuator
+# the executor defines the basic actions that the system can perform as defined in the knowledge base
+executor: 
+    module: Actuator.EvacExecutor
+    class: EvacExecutor
+responder: 
+    module: Actuator.EvacResponder
+    class: EvacResponder
