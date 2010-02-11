@@ -24,7 +24,7 @@ class MapnikControl():
         self.mapContents = {}
     
     def sortMapContents(self):
-        order_list = ["ten mile epz", "five mile epz", "two mile epz", "plume model", "evacuation area", "three mile island nuclear station"]
+        order_list = ["ten mile epz", "five mile epz", "two mile epz", "plume model", "evacuation area", "three mile island nuclear station", "guide team"]
         newMapContents = []
         for layer_name in order_list:
             if layer_name in self.mapContents:
