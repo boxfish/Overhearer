@@ -172,6 +172,36 @@ class EvacExecutor(Executor):
     plan.mentalState.execStatus = exec_success
     plan.searchParamByName("ImpactedArea").status = param_status_success
 
+  def IdentifyDiffLocFromGesture(self, plan):
+    print "Execute: IdentifyDiffLocFromGesture"
+    print plan.refGestures
+    if plan.refGestures:
+      center = self.GetCenterPoint(plan.refGestures)    
+      width = self.mapCtrl.bbox[2] - self.mapCtrl.bbox[0]
+      height = self.mapCtrl.bbox[3] - self.mapCtrl.bbox[1]
+      minX = center[0] - 0.5 * width
+      minY = center[1] - 0.5 * height
+      maxX = center[0] + 0.5 * width
+      maxY = center[1] + 0.5 * height
+      self.mapCtrl.setMapExtent(minX, minY, maxX, maxY)
+      
+  def GetCenterPoint(self, gestures):
+    minX = 0.0
+    maxX = 0.0
+    minY = 0.0
+    maxY = 0.0
+    for gesture in gestures:
+      for point in gesture:
+        if point[0] < minX:
+          minX = point[0]    
+        if point[0] > maxX:
+          maxX = point[0]
+        if point[1] < minY:
+          minY = point[1]    
+        if point[1] > maxY:
+          maxY = point[1]
+    return [0.5*(minX + maxX), 0.5*(minY + maxY)]
+          
 def main():
   pass
   
