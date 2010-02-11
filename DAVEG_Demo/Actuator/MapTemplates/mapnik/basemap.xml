@@ -189,13 +189,13 @@
             <Filter>(([aerialway]='cable_car') or ([aerialway]='gondola'))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <LinePatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/cable_car.png" type="png" width="28" height="3"></LinePatternSymbolizer>
+            <LinePatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/cable_car.png" type="png" width="28" height="3"></LinePatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([aerialway]='chair_lift') or ([aerialway]='drag_lift'))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <LinePatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/chair_lift.png" type="png" width="30" height="5"></LinePatternSymbolizer>
+            <LinePatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/chair_lift.png" type="png" width="30" height="5"></LinePatternSymbolizer>
         </Rule>
     </Style>
     <Style name="area-text">
@@ -447,17 +447,17 @@
             <Filter>([natural]='cliff')</Filter>
             <MinScaleDenominator>25000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <LinePatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/cliff.png" type="png" width="10" height="4"></LinePatternSymbolizer>
+            <LinePatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/cliff.png" type="png" width="10" height="4"></LinePatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>([natural]='cliff')</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <LinePatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/cliff2.png" type="png" width="12" height="6"></LinePatternSymbolizer>
+            <LinePatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/cliff2.png" type="png" width="12" height="6"></LinePatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>([man_made]='embankment')</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <LinePatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/cliff.png" type="png" width="10" height="4"></LinePatternSymbolizer>
+            <LinePatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/cliff.png" type="png" width="10" height="4"></LinePatternSymbolizer>
         </Rule>
     </Style>
     <Style name="coast-poly">
@@ -829,7 +829,7 @@
         <Rule>
             <Filter>([landuse]='quarry')</Filter>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
-            <PolygonPatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/quarry2.png" type="png" width="30" height="30"></PolygonPatternSymbolizer>
+            <PolygonPatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/quarry2.png" type="png" width="30" height="30"></PolygonPatternSymbolizer>
             <LineSymbolizer>
                 <CssParameter name="stroke">rgb(128,128,128)</CssParameter>
                 <CssParameter name="stroke-width">0.5</CssParameter>
@@ -847,23 +847,23 @@
             <Filter>([landuse]='vineyard')</Filter>
             <MinScaleDenominator>25000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <PolygonPatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/vineyard.png" type="png" width="19" height="21"></PolygonPatternSymbolizer>
+            <PolygonPatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/vineyard.png" type="png" width="19" height="21"></PolygonPatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>([landuse]='vineyard')</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <PolygonPatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/vineyard.png" type="png" width="29" height="29"></PolygonPatternSymbolizer>
+            <PolygonPatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/vineyard.png" type="png" width="29" height="29"></PolygonPatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>([leisure]='nature_reserve')</Filter>
             <MinScaleDenominator>50000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <PolygonPatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/nature_reserve.png" type="png" width="21" height="24"></PolygonPatternSymbolizer>
+            <PolygonPatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/nature_reserve.png" type="png" width="21" height="24"></PolygonPatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>([leisure]='nature_reserve')</Filter>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
-            <PolygonPatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/nature_reserve2.png" type="png" width="42" height="48"></PolygonPatternSymbolizer>
+            <PolygonPatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/nature_reserve2.png" type="png" width="42" height="48"></PolygonPatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>((([landuse]='cemetery') or ([landuse]='grave_yard')) or ([amenity]='grave_yard'))</Filter>
@@ -934,12 +934,12 @@
             <Filter>([military]='danger_area')</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
-            <PolygonPatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/danger.png" type="png" width="30" height="30"></PolygonPatternSymbolizer>
+            <PolygonPatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/danger.png" type="png" width="30" height="30"></PolygonPatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>((([landuse]='cemetery') or ([landuse]='grave_yard')) or ([amenity]='grave_yard'))</Filter>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
-            <PolygonPatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/grave_yard.png" type="png" width="16" height="16"></PolygonPatternSymbolizer>
+            <PolygonPatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/grave_yard.png" type="png" width="16" height="16"></PolygonPatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([landuse]='meadow') or ([landuse]='grass'))</Filter>
@@ -959,7 +959,7 @@
         <Rule>
             <Filter>([tourism]='zoo')</Filter>
             <MaxScaleDenominator>750000</MaxScaleDenominator>
-            <PolygonPatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/zoo.png" type="png" width="21" height="24"></PolygonPatternSymbolizer>
+            <PolygonPatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/zoo.png" type="png" width="21" height="24"></PolygonPatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>([leisure]='common')</Filter>
@@ -1000,7 +1000,7 @@
         <Rule>
             <Filter>([landuse]='forest')</Filter>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
-            <PolygonPatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/forest.png" type="png" width="21" height="24"></PolygonPatternSymbolizer>
+            <PolygonPatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/forest.png" type="png" width="21" height="24"></PolygonPatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>([landuse]='farmyard')</Filter>
@@ -1162,12 +1162,12 @@
         <Rule>
             <Filter>([natural]='beach')</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <PolygonPatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/beach.png" type="png" width="10" height="10"></PolygonPatternSymbolizer>
+            <PolygonPatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/beach.png" type="png" width="10" height="10"></PolygonPatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>([natural]='mud')</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <PolygonPatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mud.png" type="png" width="10" height="10"></PolygonPatternSymbolizer>
+            <PolygonPatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mud.png" type="png" width="10" height="10"></PolygonPatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>([leisure]='pitch')</Filter>
@@ -3830,263 +3830,263 @@
         <Rule>
             <Filter>([tourism]='alpine_hut')</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/alpinehut.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/alpinehut.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='shelter')</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/shelter2.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/shelter2.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='atm')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/atm2.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/atm2.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='bank')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/bank2.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/bank2.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='bar')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/bar.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/bar.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='bicycle_rental')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/rental_bicycle.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/rental_bicycle.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([amenity]='bus_stop') or ([highway]='bus_stop'))</Filter>
             <MinScaleDenominator>5000</MinScaleDenominator>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/bus_stop_small.png" type="png" width="3" height="3"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/bus_stop_small.png" type="png" width="3" height="3"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([amenity]='bus_stop') or ([highway]='bus_stop'))</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/bus_stop.p.12.png" type="png" width="12" height="12"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/bus_stop.p.12.png" type="png" width="12" height="12"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='bus_station')</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/bus_station.n.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/bus_station.n.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([highway]='traffic_signals')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/traffic_light.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/traffic_light.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='cafe')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/cafe.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/cafe.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([tourism]='camp_site')</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/camping.n.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/camping.n.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([tourism]='caravan_site')</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/caravan_park.p.24.png" type="png" width="24" height="24"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/caravan_park.p.24.png" type="png" width="24" height="24"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='car_sharing')</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/car_share.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/car_share.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='cinema')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/cinema.p.24.png" type="png" width="24" height="24"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/cinema.p.24.png" type="png" width="24" height="24"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='fire_station')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/firestation.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/firestation.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='fuel')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/fuel.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/fuel.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([tourism]='guest_house')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/guest_house.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/guest_house.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='hospital')</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/hospital.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/hospital.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([tourism]='hostel')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/hostel.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/hostel.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([tourism]='hotel')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/hotel2.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/hotel2.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='embassy')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/embassy.png" type="png" width="12" height="12"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/embassy.png" type="png" width="12" height="12"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='library')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/library.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/library.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([man_made]='mast')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/communications.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/communications.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([tourism]='museum')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/museum.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/museum.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([amenity]='parking') and (([access]='public') or not (([access]&lt;&gt;''))))</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/parking.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/parking.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='pharmacy')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pharmacy.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pharmacy.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([amenity]='place_of_worship') and ([religion]='christian'))</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/christian3.p.14.png" type="png" width="14" height="14"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/christian3.p.14.png" type="png" width="14" height="14"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([amenity]='place_of_worship') and ([religion]='muslim'))</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/islamic3.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/islamic3.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([amenity]='place_of_worship') and ([religion]='sikh'))</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sikh3.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sikh3.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([amenity]='place_of_worship') and ([religion]='jewish'))</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/jewish3.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/jewish3.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='place_of_worship')</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/place_of_worship3.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/place_of_worship3.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='police')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/police.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/police.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='post_box')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/post_box.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/post_box.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='post_office')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/post_office.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/post_office.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='pub')</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pub.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pub.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='recycling')</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/recycling.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/recycling.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='restaurant')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/restaurant.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/restaurant.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='fast_food')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/fast_food.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/fast_food.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='telephone')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/telephone.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/telephone.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='theatre')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/theatre.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/theatre.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='toilets')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/toilets.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/toilets.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='drinking_water')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/food_drinkingtap.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/food_drinkingtap.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([amenity]='prison')</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/amenity_prison.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/amenity_prison.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([tourism]='viewpoint')</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/view_point.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/view_point.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([man_made]='water_tower')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tower_water.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tower_water.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([shop]='supermarket')</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/shop_supermarket.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/shop_supermarket.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([shop]='bakery')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/shop_bakery.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/shop_bakery.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([shop]='clothes')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/shop_clothes.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/shop_clothes.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([shop]='convenience')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/shop_convenience.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/shop_convenience.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([shop]='diy')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/shop_diy.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/shop_diy.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([shop]='hairdresser')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/shop_hairdresser.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/shop_hairdresser.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
         </Rule>
     </Style>
     <Style name="power">
@@ -4108,7 +4108,7 @@
     <Style name="power_towers">
         <Rule>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/power_tower.png" type="png" width="7" height="7"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/power_tower.png" type="png" width="7" height="7"></PointSymbolizer>
         </Rule>
     </Style>
     <Style name="primarybridge_layer0_casing">
@@ -4994,241 +4994,241 @@
             <Filter>(([highway]='motorway') and ([length]=1))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='motorway') and ([length]=2))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='motorway') and ([length]=3))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='motorway') and ([length]=4))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='motorway') and ([length]=5))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='motorway') and ([length]=6))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='motorway') and ([length]=7))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='motorway') and ([length]=8))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=1))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=2))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=3))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="24" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="24" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=4))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=5))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=6))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=7))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=8))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield8.png" type="png" width="66" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield8.png" type="png" width="66" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=1))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=2))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=3))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=4))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=5))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=6))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=7))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=8))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield8.png" type="png" width="66" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield8.png" type="png" width="66" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='secondary') and ([length]=1))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='secondary') and ([length]=2))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='secondary') and ([length]=3))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='secondary') and ([length]=4))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='secondary') and ([length]=5))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='secondary') and ([length]=6))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='secondary') and ([length]=7))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='secondary') and ([length]=8))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield8.png" type="png" width="66" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="21" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/sec_shield8.png" type="png" width="66" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>((([highway]='tertiary') and ([length]=1)) and not (([bridge]='yes')))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>((([highway]='tertiary') and ([length]=2)) and not (([bridge]='yes')))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>((([highway]='tertiary') and ([length]=3)) and not (([bridge]='yes')))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>((([highway]='tertiary') and ([length]=4)) and not (([bridge]='yes')))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>((([highway]='tertiary') and ([length]=5)) and not (([bridge]='yes')))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>((([highway]='tertiary') and ([length]=6)) and not (([bridge]='yes')))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>((([highway]='tertiary') and ([length]=7)) and not (([bridge]='yes')))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>((([highway]='tertiary') and ([length]=8)) and not (([bridge]='yes')))</Filter>
             <MinScaleDenominator>1000</MinScaleDenominator>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield8.png" type="png" width="66" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="18" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/ter_shield8.png" type="png" width="66" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>((([highway]='unclassified') or ([highway]='residential')) and not (([bridge]='yes')))</Filter>
@@ -5336,145 +5336,145 @@
             <Filter>(([highway]='motorway') and ([length]=1))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>750000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='motorway') and ([length]=2))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>750000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='motorway') and ([length]=3))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>750000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='motorway') and ([length]=4))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>750000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='motorway') and ([length]=5))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>750000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='motorway') and ([length]=6))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>750000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='motorway') and ([length]=7))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>750000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='motorway') and ([length]=8))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>750000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mot_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=1))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=2))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=3))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="24" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="24" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=4))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=5))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=6))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=7))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='trunk') and ([length]=8))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield8.png" type="png" width="66" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tru_shield8.png" type="png" width="66" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=1))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield1.png" type="png" width="17" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=2))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield2.png" type="png" width="24" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=3))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield3.png" type="png" width="31" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=4))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield4.png" type="png" width="38" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=5))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield5.png" type="png" width="45" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=6))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield6.png" type="png" width="52" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=7))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield7.png" type="png" width="59" height="17"></ShieldSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='primary') and ([length]=8))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield8.png" type="png" width="66" height="17"></ShieldSymbolizer>
+            <ShieldSymbolizer name="ref" fontset_name="bold-fonts" size="10" fill="rgb(255,255,255)" placement="line" spacing="750" min_distance="30" file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/pri_shield8.png" type="png" width="66" height="17"></ShieldSymbolizer>
         </Rule>
     </Style>
     <Style name="sports_grounds">
@@ -5510,34 +5510,34 @@
             <Filter>(([railway]='station') and not (([disused]='yes')))</Filter>
             <MinScaleDenominator>100000</MinScaleDenominator>
             <MaxScaleDenominator>200000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/halt.png" type="png" width="4" height="4"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/halt.png" type="png" width="4" height="4"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([railway]='station') and not (([disused]='yes')))</Filter>
             <MinScaleDenominator>25000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/station_small.png" type="png" width="6" height="6"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/station_small.png" type="png" width="6" height="6"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([railway]='station') and ([disused]='yes'))</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/station_disused.png" type="png" width="6" height="6"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/station_disused.png" type="png" width="6" height="6"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([railway]='station') and not (([disused]='yes')))</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/station.png" type="png" width="9" height="9"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/station.png" type="png" width="9" height="9"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>((([railway]='halt') or ([railway]='tram_stop')) or ([aerialway]='station'))</Filter>
             <MinScaleDenominator>25000</MinScaleDenominator>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/halt.png" type="png" width="4" height="4"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/halt.png" type="png" width="4" height="4"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>((([railway]='halt') or ([railway]='tram_stop')) or ([aerialway]='station'))</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/station_small.png" type="png" width="6" height="6"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/station_small.png" type="png" width="6" height="6"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>((([railway]='halt') or ([railway]='tram_stop')) or ([aerialway]='station'))</Filter>
@@ -5585,7 +5585,7 @@
             <Filter>([aeroway]='airport')</Filter>
             <MinScaleDenominator>400000</MinScaleDenominator>
             <MaxScaleDenominator>1500000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/airport.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/airport.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
             <TextSymbolizer name="name" fontset_name="bold-fonts" size="8" fill="rgb(102,146,218)" dy="-12" halo_radius="1"></TextSymbolizer>
         </Rule>
         <Rule>
@@ -5598,7 +5598,7 @@
             <Filter>([aeroway]='aerodrome')</Filter>
             <MinScaleDenominator>400000</MinScaleDenominator>
             <MaxScaleDenominator>750000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/aerodrome.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/aerodrome.p.16.png" type="png" width="16" height="16"></PointSymbolizer>
             <TextSymbolizer name="name" fontset_name="oblique-fonts" size="8" fill="rgb(102,146,218)" dy="-12" halo_radius="1"></TextSymbolizer>
         </Rule>
         <Rule>
@@ -5611,68 +5611,68 @@
             <Filter>([railway]='level_crossing')</Filter>
             <MinScaleDenominator>12500</MinScaleDenominator>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/level_crossing.png" type="png" width="7" height="7"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/level_crossing.png" type="png" width="7" height="7"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([railway]='level_crossing')</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/level_crossing2.png" type="png" width="11" height="11"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/level_crossing2.png" type="png" width="11" height="11"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([man_made]='lighthouse')</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/lighthouse.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/lighthouse.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([natural]='peak')</Filter>
             <MaxScaleDenominator>400000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/peak.png" type="png" width="8" height="8"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/peak.png" type="png" width="8" height="8"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([natural]='spring')</Filter>
             <MaxScaleDenominator>50000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/spring.png" type="png" width="5" height="7"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/spring.png" type="png" width="5" height="7"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([natural]='tree')</Filter>
             <MinScaleDenominator>5000</MinScaleDenominator>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tree.png" type="png" width="3" height="3"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tree.png" type="png" width="3" height="3"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([natural]='tree')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tree2.png" type="png" width="5" height="5"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/tree2.png" type="png" width="5" height="5"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([man_made]='power_wind') or (([power]='generator') and ([power_source]='wind')))</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/power_wind.png" type="png" width="16" height="26"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/power_wind.png" type="png" width="16" height="26"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([man_made]='windmill')</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/windmill.png" type="png" width="10" height="15"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/windmill.png" type="png" width="10" height="15"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([man_made]='mast')</Filter>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/communications.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/communications.p.20.png" type="png" width="20" height="20"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([highway]='mini_roundabout')</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mini_round.png" type="png" width="9" height="9"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/mini_round.png" type="png" width="9" height="9"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>(([highway]='gate') or ([barrier]='gate'))</Filter>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/gate2.png" type="png" width="7" height="5"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/gate2.png" type="png" width="7" height="5"></PointSymbolizer>
         </Rule>
         <Rule>
             <Filter>([barrier]='bollard')</Filter>
             <MaxScaleDenominator>12500</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/bollard.png" type="png" width="3" height="3"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/bollard.png" type="png" width="3" height="3"></PointSymbolizer>
         </Rule>
     </Style>
     <Style name="text">
@@ -6811,11 +6811,11 @@
         <Rule>
             <MinScaleDenominator>5000</MinScaleDenominator>
             <MaxScaleDenominator>25000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/turning_circle.15.png" type="png" width="15" height="15"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/turning_circle.15.png" type="png" width="15" height="15"></PointSymbolizer>
         </Rule>
         <Rule>
             <MaxScaleDenominator>5000</MaxScaleDenominator>
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/turning_circle.19.png" type="png" width="19" height="19"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/turning_circle.19.png" type="png" width="19" height="19"></PointSymbolizer>
         </Rule>
     </Style>
     <Style name="village">
@@ -6841,7 +6841,7 @@
                 <CssParameter name="stroke-width">1.5</CssParameter>
                 <CssParameter name="stroke-dasharray">4, 2</CssParameter>
             </LineSymbolizer>
-            <PolygonPatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/glacier.png" type="png" width="40" height="32"></PolygonPatternSymbolizer>
+            <PolygonPatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/glacier.png" type="png" width="40" height="32"></PolygonPatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>([natural]='glacier')</Filter>
@@ -6851,7 +6851,7 @@
                 <CssParameter name="stroke-width">1.5</CssParameter>
                 <CssParameter name="stroke-dasharray">4, 2</CssParameter>
             </LineSymbolizer>
-            <PolygonPatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/glacier2.png" type="png" width="70" height="56"></PolygonPatternSymbolizer>
+            <PolygonPatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/glacier2.png" type="png" width="70" height="56"></PolygonPatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>(((((([waterway]='dock') or ([landuse]='reservoir')) or ([landuse]='water')) or ([waterway]='mill_pond')) or ([waterway]='riverbank')) or ([waterway]='canal'))</Filter>
@@ -6877,12 +6877,12 @@
         <Rule>
             <Filter>(([natural]='marsh') or ([natural]='wetland'))</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <PolygonPatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/marsh.png" type="png" width="30" height="30"></PolygonPatternSymbolizer>
+            <PolygonPatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/marsh.png" type="png" width="30" height="30"></PolygonPatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>([natural]='scrub')</Filter>
             <MaxScaleDenominator>100000</MaxScaleDenominator>
-            <PolygonPatternSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/scrub.png" type="png" width="30" height="30"></PolygonPatternSymbolizer>
+            <PolygonPatternSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/scrub.png" type="png" width="30" height="30"></PolygonPatternSymbolizer>
         </Rule>
         <Rule>
             <Filter>([natural]='land')</Filter>
@@ -7304,7 +7304,7 @@
     </Style>
     <Style name="three_mile_island_nuclear_station">
         <Rule>            
-            <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/red-arrow.png" type="png" width="16" height="16" allow_overlap="true"></PointSymbolizer>
+            <PointSymbolizer file="/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/red-arrow.png" type="png" width="16" height="16" allow_overlap="true"></PointSymbolizer>
             <TextSymbolizer name="label" fontset_name="oblique-fonts" size="10" fill="rgb(255,4,0)" halo_radius="1" placement="point" dy="20" dx="50"></TextSymbolizer>
             
         </Rule>
@@ -7312,21 +7312,21 @@
     <Layer name="world" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
         <StyleName>world</StyleName>
         <Datasource>
-            <Parameter name="file">/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/world_boundaries/shoreline_300</Parameter>
+            <Parameter name="file">/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/world_boundaries/shoreline_300</Parameter>
             <Parameter name="type">shape</Parameter>
         </Datasource>
     </Layer>
     <Layer name="coast-poly" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">
         <StyleName>coast-poly</StyleName>
         <Datasource>
-            <Parameter name="file">/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/world_boundaries/processed_p</Parameter>
+            <Parameter name="file">/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/world_boundaries/processed_p</Parameter>
             <Parameter name="type">shape</Parameter>
         </Datasource>
     </Layer>
     <Layer name="builtup" srs="+proj=merc +datum=WGS84 +over" status="1" clear_label_cache="0">
         <StyleName>builtup</StyleName>
         <Datasource>
-            <Parameter name="file">/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/world_boundaries/builtup_area</Parameter>
+            <Parameter name="file">/Users/byu/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/world_boundaries/builtup_area</Parameter>
             <Parameter name="type">shape</Parameter>
         </Datasource>
     </Layer>
