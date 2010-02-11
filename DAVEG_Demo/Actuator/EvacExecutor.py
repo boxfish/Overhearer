@@ -176,7 +176,8 @@ class EvacExecutor(Executor):
     print "Execute: IdentifyDiffLocFromGesture"
     print plan.refGestures
     if plan.refGestures:
-      center = self.GetCenterPoint(plan.refGestures)    
+      center = self.GetCenterPoint(plan.refGestures)
+      print center    
       width = self.mapCtrl.bbox[2] - self.mapCtrl.bbox[0]
       height = self.mapCtrl.bbox[3] - self.mapCtrl.bbox[1]
       minX = center[0] - 0.5 * width
@@ -186,10 +187,10 @@ class EvacExecutor(Executor):
       self.mapCtrl.setMapExtent(minX, minY, maxX, maxY)
       
   def GetCenterPoint(self, gestures):
-    minX = 0.0
-    maxX = 0.0
-    minY = 0.0
-    maxY = 0.0
+    minX = gestures[0][0][0]
+    maxX = gestures[0][0][0]
+    minY = gestures[0][0][1]
+    maxY = gestures[0][0][1]
     for gesture in gestures:
       for point in gesture:
         if point[0] < minX:
