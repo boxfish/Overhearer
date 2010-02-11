@@ -298,7 +298,7 @@ def participantHandler(request, pId):
     return HttpResponse("Hello, world. You're at the participantHandler index.")
 
 def testHandler(request):
-    f = open("/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/config.yaml")
+    f = open(os.path.join(settings.PROJECT_PATH, settings.CONTEXT, 'config.yaml'))
     config = yaml.load(f)
     f.close()
     dialogue = DialogueManager(config)                
