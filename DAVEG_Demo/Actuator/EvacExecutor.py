@@ -189,9 +189,7 @@ class EvacExecutor(Executor):
     print "Execute: AssignGuideTeam"
     if plan.refGestures:
       center = self.GetCenterPoint(plan.refGestures)
-      print "TEST"
       layer = self.mapCtrl.getMapLayer('guide team')
-      print layer
       if not layer:
         values = {}
         values["name"] = "guide team"
@@ -200,7 +198,6 @@ class EvacExecutor(Executor):
         values["values"] = []
         values["values"].append({"coords": center, "label":str(plan.agents[0].id)})
         self.mapCtrl.addMapLayer(values)
-        print values
       else:
         layer["values"].append({"coords": center, "label":str(plan.agents[0].id)})
         

@@ -51,6 +51,7 @@ class MapnikControl():
                     lyr.datasource = mapnik.PointDatasource()
                     for value in layer_info.get("values", []):
                         lyr.datasource.add_point(value["coords"][0], value["coords"][1], "label", value["label"])
+                        print value
                 else:
                     # add the layer & styles
                     query = "(select geom, label from geo_contents where name='%s') as %s" % (layer_name, '_'.join(layer_name.split(' ')))
