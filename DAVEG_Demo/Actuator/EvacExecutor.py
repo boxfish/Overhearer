@@ -58,7 +58,8 @@ class EvacExecutor(Executor):
       plan.parent.values.append(paramValue)
       plan.parent.status = param_status_hasValue
       plan.mentalState.execStatus = exec_success
-      plan.generatedValues.append(paramValue)
+      if not paramValue in plan.generatedValues:
+        plan.generatedValues.append(paramValue)
     else:
       plan.mentalState.execStatus = exec_failure
 
@@ -96,15 +97,17 @@ class EvacExecutor(Executor):
       paramValue = -1
     # update plan graph
     if paramValue >=0:
-      plan.parent.values.append(plan.refPhrase)
-      plan.parent.status = param_status_hasValue
+      if not plan.refPhrase in plan.parent.values:
+        plan.parent.values.append(plan.refPhrase)
+        plan.parent.status = param_status_hasValue
       plan.mentalState.execStatus = exec_success
-      plan.generatedValues.append(plan.refPhrase)
       values = {}
       values["name"] = str(plan.refPhrase) + ' mile epz'
       values["type"] = "structure"
       values["styles"] = ['_'.join(values["name"].split(' ')),]
       self.mapCtrl.addMapLayer(values)
+      if not values["name"] in plan.generatedValues:
+        plan.generatedValues.append(values["name"])
       plan.searchParamByName("ImpactedArea").status = param_status_hasValue
     else:
       plan.mentalState.execStatus = exec_failure
@@ -122,6 +125,8 @@ class EvacExecutor(Executor):
         values["type"] = "structure"
         values["styles"] = ['_'.join(values["name"].split(' ')),]
         self.mapCtrl.addMapLayer(values)
+        if not values["name"] in plan.generatedValues:
+          plan.generatedValues.append(values["name"])
       plan.mentalState.execStatus = exec_success
       plan.searchParamByName("ImpactedArea").status = param_status_hasValue
 
@@ -145,6 +150,8 @@ class EvacExecutor(Executor):
       self.mapCtrl.addMapLayer(values)
       plan.mentalState.execStatus = exec_success
       plan.searchParamByName("ImpactedArea").status = param_status_hasValue
+      if not values["name"] in plan.generatedValues:
+        plan.generatedValues.append(values["name"])
 
   def PerformEvacuation(self, plan):
     """docstring for PerformEvacuation"""
@@ -153,13 +160,15 @@ class EvacExecutor(Executor):
     iden_actions = action.searchActionsByName("IdentifyQuantityFromSpeech")
     for ident_action in iden_actions:
       for value in ident_action.generatedValues:
-        self.mapCtrl.removeMapLayer(str(value) + ' mile epz')
+        self.mapCtrl.removeMapLayer(value)
     self.mapCtrl.removeMapLayer('plume model')
     values = {}
     values["name"] = 'evacuation area'
     values["type"] = "structure"
     values["styles"] = ['_'.join(values["name"].split(' ')),]
-    self.mapCtrl.addMapLayer(values)            
+    self.mapCtrl.addMapLayer(values)  
+    if not values["name"] in plan.generatedValues:
+        plan.generatedValues.append(values["name"])          
     plan.mentalState.execStatus = exec_success
     plan.searchParamByName("ImpactedArea").status = param_status_success
 

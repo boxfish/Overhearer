@@ -60,7 +60,22 @@ class EvacResponder():
         
     def generate(self):
         """generate the response"""
+        EPZ_in_focus = []
+        for focus in self.planGraph.focus:
+            for value in focus.generatedValues:
+                if value.endswith(" epz"):
+                    EPZ_in_focus.append(value)
+        if EPZ_in_focus:
+            self.executor.mapCtrl.removeEPZLayers()
+            for value in EPZ_in_focus:
+                values = {}
+                values["name"] = value
+                values["type"] = "structure"
+                values["styles"] = ['_'.join(values["name"].split(' ')),]
+                self.executor.mapCtrl.addMapLayer(values)
+                    
         self.preview = self.executor.mapCtrl.generateStaticMap(self.map_width, self.map_height)
+        
         self.bbox = self.executor.mapCtrl.bbox
         
     def getResponse(self):

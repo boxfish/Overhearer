@@ -7236,7 +7236,7 @@
             </PolygonSymbolizer>
         </Rule>
     </Style>
-        <Style name="two_mile_epz">
+    <Style name="two_mile_epz">
         <Rule>
             <PolygonSymbolizer>
                 <CssParameter name="fill">rgb(212,154,4)</CssParameter>
@@ -7307,6 +7307,33 @@
             <PointSymbolizer file="/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/red-arrow.png" type="png" width="16" height="16" allow_overlap="true"></PointSymbolizer>
             <TextSymbolizer name="label" fontset_name="oblique-fonts" size="10" fill="rgb(255,4,0)" halo_radius="1" placement="point" dy="20" dx="50"></TextSymbolizer>
             
+        </Rule>
+    </Style>
+        <Style name="two_mile_epz_focus">
+        <Rule>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(211,43,28)</CssParameter>
+                <CssParameter name="stroke-width">2.5</CssParameter>
+                <CssParameter name="stroke-opacity">0.8</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="five_mile_epz_focus">
+        <Rule>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(211,43,28)</CssParameter>
+                <CssParameter name="stroke-width">2.5</CssParameter>
+                <CssParameter name="stroke-opacity">0.8</CssParameter>
+            </LineSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="ten_mile_epz_focus">
+        <Rule>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(211,43,28)</CssParameter>
+                <CssParameter name="stroke-width">2.5</CssParameter>
+                <CssParameter name="stroke-opacity">0.8</CssParameter>
+            </LineSymbolizer>
         </Rule>
     </Style>
     <Layer name="world" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" status="1" clear_label_cache="0">

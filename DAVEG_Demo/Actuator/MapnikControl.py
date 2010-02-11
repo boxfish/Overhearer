@@ -22,6 +22,14 @@ class MapnikControl():
         self.projection = str(projection)
         self.bbox = [-13852053.638602437, 933101.2722854596, -4975574.699678951, 7526228.245446581]
         self.mapContents = {}
+    
+    def sortMapContents(self):
+        order_list = ["ten mile epz", "five mile epz", "two mile epz", "plume model", "evacuation area", "three mile island nuclear station"]
+        newMapContents = []
+        for layer_name in order_list:
+            if layer_name in self.mapContents:
+                newMapContents.append(layer_name)
+        return newMapContents
         
     def generateStaticMap(self, width, height):
         """docstring for getMapXML"""
@@ -33,7 +41,9 @@ class MapnikControl():
         mapnik.load_map(m, self.base_map_file)
         env = mapnik.Envelope(self.bbox[0], self.bbox[1], self.bbox[2], self.bbox[3])
         m.zoom_to_box(env)
-        for layer_name, layer_info in self.mapContents.items():
+        layer_names = self.sortMapContents()
+        for layer_name in layer_names:
+            layer_info = self.mapContents[layer_name]
             layer_type = layer_info.get("type", "")
             if layer_type and layer_type != "layer":
                 # add the layer & styles
@@ -67,7 +77,28 @@ class MapnikControl():
         if layerName in self.mapContents:
             del self.mapContents[layerName]
         return
-                  
+    
+    def removeEPZLayers(self):
+        for layer_name in self.mapContents.keys():
+            if layer_name.endswith(" epz"):
+                del self.mapContents[layer_name]
+        
+    def removeFocusLayers(self):
+        """docstring for removeFocusLayer"""
+        for layer_name, layer_info in self.mapContents.items():
+            styles = layer_info.get("styles", [])
+            for style in styles:
+                if style.endswith("_focus"):
+                    self.mapContents[layer_name]["styles"].remove(style)
+    
+    def addFocusLayer(self, layerName):
+        if layerName in self.mapContents:
+            styles = self.mapContents[layerName].get("styles", [])
+            for style in styles:
+                if style.endswith("_focus"):
+                    return
+            self.mapContents[layerName]["styles"].append('_'.join(layerName.split(' '))+'_focus')    
+            
 def main():
     pass
     
