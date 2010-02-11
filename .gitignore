@@ -5,9 +5,9 @@ backup/
 static/data/map_resp/
 DMLib/libPhoenix.dylib
 Parser/Phoenix/build/
-*.sqlite
 NuclearRelease/Actuator/MapData/world_boundaries/
 maps/mapfiles/
 static/data/DAVEG_Demo/*
 DAVEG_Demo/Actuator/MapTemplates/mapnik/world_boundaries/
 DAVEG_Demo/Actuator/MapTemplates/mapnik/symbols/
+overhearer.sqlite
