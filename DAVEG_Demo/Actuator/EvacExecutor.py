@@ -45,7 +45,7 @@ class EvacExecutor(Executor):
     
     # mockup: decide the map extent
     if paramValue == "three mile island nuclear station":
-        self.mapCtrl.setMapExtent(-8574408.602598343, 4855651.740543485, -8508086.231095564, 4918399.766340519)
+        self.mapCtrl.setMapExtent(-8545941.648454214, 4883905.226215085, -8536034.213773614, 4892847.935304075)
         values = {}
         values["name"] = paramValue
         values["type"] = "location"
@@ -106,6 +106,7 @@ class EvacExecutor(Executor):
       values["type"] = "structure"
       values["styles"] = ['_'.join(values["name"].split(' ')),]
       self.mapCtrl.addMapLayer(values)
+      self.mapCtrl.setMapExtent(-8574408.602598343, 4855651.740543485, -8508086.231095564, 4918399.766340519)
       if not values["name"] in plan.generatedValues:
         plan.generatedValues.append(values["name"])
       plan.searchParamByName("ImpactedArea").status = param_status_hasValue
