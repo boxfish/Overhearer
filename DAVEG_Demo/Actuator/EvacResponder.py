@@ -35,6 +35,7 @@ class EvacResponder():
         self.id = "0"
         self.map_width = 450
         self.map_height = 450
+        self.bbox = []
     
     def getResponseContent(self, responseId):
         """return the generated content of this responder"""
@@ -60,6 +61,7 @@ class EvacResponder():
     def generate(self):
         """generate the response"""
         self.preview = self.executor.mapCtrl.generateStaticMap(self.map_width, self.map_height)
+        self.bbox = self.executor.mapCtrl.bbox
         
     def getResponse(self):
         """docstring for getResponse"""
@@ -68,6 +70,7 @@ class EvacResponder():
         response["id"] = self.id
         response["preview"] = self.preview  # the url of the preview map picture
         response["explanation"] = "the explanation of the response"
+        response["bbox"] = ",".join(self.bbox)
         return response
         
 def main():
