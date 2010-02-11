@@ -167,9 +167,9 @@ class EvacExecutor(Executor):
     values["type"] = "structure"
     values["styles"] = ['_'.join(values["name"].split(' ')),]
     self.mapCtrl.addMapLayer(values)  
-    self.mapCtrl.setMapExtent(-8560082.0, 4869277.0,-8513847.0 4907464.5)
+    self.mapCtrl.setMapExtent(-8560082.0, 4869277.0,-8513847.0, 4907464.5)
     if not values["name"] in plan.generatedValues:
-        plan.generatedValues.append(values["name"])          
+      plan.generatedValues.append(values["name"])          
     plan.mentalState.execStatus = exec_success
     plan.searchParamByName("ImpactedArea").status = param_status_success
 
