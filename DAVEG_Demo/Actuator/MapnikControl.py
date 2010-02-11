@@ -107,7 +107,7 @@ class MapnikControl():
     def getMapLayer(self, layerName):
         if layerName in self.mapContents:
             return self.mapContents[layerName]
-        else
+        else:
             return None
             
 def main():
