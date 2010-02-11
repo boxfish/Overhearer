@@ -198,7 +198,8 @@ class EvacExecutor(Executor):
         values["type"] = "points"
         values["styles"] = ['_'.join(values["name"].split(' ')),]
         values["values"] = []
-        values["values"].append({"coords": center, "label":plan.initiator.id})
+        print values
+        values["values"].append({"coords": center, "label":plan.agents[0].id})
         print "AddLayer"
         self.mapCtrl.addMapLayer(values)
         print "AddLayer successfully!"
