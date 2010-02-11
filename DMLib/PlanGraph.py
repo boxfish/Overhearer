@@ -53,14 +53,15 @@ class PlanGraph():
   
   def explain(self, tempPlans):
     """docstring for __explain"""
-    self.focus = []
+    #self.focus = []
+    new_focus = []
     hasAction = False
     for plan in tempPlans:
       if plan.actionType == "ACTION":
         speakerId = plan.initiator
         explainedPlan = self.__explainPlanGraph(plan)
         if explainedPlan:
-          self.focus.append(explainedPlan)
+          new_focus.append(explainedPlan)
           explainedPlan.updateMentalStates(speakerId)
           hasAction = True
           break
@@ -69,10 +70,12 @@ class PlanGraph():
         speakerId = plan.initiator
         explainedPlan = self.__explainPlanGraph(plan)
         if explainedPlan:
-            explainedPlan.updateMentalStates(speakerId)
-            if not hasAction:
-              self.focus.append(explainedPlan)
-    return self.focus
+          explainedPlan.updateMentalStates(speakerId)
+          if not hasAction:
+            new_focus.append(explainedPlan)
+    if new_focus:
+      self.focus = new_focus
+    return new_focus
 
   def __explainPlanGraph(self, tempPlan):
     """docstring for __explainPlan"""
@@ -85,6 +88,10 @@ class PlanGraph():
       else:
         return None
     else:
+      for focus in self.focus:
+        explainedPlan = self.__explainPlanNode(focus, tempPlan)
+        if explainedPlan:
+          return explainedPlan                 
       return self.__explainPlanNode(self.root, tempPlan)
   
   def __explainPlanNode(self, plan, tempPlan):
@@ -95,14 +102,16 @@ class PlanGraph():
         hasFound = False
         for subPlan in plan.parent.subPlans:
           if subPlan.refPhrase == tempPlan.refPhrase:
-            explainedPlan = copy.copy(subPlan)
+            # explainedPlan = copy.copy(subPlan)
+            explainedPlan = subPlan
             hasFound = True
             break
         if hasFound:
           # The current plan has same reference with tempPlan
-          plan.parent.subPlans = []
-          plan.parent.values = []
-          plan.parent.subPlans.append(explainedPlan)
+          #plan.parent.subPlans = []
+          #plan.parent.values = []
+          #plan.parent.subPlans.append(explainedPlan)
+          pass
         else:
           # The current plan has differnt reference from tempPlan
           tempPlan.parent = plan.parent
@@ -115,6 +124,7 @@ class PlanGraph():
         explainedPlan = plan
       tempAgent = tempPlan.agents[0]
       exists = False
+
       for agent in explainedPlan.agents:
         if agent.id == tempAgent.id:
           agent.mentalState = tempAgent.mentalState
@@ -123,7 +133,7 @@ class PlanGraph():
       if not exists:
         explainedPlan.agents.append(tempAgent)
         if len(explainedPlan.agents) == 1:
-          plan.initiator = tempAgent.id      
+          explainedPlan.initiator = tempAgent.id      
       return explainedPlan    
     if plan.complexity == "complex":
       if plan.mentalState.execStatus == exec_noRecipe:
@@ -191,7 +201,9 @@ class PlanGraph():
     self.agenda = []
     for plan in self.focus:
       self.__elaboratePlanNode(plan)
-
+    # after the elaborate, update the mental state of the system if necessary
+    self.__updateSystemMentalState(self.root)
+        
   def __elaboratePlanNode(self, plan):
     """docstring for __elaboratePlanNode"""
     isIntended = False
@@ -224,7 +236,23 @@ class PlanGraph():
         plan.mentalState.intention = int_intendTo
         self.agenda.append(plan)
         self.executor.execute(plan)
-              
+        
+  def __updateSystemMentalState(self, plan):
+    if len(plan.agents) > 1:
+      execStatus = plan.agents[0].mentalState.execStatus
+      for agent in plan.agents[1:]:
+        execStatus = min(execStatus, agent.mentalState.execStatus)  
+      if execStatus > plan.mentalState.execStatus:
+        plan.mentalState.execStatus = execStatus
+      if execStatus >= exec_paramReady:
+        for param in plan.params:
+          param.status = param_status_success
+      for param in plan.params:
+        for subPlan in param.subPlans:
+          self.__updateSystemMentalState(subPlan)  
+      for subPlan in plan.subPlans:
+        self.__updateSystemMentalState(subPlan)        
+                  
   def __elaborateParamNode(self, param):
     """docstring for __elaborateParamNode"""
     for subPlan in param.subPlans:
@@ -257,6 +285,7 @@ class PlanNode():
     self.compexity = ""
     self.refType = ""
     self.refPhrase = ""
+    self.refGestures = []
     self.refId = None
     self.parent = None
     self.subPlans = []
@@ -406,6 +435,23 @@ class PlanNode():
             return param
       parent = parent.parent
     return None
+
+  def searchActionsByName(self, actionName):
+    """docstring for searchParamByName"""
+    actions = []
+    parent = self.parent
+    for param in self.params:
+      for subPlan in param.subPlans:
+        if subPlan.actionName == actionName:
+          actions.append(subPlan)
+        else:
+          actions.extend(subPlan.searchActionsByName(actionName))
+    for subPlan in self.subPlans:
+      if subPlan.actionName == actionName:
+        actions.append(subPlan)
+      else:
+        actions.extend(subPlan.searchActionsByName(actionName))
+    return actions
     
 class ParamNode():
   """docstring for ParamNode"""

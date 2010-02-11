@@ -35,8 +35,11 @@ class DialogueManager():
         if self.config:
             self.context = self.config["context"]
             # create parser
-            self.parser = PhoenixParser(self.context + self.config["parser_dir"] + "/config")
-            
+            if self.config["parser_dir"]:
+                self.parser = PhoenixParser(self.context + self.config["parser_dir"] + "/config")
+            else:
+                # already parsed
+                self.parser = None
             # create knowledge base
             self.kb = self.__createKBase(self.config["kbase"])
 
@@ -55,13 +58,11 @@ class DialogueManager():
             # create the plangraph
             self.planGraph = PlanGraph(kb=self.kb, executor=self.executor)
             # import all the responders and create new instances
-            self.responders = []
-            for i, responder in enumerate(self.config["responders"]):
-                responder_module_name = ".".join(["Overhearer", self.context, responder["module"]])
-                __import__(responder_module_name)
-                _responder = sys.modules[responder_module_name]
-                responder_params = responder.get("params", None)
-                self.responders.append(getattr(_responder, responder["class"])(str(i), self, responder_params))
+            responder_module_name = ".".join(["Overhearer", self.context, self.config["responder"]["module"]])
+            __import__(responder_module_name)
+            _responder = sys.modules[responder_module_name]
+            responder_params = self.config["responder"].get("params", None)
+            self.responder = getattr(_responder, self.config["responder"]["class"])(self, responder_params)
     
     def __createKBase(self, kbase):
         """docstring for create"""
@@ -90,16 +91,22 @@ class DialogueManager():
         response = {}
         speakerId = request.get("speakerId", "")
         message = request.get("message", "")
-        if speakerId == "" or message == "":
-                response["status"] = "error"
-                response["message"] = "the message cannot be processed!"
-                return response
-        # Step 1: Parsing
-        # parse message into phrases
-        result = self.parser.parse(message)
-        # parse phrases to tempPlans
-        tempPlans = self.planGraph.parsePhrases(result["phrases"], speakerId)
+        phrases = request.get("phrases", "")
+            
+        if speakerId == "" or (message == "" and phrases== ""):
+            response["status"] = "error"
+            response["message"] = "the message cannot be processed!"
+            return response
         
+        tempPlans = []
+        if not phrases and message:
+            # Step 1: Parsing
+            # parse message into phrases
+            result = self.parser.parse(message)
+            # parse phrases to tempPlans
+            tempPlans = self.planGraph.parsePhrases(result["phrases"], speakerId)
+        elif phrases:
+            tempPlans = self.planGraph.parsePhrases(phrases, speakerId)
         # if no phrases are parsed, return the error message
         if len(tempPlans) == 0:
             response["status"] = "error"
@@ -111,27 +118,31 @@ class DialogueManager():
             response["status"] = "error"
             response["message"] = "could not explain the request."
             return response
+        gestures = request.get("gestures", "")
+        if gestures:
+            for focus in self.planGraph.focus:
+                focus.refGestures = gestures
+        for focus in self.planGraph.focus:
+            print focus.actionName       
         # Step 3: Elaborating
         self.planGraph.elaborate()
         # Step 4: Geenrating Response
         # generate the responses        
-        for responder in self.responders:
-            responder.generate()
+        map_width = request.get("map_width", "")
+        map_height = request.get("map_height", "")
+        if map_width and map_height:
+            self.responder.map_width = map_width
+            self.responder.map_height = map_height     
+        self.responder.generate()
         return self.getCurrentResponses()
     
     def getPlanGraphXML(self):
         """docstring for getPlanGraphXML"""
         return self.planGraph.saveXML()
     
-    def getResponseContent(self, responderId):
-        """get the response content of a particular responder"""
-        for responder in self.responders:
-            if responder.id == responderId:
-                return responder.getResponseContent()
-        response = {}
-        response["status"] = "error"
-        response["message"] = "the responder (%s) does not exists!" % responderId
-        return response
+    def getResponseContent(self, responseId):
+        """get the response content of a particular response channel"""
+        return self.responder.getResponseContent(responseId)
         
     def getMapXML(self):
         """docstring for getMapXML"""
@@ -148,34 +159,17 @@ class DialogueManager():
         return self.mapCtrl.saveXML()
 
     def getResponders(self):
-        """get the information about all the responders"""
-        responders = []
-        for responder in self.responders:
-            resp = {}
-            resp["id"] = responder.id
-            resp["type"] = responder.type
-            resp["name"] = responder.__class__.__name__ 
-            responders.append(resp)
-        return responders
+        """get the information about all the response channels"""
+        return self.responder.getResponseChannels()
         
     def getCurrentResponses(self):
-        """get the current responses from all responders"""
-        responses = []
-        for responder in self.responders:
-            response = responder.getResponse()
-            if response:
-                responses.append(response)
-        if len(responses) == 0:
-            response = {}
-            response["status"] = "error"
-            response["message"] = "there is no response at this moment!"
-            return response
-        return responses
+        """get all the current responses"""
+        return self.responder.getCurrentResponses()
         
 def main():
-    dlgManager = DialogueManager()
-    request = Request("Jill", "There is a nuclear release, and we need to plan evacuation")
-    print dlgManager.process(request)
+    #request = Request("Jill", "There is a nuclear release, and we need to plan evacuation")
+    #print dlgManager.process(request)
+    pass
 
 if __name__ == '__main__':
     main()

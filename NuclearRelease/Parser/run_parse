@@ -1,2 +1,2 @@
 #
-./parse_text -config config
+./parse_text -config config.back

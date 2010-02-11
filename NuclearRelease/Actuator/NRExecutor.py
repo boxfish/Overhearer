@@ -52,12 +52,41 @@ class NRExecutor(Executor):
             plan.parent.status = param_status_hasValue
             plan.mentalState.execStatus = exec_success
             plan.generatedValues.append(paramValue)
+            for agent in plan.agents:
+                for parent_agent in plan.parent.parent.agents:
+                    if agent.id == parent_agent.id:
+                        parent_agent.mentalState.execStatus = exec_paramReady
+                        break
         else:
             plan.mentalState.execStatus = exec_failure
 
+    def IdentifyAreaFromSpeech(self, plan):
+        print "Execute: IdentifyAreaFromSpeech: %s" % plan.refPhrase
+        paramValue = ""
+        refPhrase = " ".join(plan.refPhrase.split("_"))
+        # only support postgresql right now
+        if self.datasource and self.datasource.get("type", "") == "postgresql":
+            db = psycopg2.connect(self.dsn)
+            cursor = db.cursor()
+            query = "SELECT name FROM geo_contents where name = '%s'" % refPhrase
+            cursor.execute(query)
+            if len(cursor.fetchall()) > 0:
+                paramValue = refPhrase
+            else:
+                # TODO  lookup the ref phrase using geocoding service and add it to the database
+                pass
+            db.close()
+        # update plan graph
+        if paramValue:
+            plan.parent.values.append(paramValue)
+            plan.parent.status = param_status_hasValue
+            plan.mentalState.execStatus = exec_success
+            plan.generatedValues.append(paramValue)
+        else:
+            plan.mentalState.execStatus = exec_failure
+                
     def GenerateEPZs(self, plan):
         """docstring for GenerateEPZs"""
-        print "Execute: GenerateEPZs"
         plan.mentalState.execStatus = exec_failure
         if self.datasource and self.datasource.get("type", "") == "postgresql":
             db = psycopg2.connect(self.dsn)
@@ -78,19 +107,18 @@ class NRExecutor(Executor):
     
     def GeneratePlumeModel(self, plan):
         """docstring for GenerateEPZs"""
-        print "Execute: GenerateEPZs"
+        print "Execute: GeneratePlumeModel"
         plan.mentalState.execStatus = exec_failure
         if self.datasource and self.datasource.get("type", "") == "postgresql":
             db = psycopg2.connect(self.dsn)
             cursor = db.cursor()
             query = "SELECT name FROM geo_contents where name = 'plume model'"
             cursor.execute(query)
-            if len(cursor.fetchall()) > 0:
-                paramLoc = plan.searchParamByName("ImpactedArea")
-                paramLoc.status = param_status_hasValue
-                for row in cursor:
+            results = cursor.fetchall()
+            if len(results) > 0:
+                for row in results:
                     if row[0]:
-                        paramLoc.values.append(row[0])
+                        plan.generatedValues.append(row[0])
                 plan.mentalState.execStatus = exec_success
             else:
                 # TODO  create the plume model using sql

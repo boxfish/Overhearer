@@ -7,4 +7,4 @@ tiles:
     buffer_size: 128
     max_zoom: 22
     caching_map: 50
-    caching_image: false
+    caching_image: true

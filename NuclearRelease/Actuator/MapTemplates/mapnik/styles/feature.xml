@@ -1,26 +1,85 @@
 <Styles>
+    <Style name="epz-2">
+        <Rule>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(212,154,4)</CssParameter>
+                <CssParameter name="fill-opacity">0.7</CssParameter>
+            </PolygonSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(211,43,28)</CssParameter>
+                <CssParameter name="stroke-width">2.5</CssParameter>
+                <CssParameter name="stroke-opacity">0.8</CssParameter>
+                <CssParameter name="stroke-dasharray">4, 2</CssParameter>
+            </LineSymbolizer>
+            <TextSymbolizer name="label" fontset_name="oblique-fonts" size="10" fill="rgb(255,4,0)" halo_radius="1" placement="line"></TextSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="epz-5">
+        <Rule>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(212,154,4)</CssParameter>
+                <CssParameter name="fill-opacity">0.6</CssParameter>
+            </PolygonSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(211,43,28)</CssParameter>
+                <CssParameter name="stroke-width">2.0</CssParameter>
+                <CssParameter name="stroke-opacity">0.8</CssParameter>
+                <CssParameter name="stroke-dasharray">4, 2</CssParameter>
+            </LineSymbolizer>
+            <TextSymbolizer name="label" fontset_name="oblique-fonts" size="10" fill="rgb(255,4,0)" halo_radius="1" placement="line"></TextSymbolizer>
+        </Rule>
+    </Style>
+    <Style name="epz-10">
+        <Rule>
+            <PolygonSymbolizer>
+                <CssParameter name="fill">rgb(212,154,4)</CssParameter>
+                <CssParameter name="fill-opacity">0.5</CssParameter>
+            </PolygonSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(211,43,28)</CssParameter>
+                <CssParameter name="stroke-width">1.5</CssParameter>
+                <CssParameter name="stroke-opacity">0.8</CssParameter>
+                <CssParameter name="stroke-dasharray">4, 2</CssParameter>
+            </LineSymbolizer>
+            <TextSymbolizer name="label" fontset_name="oblique-fonts" size="10" fill="rgb(255,4,0)" halo_radius="1" placement="line"></TextSymbolizer>
+        </Rule>
+    </Style>
     <Style name="epz">
         <Rule>
             <PolygonSymbolizer>
-                <CssParameter name="fill">rgb(51,204,153)</CssParameter>
+                <CssParameter name="fill">rgb(212,154,4)</CssParameter>
+                <CssParameter name="fill-opacity">0.8</CssParameter>
             </PolygonSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(211,43,28)</CssParameter>
+                <CssParameter name="stroke-width">1.5</CssParameter>
+                <CssParameter name="stroke-opacity">0.8</CssParameter>
+                <CssParameter name="stroke-dasharray">4, 2</CssParameter>
+            </LineSymbolizer>
         </Rule>
     </Style>
     <Style name="plume">
         <Rule>
             <PolygonSymbolizer>
                 <CssParameter name="fill">rgb(51,204,153)</CssParameter>
+                <CssParameter name="fill-opacity">0.6</CssParameter>
             </PolygonSymbolizer>
         </Rule>
     </Style>
-    <Style name="marker">
-        <Rule>
-            <PointSymbolizer file="${mapInfo['mapnik_template_dir']}/symbols/red-arrow.png" type="png" width="16" height="16"></PointSymbolizer>
+    <Style name="nuclear_station">
+        <Rule>            
+            <PointSymbolizer file="${mapnik_template_dir}/symbols/red-arrow.png" type="png" width="16" height="16" allow_overlap="true"></PointSymbolizer>
+            <TextSymbolizer name="label" fontset_name="oblique-fonts" size="10" fill="rgb(255,4,0)" halo_radius="1" placement="point" dy="20" dx="50"></TextSymbolizer>
         </Rule>
     </Style>
-    <Style name="label">
+    <Style name="highlight">
         <Rule>
-            <TextSymbolizer name="label" fontset_name="bold-fonts" size="10" fill="rgb(153,204,153)" dy="-8" halo_radius="1" wrap_width="14"></TextSymbolizer>
+            <LineSymbolizer>
+                <CssParameter name="stroke">rgb(211,43,28)</CssParameter>
+                <CssParameter name="stroke-width">4</CssParameter>
+                <CssParameter name="stroke-opacity">0.8</CssParameter>
+            </LineSymbolizer>
         </Rule>
     </Style>
+    
 </Styles>

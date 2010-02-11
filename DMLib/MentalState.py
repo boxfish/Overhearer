@@ -14,8 +14,8 @@ import os
 (int_unknown, int_intendTo, int_intendThat, int_intendNot, int_potential) = range (5)
 int_status = ["int_unknown", "int_intendTo", "int_intendThat", "int_intendNot", "int_potential"]
 # status of plans
-(exec_noRecipe, exec_hasRecipe, exec_canBringAbout, exec_paramReady, exec_success, exec_failure) = range(6)
-exec_status = ["exec_noRecipe", "exec_hasRecipe", "exec_canBringAbout", "exec_paramReady", "exec_success", "exec_failure"] 
+(exec_failure, exec_noRecipe, exec_hasRecipe, exec_canBringAbout, exec_paramReady, exec_success) = range(6)
+exec_status = ["exec_failure", "exec_noRecipe", "exec_hasRecipe", "exec_canBringAbout", "exec_paramReady", "exec_success"] 
 # types of parameters
 (param_type_unknown, param_type_geoType, param_type_int, param_type_real, param_type_text) = range(5)
 param_type = ["param_type_unknown", "param_type_geoType", "param_type_int", "param_type_real", "param_type_text"]

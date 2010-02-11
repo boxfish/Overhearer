@@ -72,9 +72,8 @@ def appendDialogue(dlg_obj):
 
 def check_validity(config):
     """check the validity of Config"""
-    if config.has_key("context") and config.has_key("parser_dir") and config.has_key("kbase") and config.has_key("executor") and config.has_key("responders"):
-        if len(config["responders"]) > 0:
-            return True
+    if config.has_key("context") and config.has_key("parser_dir") and config.has_key("kbase") and config.has_key("executor") and config.has_key("responder"):
+        return True
     return False
 
 
@@ -109,7 +108,6 @@ def dialoguesHandler(request):
         participants = data.get("participants", [])
         if participants:
             f = open(os.path.join(settings.PROJECT_PATH, settings.CONTEXT, 'config.yaml'))
-            print os.path.join(settings.PROJECT_PATH, settings.CONTEXT, 'config.yaml')
             config = yaml.load(f)
             f.close()
             if config and check_validity(config):
@@ -300,16 +298,33 @@ def participantHandler(request, pId):
     return HttpResponse("Hello, world. You're at the participantHandler index.")
 
 def testHandler(request):
-    id = "testforpickled15"
-    dlg = Dialogue.objects.get(dlgId=id)
-    '''
-    f = open(os.path.join(settings.PROJECT_PATH, settings.CONTEXT, 'config.yaml'))
+    f = open("/Users/bohr/Work/Research/Overhearer/DAVEG_Demo/config.yaml")
     config = yaml.load(f)
-    dialogue = DialogueManager(config, id)
-    dlg = Dialogue(dlgId=id, name="name", description="desc", context="test")
-    dlg.pickled_obj = dialogue
-    dlg.save()
-    '''
+    f.close()
+    dialogue = DialogueManager(config)                
+    participant = {"name": "Jill", "id":"Jill"}
+    dialogue.addParticipant(participant)
+    participant = {"name": "Jim", "id":"Jim"}
+    dialogue.addParticipant(participant)
+    data = {"speakerId":"Jill", "phrases":["nuclear release", "evacuation"]}
+    print dialogue.process(data)
+    data = {"speakerId":"Jill", "phrases":["the", "three mile island nuclear station"]}
+    print dialogue.process(data)
+    data = {"speakerId":"Jim", "phrases":["two", "five", "ten", "mile", "EPZ"]}
+    print dialogue.process(data)
+    data = {"speakerId":"Jill", "phrases":["five", "mile", "EPZ"]}
+    print dialogue.process(data)
+    data = {"speakerId":"Jim", "phrases":["ten", "mile", "EPZ"]}
+    print dialogue.process(data)
+    data = {"speakerId":"Jill", "phrases":["ten", "mile", "EPZ"]}
+    print dialogue.process(data)
+    data = {"speakerId":"Jim", "phrases":["a", "plume model"]}
+    print dialogue.process(data)
+    data = {"speakerId":"Jim", "phrases":["the", "current wind condition"]}
+    print dialogue.process(data)
+    data = {"speakerId":"Jill", "phrases":["order evacuation", ]}
+    print dialogue.process(data)
+
     return HttpResponse("Hello, world. You're at the testHandler index.")
 
 

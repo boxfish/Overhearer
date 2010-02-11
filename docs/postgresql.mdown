@@ -112,6 +112,7 @@ Follow the instruction at <http://trac.mapnik.org/wiki/MacInstallation>
 +	Generate the map xml file
 
 		./generate_xml.py osm.xml my_map.xml --host 'localhost' --port 5432 --dbname osm --user admin --password '309ist' --world_boundaries '../data/world_boundaries'
+		python generate_xml.py osm.xml osm_basemap.xml --dbname osm --user admin --host localhost --port 5432 --password 309ist --world_boundaries /Users/bohr/Work/Research/Overhearer/NuclearRelease/Actuator/MapData/world_boundaries
 		
 # References:
 

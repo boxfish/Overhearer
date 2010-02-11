@@ -54,13 +54,14 @@ class PhoenixParser():
         parse = repr(s.value).replace("\'","").replace(" \\n", ":").split(":")
         print parse
         result["frame"] = parse[0]
-        phrases = parse[1].lower().split("].")
-        newPhrases = []
-        for phrase in phrases:
-            newPhrases.extend(phrase.split("["))
-        for phrase in newPhrases:
-            if phrase != "" and not phrase in result["phrases"]:
-                result["phrases"].append(phrase.rstrip())
+        for item in parse[1:]:
+            phrases = item.lower().split("].")
+            newPhrases = []
+            for phrase in phrases:
+                newPhrases.extend(phrase.split("["))
+            for phrase in newPhrases:
+                if phrase != "" and not phrase in result["phrases"]:
+                    result["phrases"].append(phrase.rstrip())
         print "Parsing: [%s]" % ", ".join(result["phrases"])
         return result
         

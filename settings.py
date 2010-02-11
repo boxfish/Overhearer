@@ -4,7 +4,8 @@ PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
 # Application context
 #CONTEXT = 'EvacuationExample'
-CONTEXT = 'NuclearRelease'
+#CONTEXT = 'NuclearRelease'
+CONTEXT = 'DAVEG_Demo'
 
 # Total number of concurrent dialogues maintained in memory
 DIALOGUE_NUM = 50

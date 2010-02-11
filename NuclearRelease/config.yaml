@@ -31,14 +31,14 @@ executor:
             dbname: nuclear_release
             user: admin
             password: 309ist
-responders: 
+responder: 
 # it is possible to have multiple responders, e.g. different modals, or different experimental strategies
     #- module: TextResponder
     #  class: TextResponder
-    - module: Actuator.MapnikResponder
-      class: MapnikResponder
-      params:
-          kbase: ReasoningRules
+    module: Actuator.MapListResponder
+    class: MapListResponder
+    params:
+        kbase: ReasoningRules
     #        testcase: 1
     #- module: Actuator.MapnikResponder
     #    class: MapnikResponder

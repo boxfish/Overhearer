@@ -1,10 +1,18 @@
 #   Plan Response
     FRAME: PlanResponse
     NETS:
-    [Response_Planning]
-	[Plan_Response]
+    [Number]
+    [Plan_Response]
 	[Task_Context]
 	[Incidence_Location]
-	[EPZs]
-	[PlumeModel]
+	[Identify_Impacted_Area]
+	[Generate_Plume_Model]
+	[Plan_Evacuation]
+	[THE_EPZ]
+	[THE_PLUME_MODEL]
+	[Two_Mile_EPZ]
+	[Five_Mile_EPZ]
+	[Ten_Mile_EPZ]
+	[PLUME_MODEL]
+	[Setup_Care_Centers]
 ;

@@ -1,13 +1,6 @@
 ###### Domain Specific Rules #############
-[Response_Planning]
-	(*EXIST *A [Task_Context] *[Incidence_Location] *I_WE NEED [Plan_Response])
-EXIST
-	(there's)
-	(there is)
-A
-	(a)
-	(an)
-	(some)
+[I_WE_NEED]
+    (*I_WE NEED)
 I_WE
 	(i)
 	(we)
@@ -17,11 +10,117 @@ NEED
 	(wanna)
 	(like to)
 	(be needing to)
+	(should)
+;
+[Number]
+	(MIL *THOU *HUN *BASE)
+	(THOU *HUN *BASE)
+	(HUN *BASE)
+	(BASE)
+	(ORDINAL)
+	(+DIGIT)
+MIL
+	(BASE million)
+THOU
+	(BASE thousand)
+	(DIGIT hundred *BASE thousand)
+HUN
+	(DIGIT hundred)
+BASE
+	(DIGIT)
+	(TEEN)
+	(DECADE *DIGIT)
+DIGIT
+	(zero)
+	(one)
+	(two)
+	(three)
+	(four)
+	(five)
+	(six)
+	(seven)
+	(eight)
+	(nine)
+TEEN
+	(ten)
+	(eleven)
+	(twelve)
+	(thirteen)
+	(fourteen)
+	(fifteen)
+	(sixteen)
+	(seventeen)
+	(eighteen)
+	(nineteen)
+ORDINAL
+	(ORDINAL_DIGIT)
+	(ORDINAL_TEEN)
+	(ORDINAL_DECADE)
+	(DECADE ORDINAL_DIGIT)
+ORDINAL_DIGIT
+	(first)
+	(second)
+	(third)
+	(fourth)
+	(fifth)
+	(sixth)
+	(seventh)
+	(eighth)
+	(ninth)
+ORDINAL_TEEN
+	(tenth)
+	(eleventh)
+	(twelfth)
+	(thirteenth)
+	(fourteenth)
+	(fifteenth)
+	(sixteenth)
+	(seventeenth)
+	(eighteenth)
+	(nineteenth)
+ORDINAL_DECADE
+	(twentieth)
+	(thirtieth)
+	(fortieth)
+	(fiftieth)
+	(sixtieth)
+	(seventieth)
+	(eightieth)
+	(ninetieth)
+	(*one hundredth)
+DECADE
+	(twenty)
+	(thirty)
+	(forty)
+	(fifty)
+	(sixty)
+	(seventy)
+	(eighty)
+	(ninety)
 ;
 
-[Plan_Response]	
+
+
+[Plan_Response]
+	(*EXIST *A [Task_Context] AT *THE *[Incidence_Location] *AND [I_WE_NEED] PLAN_RESP)
+EXIST
+	(there's)
+	(there is)
+A
+	(a)
+	(an)
+	(some)
+AT
+    (at)
+    (in)
+THE
+    (the)
+AND
+    (and)
+PLAN_RESP	
 	(plan response)
 ;
+
 [Task_Context]
 	(TASK)
 TASK
@@ -32,10 +131,95 @@ TASK
 	(three mile island nuclear station)
 ;
 
-[EPZs]
-	(epzs)
+[Identify_Impacted_Area]
+    ([I_WE_NEED] IDEN_IMPACTED)
+IDEN_IMPACTED
+    (identify impacted area)
+    (identify impacted areas)
 ;
-	
-[PlumeModel]
-	(plume model)
+
+[THE_EPZ]
+	([Two_Mile_EPZ])
+	([Five_Mile_EPZ])
+	([Ten_Mile_EPZ])
+;
+
+[Two_Mile_EPZ]
+    (the two-mile epz)
+    (the two mile epz)
+    (the 2-mile epz)
+    (the 2 mile epz)
+;
+
+[Five_Mile_EPZ]
+    (the five-mile epz)
+    (the five mile epz)
+    (the 5-mile epz)
+    (the 5 mile epz)
+;
+
+[Ten_Mile_EPZ]
+    (the ten-mile epz)
+    (the ten mile epz)
+    (the 10-mile epz)
+    (the 10 mile epz)
+;
+
+[THE_PLUME_MODEL]
+    (THE [PLUME_MODEL])
+THE
+    (the)
+    (this)
+;
+
+[PLUME_MODEL]
+    (plume model)
+    (downwind plume model)
+    (plume zone)
+    (downwind plume zone)
+;
+    	
+[Generate_Plume_Model]
+	([I_WE_NEED] GENERATE A PLUME_MODEL)
+	(LET_US GENERATE A PLUME_MODEL)
+LET_US
+	(let's)
+	(let us)
+GENERATE
+	(add)
+	(generate)
+A
+	(a)
+	(an)
+	(some)
+PLUME_MODEL
+    (plume model)
+    (plume zone)
+    (downwind plume model)
+    (downwind plume zone)
+;
+
+[Plan_Evacuation]
+    ([I_WE_NEED] EVACUATE IN [THE_EPZ] *AND *[THE_PLUME_MODEL])
+EVACUATE
+    (plan to evacuate)
+    (plan evacuation)
+    (evacuate people)
+    (evacuate everyone)
+IN
+    (within)
+    (in)
+AND
+    (and)
+    (plus)
+    (with)
+    (together with)
+;
+
+[Setup_Care_Centers]
+    ([I_WE_NEED] SETUP_CENTERS)
+SETUP_CENTERS
+    (set up the care centers)
+    (set up the care centers)
+    (arrange the care centers)
 ;

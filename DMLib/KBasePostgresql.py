@@ -120,7 +120,7 @@ class KBasePostgresql():
     def getActionContext(self, actionName):
         db = psycopg2.connect(self.dsn)
         cursor = db.cursor()
-        query = "SELECT geo_content_name FROM action_geo_content where action_name = '%s'" % actionName
+        query = "SELECT geo_content_name FROM action_geo_content where action_name = '%s' order by render_order" % actionName
         print query
         cursor.execute(query)
         contents = []
@@ -129,7 +129,34 @@ class KBasePostgresql():
                 contents.append(row[0])
         db.close()
         return contents
+    
+    def getOrderedFeatures(self, feature_names):
+        """docstring for getOrderedFeatures"""
+        db = psycopg2.connect(self.dsn)
+        cursor = db.cursor()
+        query = "SELECT name FROM geo_contents where name in (%s) order by render_order" % ", ".join(["'%s'" % k for k in feature_names])
+        print query
+        cursor.execute(query)
+        contents = []
+        for row in cursor:
+            if row[0]:
+                contents.append(row[0])
+        db.close()
+        return contents
+    
                 
+    def getBbox(self, feature_names):
+        """docstring for getOrderedFeatures"""
+        db = psycopg2.connect(self.dsn)
+        cursor = db.cursor()
+        query = "SELECT ST_XMin(ST_Extent(geom)), ST_YMin(ST_Extent(geom)),ST_XMax(ST_Extent(geom)),ST_YMax(ST_Extent(geom)) FROM geo_contents where name in (%s)" % ", ".join(["'%s'" % k for k in feature_names])
+        print query
+        cursor.execute(query)
+        bbox = []
+        bbox.extend(cursor.fetchone())
+        db.close()
+        return bbox
+    
     def executeSQL(self, query):
         """docstring for executeSQL"""
         db = psycopg2.connect(self.dsn)
