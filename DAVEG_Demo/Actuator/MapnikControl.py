@@ -46,10 +46,15 @@ class MapnikControl():
             layer_info = self.mapContents[layer_name]
             layer_type = layer_info.get("type", "")
             if layer_type and layer_type != "layer":
-                # add the layer & styles
                 lyr = mapnik.Layer(layer_name, self.projection)
-                query = "(select geom, label from geo_contents where name='%s') as %s" % (layer_name, '_'.join(layer_name.split(' ')))
-                lyr.datasource = mapnik.PostGIS(host='localhost',user='admin',password='309ist',dbname='nuclear_release',table=query)
+                if layer_type == "points":
+                    lyr.datasource = mapnik.PointDatasource()
+                    for value in layer_info.get("values", []):
+                        lyr.datasource.add_point(value["coords"][0], value["coords"][1], "label", value["label"])
+                else:
+                    # add the layer & styles
+                    query = "(select geom, label from geo_contents where name='%s') as %s" % (layer_name, '_'.join(layer_name.split(' ')))
+                    lyr.datasource = mapnik.PostGIS(host='localhost',user='admin',password='309ist',dbname='nuclear_release',table=query)
                 styles = layer_info.get("styles", [])
                 for style in styles:
                     lyr.styles.append(style)
@@ -98,6 +103,10 @@ class MapnikControl():
                 if style.endswith("_focus"):
                     return
             self.mapContents[layerName]["styles"].append('_'.join(layerName.split(' '))+'_focus')    
+
+    def getMapLayer(self, layerName):
+        if layerName in self.mapContents:
+            return self.mapContents[layerName]
             
 def main():
     pass

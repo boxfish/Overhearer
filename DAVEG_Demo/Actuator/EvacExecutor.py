@@ -177,14 +177,30 @@ class EvacExecutor(Executor):
     print "Execute: IdentifyDiffLocFromGesture"
     if plan.refGestures:
       center = self.GetCenterPoint(plan.refGestures)
-      width = self.mapCtrl.bbox[2] - self.mapCtrl.bbox[0]
-      height = self.mapCtrl.bbox[3] - self.mapCtrl.bbox[1]
+      width = 0.5 * (self.mapCtrl.bbox[2] - self.mapCtrl.bbox[0])
+      height = 0.5 * (self.mapCtrl.bbox[3] - self.mapCtrl.bbox[1])
       minX = center[0] - 0.5 * width
       minY = center[1] - 0.5 * height
       maxX = center[0] + 0.5 * width
       maxY = center[1] + 0.5 * height
       self.mapCtrl.setMapExtent(minX, minY, maxX, maxY)
-      
+  
+  def AssignGuideTeam(self, plan):
+    print "Execute: AssignGuideTeam"
+    if plan.refGestures:
+      center = self.GetCenterPoint(plan.refGestures)
+      layer = self.mapCtrl.getMapLayer('guide team')
+      if not layer:
+        values = {}
+        values["name"] = "guide team"
+        values["type"] = "points"
+        values["styles"] = ['_'.join(values["name"].split(' ')),]
+        values["values"] = []
+        values["values"].append({"coords": center, "label":plan.initiator.id})
+        self.mapCtrl.addMapLayer(values)
+      else:
+        layer["values"].append({"coords": center, "label":plan.initiator.id})
+        
   def GetCenterPoint(self, gestures):
     minX = gestures[0][0][0]
     maxX = gestures[0][0][0]
