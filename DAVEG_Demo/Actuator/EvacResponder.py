@@ -70,7 +70,7 @@ class EvacResponder():
         response["id"] = self.id
         response["preview"] = self.preview  # the url of the preview map picture
         response["explanation"] = "the explanation of the response"
-        response["bbox"] = ",".join(self.bbox)
+        response["bbox"] = ",".join([str(s) for s in self.bbox])
         return response
         
 def main():
