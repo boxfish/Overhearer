@@ -1,10 +1,69 @@
-1. This is Jill. There is a nuclear release and we need to plan evacuation
+1. Jill: Hi, Jim. There is a nuclear release and we need to plan evacuation
 nuclear release, evacuation
 
-2. This is Jim. Where is the release site?
+2. DAVE: Where is the release site? 
 
-3. This is Jill. It is at the three mile island nuclear station
+3. Jill: It is the one near Harrisburg
+
+4. DAVE: [Show the map near Harrisburg with the potential release sites nearby]
+
+5. Jill: I think it should be this one [pointing to one of the candidates on the map]
+
+6. DAVE: This is the three mile island nuclear station. [update the map to the immediate surrounding of the site]
+
+7. Jim: OK, Jill. What is the population within the two mile EPZ zone around the plant?
+
+8. DAVE: There are 2,000 people in this area. [update the map to show the 2-mile EPZ]
+
+9. Jim: Thank you, DAVE. What about five mile EPZ zone?
+
+10. DAVE: There are 5,000 people in this area. [update the map to show the 5-mile EPZ]
+ 
+11. Jill: Hi, Jim, we should also consider 10 mile EPZ zone.
+
+12. DAVE: There are 10,000 people in this area. [update the map to show the 10-mile EPZ]
+
+13. Jim: Jill, I think we should choose 5 mile EPZ zone.
+
+14: DAVE: [highlight the 5-mile EPZ]
+
+15. Jill: OK, Jim. We also need to consider the wind condition. 
+
+16. DAVE: here is the plume model based on current wind condition. [update the map with plume model]
+
+17. Jim: Yes, Jill. Let us add the plume model to the evacuation area.
+
+18. DAVE: [update the map to show the evacuation area as a whole]
+
+19. Jill: That sounds good, Jim. DAVE, can you order the evacuation within this area please?
+
+20: DAVE: [Trigger the sirens and radio announcements] Evacuation order has been performed.
+
+21: Jim: Hey, Jill, what do you think are the major evacuation routes?
+
+22: Jill: I think they are I-23 and I-233, Jim.
+
+23: DAVE: [Update the map with two routes highlighted with traffic info if possible]  
+
+24: Jim: Thanks, Jill. I think evacuation is likely to be difficult here [pointing to an area on the map].
+
+25: Jill: Yeah, I will go to this location to guide the evacuation process.
+
+26: DAVE: [update the map with an icon showing Jill's intended location]
+
+27: Jim: OK, Jill. I will go here then.
+
+28: DAVE: [update the map with an icon showing Jim's intended location]
+
+at the three mile island nuclear station
 the, three mile island nuclear station
+
+4. System: show the nearby candidates around Harrisburg
+
+5. This is Jill. It should be this one. (with gesture)
+
+6. System: zoom the map to the nuclear station. 
+It is at the three mile island nuclear station.
 
 4. This is Jim. Show me the two five and ten mile EPZ Zones around the plant
 two, five, ten, mile, EPZ
@@ -21,12 +80,12 @@ ten, mile, EPZ
 8. This is Jim. Let us add a plume model
 a, plume model
 
-9. This is Jill. What's the wind condition to be applied?
+9. System: What's the wind condition to be applied?
 
 10. This is Jim. Use the current wind condition
 the, current wind condition
 
-11. This is Jill. Let us order evacuation of people within thirty mile EPZ zone and the plume model
+11. This is Jill. Let us order evacuation of people within ten mile EPZ zone and the plume model
 order evacuation
 
 12. This is Jim. Evacuation is likely to be difficult here

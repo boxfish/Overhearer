@@ -55,6 +55,8 @@
 	+	Make sure the `url.rewrite-once` section is correct, so that the url is sent to the corresponding fastcgi module.
 	+ 	Reload the lighttpd to make it work.
 		
+python manage.py runserver 0.0.0.0:8080
+
 ## References
 
 + <http://docs.djangoproject.com/en/dev/howto/deployment/fastcgi/>

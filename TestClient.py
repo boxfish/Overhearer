@@ -85,10 +85,38 @@ def TestDialogues():
             if response["type"] == "map":
                 # get the first map response
                 print "Map:" + response["preview"]
+
+
+	    
     
-    '''    
+    url = base_url + "dialogues/%s/messages/" % dlgId
+    message = {"speakerId":"Jim", "phrases":["a", "plume model"]}
+    f = urllib2.urlopen(url, json.dumps(message))
+    data = f.read()
+    print "add new message: %s" % message["phrases"]
+    print data
+    f.close()
+    data = json.loads(data)
+    if type(data) == list:
+        for response in data:
+            if response["type"] == "map":
+                # get the first map response
+                print "Map:" + response["preview"]
+   
+    url = base_url + "dialogues/%s/messages/" % dlgId
+    message = {"speakerId":"Jim", "phrases":["the", "current wind condition"]}
+    f = urllib2.urlopen(url, json.dumps(message))
+    data = f.read()
+    print "add new message: %s" % message["phrases"]
+    print data
+    f.close()
+    data = json.loads(data)
+    if type(data) == list:
+        for response in data:
+            if response["type"] == "map":
+                # get the first map response
+                print "Map:" + response["preview"]
     
-     
     # 5. Get the current planGraph
     url = base_url + "dialogues/%s/plangraph/" % dlgId
     f = urllib2.urlopen(url)
@@ -96,7 +124,7 @@ def TestDialogues():
     print "the current plangraph:"
     print data
     f.close()
-
+    '''
     
     # 6. Get the first map response
     url = base_url + "dialogues/%s/responses/%s/" % (dlgId, responderId)
